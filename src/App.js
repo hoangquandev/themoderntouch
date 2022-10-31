@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import './App.css'
 import Header from "./common/Header";
 import TopBar from "./common/TopBar";
 import HomePage from "./pages/HomePage";
 import LoadingPage from "./pages/LoadingPage";
+import './App.css'
+import Footer from "./common/Footer";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <TopBar />
             <Header />
             <HomePage />
+            <Footer />
           </div>
 
       }

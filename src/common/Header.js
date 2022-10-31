@@ -5,7 +5,7 @@ import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
     navbar: {
-        height: "140px",
+        height: "135px",
         boxShadow: 'rgba(50, 50, 93, 0.25) 0 0 8px 0',
         display: 'flex',
         alignItems: 'center',

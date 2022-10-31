@@ -8,7 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 const useStyles = makeStyles((theme) => ({
     Container: {
         textAlign: "center",
-        height: "20px",
+        height: "30px",
         backgroundColor: "black",
         fontSize: "10px",
         lineHeight: "20px",
