@@ -5,8 +5,8 @@ import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
     image: {
-        width: "265px",
-        height: "173px"
+        maxWidth: "80%",
+        height: "90%"
     }
 }))
 
@@ -18,12 +18,12 @@ const Hawaii = () => {
             direction="column"
             justifyContent="space-around"
             alignItems="flex-start"
-            spacing={5}
+            spacing={12}
         >
             <img src={hawai} className={classes.image} alt='' />
             <Box textAlign='left'>
-                <Typography variant='h6'>ORIGIN</Typography>
-                <Typography variant='h2'>Hawaii</Typography>
+                <Typography variant='h6' fontFamily='Gotham'>ORIGIN</Typography>
+                <Typography variant='h2' fontFamily='TimesNewRomanItalic'>Hawaii</Typography>
             </Box>
         </Stack>
 

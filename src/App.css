@@ -1,6 +1,16 @@
 @font-face {
-  font-family: 'TimesNewRoman';
+  font-family: 'TimesNewRomanBoldItalic';
   src: local('TimesNewRoman'), url(./assets/fonts/Times\ New\ Roman/TimesNewRomanBoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: local('TimesNewRoman'), url(./assets/fonts/SVN-GOTHAM/SVN-Gotham\ Black.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'TimesNewRomanItalic';
+  src: local('TimesNewRoman'), url(./assets/fonts/Times\ New\ Roman/TimesNewRomanItalic.ttf) format('truetype');
 }
 
 #root {

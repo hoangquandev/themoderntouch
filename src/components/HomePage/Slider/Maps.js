@@ -5,8 +5,8 @@ import maps from '../../../assets/images/slider/SLIDER-07.png'
 
 const useStyles = makeStyles((theme) => ({
     image: {
-        width: "957px",
-        height: "556px"
+        width: "100%",
+        height: "100%"
     }
 }))
 

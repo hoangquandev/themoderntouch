@@ -1,6 +1,8 @@
 import { Grid } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import React from 'react'
+// import ArrowIconNext from '../../helpers/ArrowIconNext'
+import XIcon from '../../helpers/XIcon'
 import Hawaii from './Slider/Hawaii'
 import Maps from './Slider/Maps'
 import VietNam from './Slider/VietNam'
@@ -10,27 +12,40 @@ const useStyles = makeStyles((theme) => ({
         height: "781px",
         display: "flex",
         justifyContent: "center",
-        alignItems: "flex-start"
+        flexDirection: "column",
+        // backgroundColor: "#ccc",
+        alignItems: "center"
     },
     maps: {
         height: "50%",
+    },
+    navSlide: {
+        height: "160px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
     }
 }))
 
 const Slider = () => {
     const classes = useStyles()
     return (
-        <Grid container justifyContent='center' spacing={5} className={classes.container}>
-            <Grid item xs={3} className={classes.maps}>
-                <Hawaii />
+        <div className={classes.container}>
+            <Grid container justifyContent='center' spacing={5} >
+                <Grid item xs={3} className={classes.maps}>
+                    <Hawaii />
+                </Grid>
+                <Grid item xs={6} style={{ height: "70%" }}>
+                    <Maps />
+                </Grid>
+                <Grid item xs={3} style={{ height: "30%" }} >
+                    <VietNam />
+                </Grid>
             </Grid>
-            <Grid item xs={6} >
-                <Maps />
+            <Grid container className={classes.navSlide}>
+                <XIcon />
             </Grid>
-            <Grid item xs={3} className={classes.maps} >
-                <VietNam />
-            </Grid>
-        </Grid>
+        </div >
     )
 }
 

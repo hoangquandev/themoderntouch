@@ -3,6 +3,7 @@ import { Box, Grid } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import SearchIcon from '@mui/icons-material/Search';
+import XIcon from '../helpers/XIcon';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -11,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         height: "30px",
         backgroundColor: "black",
         fontSize: "10px",
-        lineHeight: "20px",
+        lineHeight: "30px",
         fontStyle: "italic",
         color: "white",
         padding: "0 100px"
@@ -44,7 +45,7 @@ const TopBar = () => {
             <Grid item xs={11}>
                 <Grid container className={classes.subNav}>
                     <Grid item xs={4}>info@themoderntouch.co</Grid>
-                    <Grid item xs={4}><span className={classes.textQuality}>QUALITY</span> Design  X  Life <span className={classes.textQuality}>QUALITY</span></Grid>
+                    <Grid item xs={4}><span className={classes.textQuality}>QUALITY</span> Design  x  Life <span className={classes.textQuality}>QUALITY</span></Grid>
                     <Grid item xs={4}>info@themoderntouch.co</Grid>
                 </Grid>
             </Grid>
@@ -54,7 +55,7 @@ const TopBar = () => {
                     <Grid item xs={6} className={classes.language}><Box sx={{ fontSize: 12 }}>EN</Box> <ArrowDropDownIcon sx={{ fontSize: 15 }} /></Grid>
                 </Grid>
             </Grid>
-        </Grid>
+        </Grid >
     )
 }
 

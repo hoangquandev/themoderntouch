@@ -5,8 +5,8 @@ import vietNam from '../../../assets/images/slider/SLIDER-06.png'
 
 const useStyles = makeStyles((theme) => ({
     image: {
-        maxWidth: "181px",
-        height: "282px"
+        maxWidth: "50%",
+        height: "100%"
     }
 }))
 
@@ -22,8 +22,8 @@ const VietNam = () => {
         >
             <img src={vietNam} className={classes.image} alt='' />
             <Box textAlign='right'>
-                <Typography variant='h6'>REPRESENTATIVE</Typography>
-                <Typography variant='h2'>Viet Nam</Typography>
+                <Typography variant='h6' fontFamily='Gotham'>REPRESENTATIVE</Typography>
+                <Typography variant='h2' fontFamily='TimesNewRomanItalic'>Viet Nam</Typography>
             </Box>
         </Stack >
 

@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         padding: "0 10%"
     },
     logo: {
-        fontFamily: "Times New Roman bold",
+        fontFamily: "Gotham",
         textAlign: "right",
         fontWeight: '900',
         fontSize: "20px"
@@ -29,7 +29,7 @@ const Header = () => {
             <Grid item xs={12 / 7}>SERVICES</Grid>
             <Grid item xs={12 / 7}>PROJECTS</Grid>
             <Grid item xs={12 / 7} className={classes.logo}>
-                <span style={{ color: "orange", fontStyle: "italic", fontSize: "14px" }}>from</span> THE <br />
+                <span style={{ color: "orange", fontStyle: "italic", fontSize: "14px", fontFamily: "Times new roman" }}>from</span> THE <br />
                 MORDERN <br />
                 TOUCH
             </Grid>
