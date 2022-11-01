@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'transparent',
         borderRadius: '30px',
         padding: '0 50px',
-        border: '1px solid'
+        border: '1px solid',
+        cursor: 'pointer'
     }
 }))
 

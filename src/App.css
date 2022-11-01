@@ -16,3 +16,9 @@
 #root {
   font-family: 'Times New Roman';
 }
+
+li {
+  list-style: none;
+  font-style: italic;
+  line-height: 24px;
+}
