@@ -61,7 +61,7 @@ const Footer = () => {
                 <div style={{ position: 'relative' }}>
                     <input type='text' placeHolder='Enter your email to subscribe Us' style={{
                         borderRadius: '30px', border: 'none',
-                        boxShadow: 'rgba(0, 0, 0, 0.18) 0px 2px 4px', width: '90%', padding: '10px 10%', marginTop: '10px'
+                        boxShadow: 'rgba(0, 0, 0, 0.18) 0px 2px 4px', width: '90%', textAlign: 'center', padding: '10px 10%', marginTop: '10px'
                     }} />
                     <button style={{
                         border: 'none', backgroundColor: '#fff', position: 'absolute', top: '10px', right: '5%', height: '36px', width: '36px',
