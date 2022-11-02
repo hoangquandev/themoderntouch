@@ -3,34 +3,30 @@ import Header from "./common/Header";
 import TopBar from "./common/TopBar";
 import HomePage from "./pages/HomePage";
 import LoadingPage from "./pages/LoadingPage";
-import './App.css'
+import "./App.css";
 import Footer from "./common/Footer";
 
-
 function App() {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     setTimeout(() => {
-      setLoading(false)
-    }, 2000)
-  }, [])
+      setLoading(false);
+    }, 3000);
+  }, []);
   return (
     <div>
-      {
-        loading ?
-          <LoadingPage />
-          :
-          <div>
-            <TopBar />
-            <Header />
-            <HomePage />
-            <Footer />
-          </div>
-
-      }
-
+      {loading ? (
+        <LoadingPage />
+      ) : (
+        <div>
+          <TopBar />
+          <Header />
+          <HomePage />
+          <Footer />
+        </div>
+      )}
     </div>
   );
 }

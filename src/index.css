@@ -1,5 +1,45 @@
+@font-face {
+    font-family: 'TimesNewRomanBoldItalic';
+    src: local('TimesNewRomanBoldItalic'), url(./assets/fonts/Times\ New\ Roman/TimesNewRomanBoldItalic.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Gotham';
+    src: local('Gotham'), url(./assets/fonts/SVN-GOTHAM/SVN-Gotham\ Black.otf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'TimesNewRomanItalic';
+    src: local('TimesNewRomanItalic'), url(./assets/fonts/Times\ New\ Roman/TimesNewRomanItalic.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'TimesNewRoman';
+    src: local('TimesNewRoman'), url(./assets/fonts/Times\ New\ Roman/TimesNewRoman.ttf) format('truetype');
+  }
+
+  
+
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    /* font-size: 62.5%; */
+    /* line-height: 1.6rem; */
+    font-family: 'TimesNewRoman';
     box-sizing: border-box;
 }
+
+img{
+    max-width: 100%;
+}
+

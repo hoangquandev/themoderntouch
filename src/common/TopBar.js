@@ -1,62 +1,84 @@
-import React from 'react'
-import { Box, Grid } from '@mui/material'
-import { makeStyles } from '@mui/styles'
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import SearchIcon from '@mui/icons-material/Search';
-import XIcon from '../helpers/XIcon';
-
-
-const useStyles = makeStyles((theme) => ({
-    Container: {
-        textAlign: "center",
-        height: "30px",
-        backgroundColor: "black",
-        fontSize: "10px",
-        lineHeight: "30px",
-        fontStyle: "italic",
-        color: "white",
-        padding: "0 100px"
-    },
-    subNav: {
-        paddingLeft: "10%",
-    },
-    textQuality: {
-        fontStyle: "normal",
-        letterSpacing: "5px",
-    },
-    language: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        cursor: "pointer"
-    },
-    search: {
-        display: "flex",
-        justifyContent: "right",
-        alignItems: "center",
-        cursor: "pointer"
-    }
-}))
+import React from "react";
+import styled from "styled-components";
+import slogan from "../assets/images/topbar/SloganWhite.png";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import SearchIcon from "@mui/icons-material/Search";
 
 const TopBar = () => {
-    const classes = useStyles()
-    return (
-        <Grid container className={classes.Container}>
-            <Grid item xs={11}>
-                <Grid container className={classes.subNav}>
-                    <Grid item xs={4}>info@themoderntouch.co</Grid>
-                    <Grid item xs={4}><span className={classes.textQuality}>QUALITY</span> Design  x  Life <span className={classes.textQuality}>QUALITY</span></Grid>
-                    <Grid item xs={4}>info@themoderntouch.co</Grid>
-                </Grid>
-            </Grid>
-            <Grid item xs={1}>
-                <Grid container style={{ height: "20px", fontStyle: "normal" }}>
-                    <Grid item xs={6} className={classes.search}><SearchIcon sx={{ fontSize: 15 }} /></Grid>
-                    <Grid item xs={6} className={classes.language}><Box sx={{ fontSize: 12 }}>EN</Box> <ArrowDropDownIcon sx={{ fontSize: 15 }} /></Grid>
-                </Grid>
-            </Grid>
-        </Grid >
-    )
-}
+  return (
+    <Container>
+      <Content>
+        <div>info@themoderntouch.co</div>
+        <Slogan>
+          <SloganImg src={slogan} alt="slogan" />
+        </Slogan>
+        <div>+84 28 39 305 018</div>
+      </Content>
+      <SubNav>
+        <Search>
+          <SearchIcon sx={{ fontSize: 15 }} />
+        </Search>
+        <DropDown>
+          <Language>EN</Language> <ArrowDropDownIcon sx={{ fontSize: 15 }} />
+        </DropDown>
+      </SubNav>
+    </Container>
+  );
+};
 
-export default TopBar
+const Container = styled.div`
+  width: 100%;
+  height: 3rem;
+  padding-left: calc(100% / 12);
+  padding-right: calc(100% / 12);
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Content = styled.div`
+  width: calc(11 * 100% / 12);
+  padding-left: calc(100% / 12);
+  text-align: center;
+  font-size: 0.75rem;
+  font-style: italic;
+  line-height: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
+const Slogan = styled.div`
+  margin-top: 10px;
+`;
+
+const SloganImg = styled.img`
+  height: 60px;
+`;
+
+const SubNav = styled.div`
+  width: calc(100% / 12);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: right;
+`;
+
+const Search = styled.div`
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  cursor: pointer;
+`;
+
+const DropDown = styled.div`
+  display: flex;
+  cursor: pointer;
+`;
+
+const Language = styled.div`
+  font-size: 0.8rem;
+`;
+
+export default TopBar;
