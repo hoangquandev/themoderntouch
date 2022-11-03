@@ -1,6 +1,6 @@
-import { Grid } from "@mui/material";
+import { Grid, sliderClasses } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React from "react";
+import React, { useState } from "react";
 import Hawaii from "./Slider/Hawaii";
 import Maps from "./Slider/Maps";
 import VietNam from "./Slider/VietNam";
@@ -13,6 +13,14 @@ const useStyles = makeStyles((theme) => ({
     height: "600px",
     margin: "4rem auto",
     position: "relative",
+    transition: "transform 0.7s ease",
+  },
+  containerScroll: {
+    maxWidth: "100%",
+    width: 500,
+    height: "300px",
+    margin: "4rem auto",
+    position: "relative",
   },
   callToAction: {
     position: "absolute",
@@ -23,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    transition: "all 0.7s ease",
     height: 100,
     "&:hover": {
       height: "150px",
@@ -42,9 +51,23 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Slider = () => {
+  const [slider, setSlider] = useState(false);
   const classes = useStyles();
+
+  const changeSlider = () => {
+    if (window.scrollY > 0) {
+      setSlider(true);
+    } else {
+      setSlider(false);
+    }
+  };
+  window.addEventListener("scroll", changeSlider);
+
   return (
-    <div className={classes.container}>
+    <div
+      className={classes.container}
+      style={slider ? { transform: "scale(50%)", height: "600px" } : {}}
+    >
       <Grid container justifyContent="center" spacing={9}>
         <Grid item xs={2}>
           <Hawaii />
