@@ -35,6 +35,9 @@ const Container = styled.div`
   color: #fff;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 960px) {
+    display: none;
+  }
 `;
 
 const Content = styled.div`

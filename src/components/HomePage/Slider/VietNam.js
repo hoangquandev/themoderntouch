@@ -1,33 +1,41 @@
-import { Box, Stack, Typography } from '@mui/material'
-import { makeStyles } from '@mui/styles'
-import React from 'react'
-import vietNam from '../../../assets/images/slider/SLIDER-06.png'
+import { Box, Stack, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+import React from "react";
+import vietNam from "../../../assets/images/slider/SLIDER-06.png";
 
 const useStyles = makeStyles((theme) => ({
-    image: {
-        maxWidth: "50%",
-        height: "100%"
-    }
-}))
+  container: {
+    marginTop: 30,
+  },
+  image: {
+    maxWidth: "70%",
+  },
+}));
 
 const VietNam = () => {
-    const classes = useStyles()
-    return (
-
-        <Stack
-            direction="column"
-            justifyContent="space-around"
-            alignItems="flex-end"
-            spacing={1}
+  const classes = useStyles();
+  return (
+    <Stack
+      direction="column"
+      justifyContent="space-between"
+      alignItems="flex-end"
+      className={classes.container}
+    >
+      <img src={vietNam} className={classes.image} alt="" />
+      <Box textAlign="right">
+        <Typography fontSize="20px" fontFamily="Gotham">
+          REPRESENTATIVE
+        </Typography>
+        <Typography
+          fontSize="70px"
+          fontFamily="TimesNewRomanItalic"
+          letterSpacing="-0.9px"
         >
-            <img src={vietNam} className={classes.image} alt='' />
-            <Box textAlign='right'>
-                <Typography variant='h6' fontFamily='Gotham'>REPRESENTATIVE</Typography>
-                <Typography variant='h2' fontFamily='TimesNewRomanItalic'>Viet Nam</Typography>
-            </Box>
-        </Stack >
+          Viet Nam
+        </Typography>
+      </Box>
+    </Stack>
+  );
+};
 
-    )
-}
-
-export default VietNam
+export default VietNam;

@@ -1,43 +1,124 @@
-import React from 'react'
-import { Grid } from '@mui/material'
-import { makeStyles } from '@mui/styles'
-
+import React from "react";
+import { makeStyles } from "@mui/styles";
+import logo from "../assets/images/slider/SLIDER-09.png";
 
 const useStyles = makeStyles((theme) => ({
-    navbar: {
-        height: "135px",
-        boxShadow: 'rgba(50, 50, 93, 0.25) 0 0 8px 0',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: "center",
-        textAlign: 'center',
-        padding: "0 10%"
+  container: {
+    maxWidth: "100%",
+    width: 1280,
+    margin: "0 auto",
+    position: "relative",
+    height: 125,
+  },
+  mainMenu: {
+    width: "100%",
+    position: "absolute",
+    left: "50%",
+    top: "50%",
+    transform: "translate(-50%,-50%)",
+  },
+  logoArea: {
+    width: "100px",
+    height: "100px",
+    position: "absolute",
+    left: "52%",
+    top: "50%",
+    transform: "translate(-50%,-50%)",
+    zIndex: 10,
+  },
+  navbar: {
+    listStyle: "none",
+    textAlign: "right",
+
+    "& *": {
+      float: "none",
+      display: "inline-block",
+      "&:nth-child(1)": {
+        float: "left",
+      },
+      "&:nth-child(2)": {
+        float: "left",
+      },
+      "&:nth-child(3)": {
+        float: "left",
+      },
+      "& *": {
+        color: "#000",
+        fontSize: "20px",
+        fontFamily: "Times New Roman",
+        fontStyle: "normal",
+        textTransform: "uppercase",
+        textDecoration: "none",
+        display: "block",
+        padding: "10px 40px",
+      },
     },
-    logo: {
-        fontFamily: "Gotham",
-        textAlign: "right",
-        fontWeight: '900',
-        fontSize: "20px"
-    }
-}))
+  },
+  "@media (max-width: 1280px)": {
+    container: {
+      width: 960,
+    },
+    navbar: {
+      "& *": {
+        "& *": {
+          fontSize: "20px",
+          padding: "10px 20px",
+        },
+      },
+    },
+  },
+  "@media (max-width: 960px)": {
+    logoArea: {
+      width: "100px",
+      height: "100px",
+      paddingLeft: "20px",
+      left: "10%",
+      top: "50%",
+      transform: "translate(-50%,-50%)",
+    },
+    navbar: {
+      display: "none",
+    },
+  },
+}));
 
 const Header = () => {
-    const classes = useStyles()
-    return (
-        <Grid container className={classes.navbar} spacing={4}>
-            <Grid item xs={12 / 7}>ABOUT US</Grid>
-            <Grid item xs={12 / 7}>SERVICES</Grid>
-            <Grid item xs={12 / 7}>PROJECTS</Grid>
-            <Grid item xs={12 / 7} className={classes.logo}>
-                <span style={{ color: "orange", fontStyle: "italic", fontSize: "14px", fontFamily: "Times new roman" }}>from</span> THE <br />
-                MORDERN <br />
-                TOUCH
-            </Grid>
-            <Grid item xs={12 / 7}>NEWS</Grid>
-            <Grid item xs={12 / 7}>CAREERS</Grid>
-            <Grid item xs={12 / 7}>CONTACT</Grid>
-        </Grid>
-    )
-}
+  const classes = useStyles();
+  return (
+    <div className={classes.container}>
+      <div className={classes.logoArea}>
+        <a href="#">
+          <img
+            src={logo}
+            style={{ maxWidth: "100%", marginTop: "13px" }}
+            atl="The Mordern Touch"
+          />
+        </a>
+      </div>
+      <div className={classes.mainMenu}>
+        <ul className={classes.navbar}>
+          <li>
+            <a href="#">about us</a>
+          </li>
+          <li>
+            <a href="#">services</a>
+          </li>
+          <li>
+            <a href="#">projects</a>
+          </li>
+          <li>
+            <a href="#">news</a>
+          </li>
+          <li>
+            <a href="#">careers</a>
+          </li>
+          <li>
+            <a href="#">contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-export default Header
+export default Header;
