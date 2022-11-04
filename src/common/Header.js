@@ -3,6 +3,15 @@ import { makeStyles } from "@mui/styles";
 import logo from "../assets/images/slider/SLIDER-09.png";
 
 const useStyles = makeStyles((theme) => ({
+  header: {
+    position: "sticky",
+    top: "0px",
+    left: "0px",
+    margin: "0 auto",
+    zIndex: 100,
+    width: "100%",
+    backgroundColor: "#fff",
+  },
   container: {
     maxWidth: "100%",
     width: 1280,
@@ -85,39 +94,41 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
   const classes = useStyles();
   return (
-    <div className={classes.container}>
-      <div className={classes.logoArea}>
-        <a href="#">
-          <img
-            src={logo}
-            style={{ maxWidth: "100%", marginTop: "13px" }}
-            atl="The Mordern Touch"
-          />
-        </a>
+    <header className={classes.header}>
+      <div className={classes.container}>
+        <div className={classes.logoArea}>
+          <a href="#">
+            <img
+              src={logo}
+              style={{ maxWidth: "100%", marginTop: "13px" }}
+              atl="The Mordern Touch"
+            />
+          </a>
+        </div>
+        <div className={classes.mainMenu}>
+          <ul className={classes.navbar}>
+            <li>
+              <a href="#">about us</a>
+            </li>
+            <li>
+              <a href="#">services</a>
+            </li>
+            <li>
+              <a href="#">projects</a>
+            </li>
+            <li>
+              <a href="#">news</a>
+            </li>
+            <li>
+              <a href="#">careers</a>
+            </li>
+            <li>
+              <a href="#">contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className={classes.mainMenu}>
-        <ul className={classes.navbar}>
-          <li>
-            <a href="#">about us</a>
-          </li>
-          <li>
-            <a href="#">services</a>
-          </li>
-          <li>
-            <a href="#">projects</a>
-          </li>
-          <li>
-            <a href="#">news</a>
-          </li>
-          <li>
-            <a href="#">careers</a>
-          </li>
-          <li>
-            <a href="#">contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    </header>
   );
 };
 

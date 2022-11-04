@@ -1,61 +1,81 @@
-// import { Grid } from '@mui/material'
-import { Stack } from '@mui/material'
-import { makeStyles } from '@mui/styles'
-import React from 'react'
+import { Stack } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+import React from "react";
+import imgService from "../../../assets/images/servicesImages/service-1.png";
 
 const useStyles = makeStyles((theme) => ({
-    card: {
-        height: '300px',
-        boxShadow: 'rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px',
-        borderRadius: "10px",
-        transition: 'transform 0.75s ease-out',
-        "&:hover": {
-            color: '#fff',
-            backgroundColor: '#ccc',
-            transform: 'scale(1.1)'
-        }
+  container: {
+    height: 300,
+    overflow: "hidden",
+    position: "relative",
+    boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
+    borderRadius: "10px",
+  },
+  card: {
+    height: "300px",
+    position: "relative",
+    "&:hover": {
+      color: "#fff",
+      backgroundImage: `url(${imgService})`,
+      transform: "scale(1.1)",
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      transition: "all 1s",
     },
-    number: {
-        display: 'flex',
-        alignItems: 'center',
-        height: '200px',
-        textAlign: 'center',
-        fontSize: '4rem'
+  },
+  number: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%,-50%)",
+    height: "200px",
+    textAlign: "center",
+    fontSize: "4rem",
+  },
+  titleCard: {
+    borderBottom: "1px solid",
+    position: "absolute",
+    top: "69%",
+    left: "50%",
+    transform: "translate(-50%,-50%)",
+    fontSize: "18px",
+    lineHeight: "20px",
+    paddingBottom: "8px",
+    "& *": {
+      width: "250px",
     },
-    titleCard: {
-        lineHeight: '40px',
-        borderBottom: '1px solid',
-        position: 'relative',
-        fontSize: '15px'
-    },
-    border: {
-        borderBottom: '3px solid',
-        width: '20%',
-        position: 'absolute',
-        top: '100%',
-        left: '50%',
-        transform: 'translate(-50%,-20%)',
-        borderRadius: '20px'
-    }
-}))
+  },
+  border: {
+    borderBottom: "3px solid",
+    width: "20%",
+    position: "absolute",
+    top: "100%",
+    left: "50%",
+    transform: "translate(-50%,-20%)",
+    borderRadius: "20px",
+  },
+}));
 
 const ServiceCard = () => {
-    const classes = useStyles()
-    return (
+  const classes = useStyles();
+  return (
+    <div className={classes.container}>
+      <Stack
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+        spacing={2}
+        className={classes.card}
+      >
+        <h1 className={classes.number}>1</h1>
+        <div className={classes.titleCard}>
+          <h3>ARCHITECTURAL DESIGN</h3>
+          <div className={classes.border}></div>
+        </div>
+      </Stack>
+    </div>
+  );
+};
 
-        <Stack
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-            spacing={2}
-            className={classes.card}
-        >
-            <h1 className={classes.number}>1</h1>
-            <div className={classes.titleCard}>ARCHITECTURAL DESIGN
-                <div className={classes.border}></div>
-            </div>
-        </Stack>
-    )
-}
-
-export default ServiceCard
+export default ServiceCard;

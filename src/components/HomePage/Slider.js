@@ -5,23 +5,32 @@ import Hawaii from "./Slider/Hawaii";
 import Maps from "./Slider/Maps";
 import VietNam from "./Slider/VietNam";
 import arrow from "../../assets/images/slider/SLIDER-08.png";
+import backgroundImage from "../../assets/images/slider/background.png";
 
 const useStyles = makeStyles((theme) => ({
+  sliderSection: {
+    width: "100vw",
+    overflow: "hidden",
+    position: "relative",
+    padding: "0 8px",
+  },
+  background: {
+    width: "100vw",
+    margin: "0 auto",
+    backgroundSize: "120%",
+    transition: "transform 0.7s ease",
+  },
   container: {
     maxWidth: "100%",
-    width: 1280,
-    height: "600px",
+    width: "100vw",
+    height: "781px",
     margin: "4rem auto",
     position: "relative",
     transition: "transform 0.7s ease",
+    backgroundColor: "#fff",
+    padding: "0 40px",
   },
-  containerScroll: {
-    maxWidth: "100%",
-    width: 500,
-    height: "300px",
-    margin: "4rem auto",
-    position: "relative",
-  },
+
   callToAction: {
     position: "absolute",
     top: "50%",
@@ -48,6 +57,17 @@ const useStyles = makeStyles((theme) => ({
     width: 300,
     margin: "auto",
   },
+  textH6: {
+    fontSize: "16px",
+    fontFamily: "TimesNewRomanItalic",
+  },
+  textH2: {
+    fontSize: "40px",
+    marginTop: "-20px",
+  },
+  image: {
+    maxWidth: "100%",
+  },
 }));
 
 const Slider = () => {
@@ -62,33 +82,100 @@ const Slider = () => {
     }
   };
   window.addEventListener("scroll", changeSlider);
-
   return (
-    <div
-      className={classes.container}
-      style={slider ? { transform: "scale(50%)", height: "600px" } : {}}
-    >
-      <Grid container justifyContent="center" spacing={9}>
-        <Grid item xs={2}>
-          <Hawaii />
-        </Grid>
-        <Grid item xs={7}>
-          <Maps />
-        </Grid>
-        <Grid item xs={3}>
-          <VietNam />
-        </Grid>
-      </Grid>
-      <div className={classes.callToAction}>
-        <h6 style={{ fontSize: "16px", fontFamily: "TimesNewRomanItalic" }}>
-          Become the leading Design Consulting Company in the segment
-        </h6>
-        <div className={classes.img}>
-          <img src={arrow} alt="CTA" style={{ maxWidth: "100%" }} />
+    <div className={classes.sliderSection}>
+      <div
+        className={classes.background}
+        style={
+          slider
+            ? {
+                backgroundImage: `url(${backgroundImage})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                transition: "all 1s",
+
+                backgroundSize: "100%",
+              }
+            : null
+        }
+      >
+        <div
+          className={classes.container}
+          style={
+            slider
+              ? {
+                  top: "-10px",
+                  transform: "scale(40%)",
+                  boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                  paddingLeft: "20px",
+                  paddingRight: "20px",
+                  left: "0px",
+                }
+              : null
+          }
+        >
+          <Grid container justifyContent="center" spacing={9}>
+            <Grid item xs={2}>
+              <Hawaii />
+            </Grid>
+            <Grid item xs={7}>
+              <Maps />
+            </Grid>
+            <Grid item xs={3}>
+              <VietNam />
+            </Grid>
+          </Grid>
+          <div
+            className={classes.callToAction}
+            style={
+              slider
+                ? {
+                    height: 200,
+                  }
+                : null
+            }
+          >
+            <h6
+              className={classes.textH6}
+              style={
+                slider
+                  ? {
+                      fontSize: "40px",
+                      width: "9000px",
+                    }
+                  : null
+              }
+            >
+              Become the leading Design Consulting Company in the segment
+            </h6>
+            <div
+              className={classes.img}
+              style={
+                slider
+                  ? {
+                      width: "900px",
+                    }
+                  : null
+              }
+            >
+              <img src={arrow} alt="CTA" className={classes.image} />
+            </div>
+            <h2
+              className={classes.textH2}
+              style={
+                slider
+                  ? {
+                      fontSize: "80px",
+                      width: "9000px",
+                    }
+                  : null
+              }
+            >
+              "Premium & Luxury"
+            </h2>
+          </div>
         </div>
-        <h2 style={{ fontSize: "40px", marginTop: "-20px" }}>
-          "Premium & Luxury"
-        </h2>
       </div>
     </div>
   );
