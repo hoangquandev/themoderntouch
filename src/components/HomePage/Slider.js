@@ -1,11 +1,12 @@
 import { Grid, sliderClasses } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Hawaii from "./Slider/Hawaii";
 import Maps from "./Slider/Maps";
 import VietNam from "./Slider/VietNam";
 import arrow from "../../assets/images/slider/SLIDER-08.png";
 import backgroundImage from "../../assets/images/slider/background.png";
+import { useViewportScroll } from "framer-motion";
 
 const useStyles = makeStyles((theme) => ({
   sliderSection: {
@@ -68,6 +69,30 @@ const useStyles = makeStyles((theme) => ({
   image: {
     maxWidth: "100%",
   },
+  "@media (max-width: 1600px)": {
+    container: {
+      height: "600px",
+    },
+    callToAction: {
+      top: "50%",
+    },
+  },
+  "@media (max-width: 1280px)": {
+    container: {
+      height: "480px",
+    },
+    callToAction: {
+      top: "50%",
+    },
+  },
+  "@media (max-width: 1024px)": {
+    container: {
+      height: "600px",
+    },
+    callToAction: {
+      top: "35%",
+    },
+  },
 }));
 
 const Slider = () => {
@@ -81,7 +106,47 @@ const Slider = () => {
       setSlider(false);
     }
   };
+  const useViewport = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+      const handleWindowResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleWindowResize);
+      return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
+    return { width };
+  };
+
   window.addEventListener("scroll", changeSlider);
+  const viewPort = useViewport();
+  const isMobile = viewPort.width <= 1024;
+  if (isMobile) {
+    return (
+      <div className={classes.container}>
+        <Grid container justifyContent="center" spacing={9}>
+          <Grid item xs={2}>
+            <Hawaii />
+          </Grid>
+          <Grid item xs={7}>
+            <Maps />
+          </Grid>
+          <Grid item xs={3}>
+            <VietNam />
+          </Grid>
+        </Grid>
+        <div className={classes.callToAction}>
+          <h6 className={classes.textH6}>
+            Become the leading Design Consulting Company in the segment
+          </h6>
+          <div className={classes.img}>
+            <img src={arrow} alt="CTA" className={classes.image} />
+          </div>
+          <h2 className={classes.textH2}>"Premium & Luxury"</h2>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className={classes.sliderSection}>
       <div
