@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import LoadingPage from "./pages/LoadingPage";
 import "./App.css";
 import Footer from "./common/Footer";
+import BottomBar from "./common/BottomBar";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -25,6 +26,7 @@ function App() {
           <Header />
           <HomePage />
           <Footer />
+          <BottomBar />
         </div>
       )}
     </div>
