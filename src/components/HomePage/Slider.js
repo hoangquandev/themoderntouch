@@ -1,12 +1,13 @@
-import { Grid, sliderClasses } from "@mui/material";
+import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Hawaii from "./Slider/Hawaii";
 import Maps from "./Slider/Maps";
 import VietNam from "./Slider/VietNam";
 import arrow from "../../assets/images/slider/SLIDER-08.png";
 import backgroundImage from "../../assets/images/slider/background.png";
-import { useViewportScroll } from "framer-motion";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const useStyles = makeStyles((theme) => ({
   sliderSection: {
@@ -18,8 +19,9 @@ const useStyles = makeStyles((theme) => ({
   background: {
     width: "100vw",
     margin: "0 auto",
+    marginBottom: "10rem",
     backgroundSize: "120%",
-    transition: "transform 0.7s ease",
+    transition: "transform 1s ease",
   },
   container: {
     maxWidth: "100%",
@@ -27,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     height: "781px",
     margin: "4rem auto",
     position: "relative",
-    transition: "transform 0.7s ease",
+    transition: "transform 1s ease",
     backgroundColor: "#fff",
     padding: "0 40px",
   },
@@ -95,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Slider = () => {
+const SliderSection = () => {
   const [slider, setSlider] = useState(false);
   const classes = useStyles();
 
@@ -155,12 +157,12 @@ const Slider = () => {
           slider
             ? {
                 backgroundImage: `url(${backgroundImage})`,
+                marginTop: "10rem",
+                marginBottom: "6rem",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
-                transition: "all 1s",
-
-                backgroundSize: "100%",
+                transition: "all 2s",
               }
             : null
         }
@@ -246,4 +248,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default SliderSection;
