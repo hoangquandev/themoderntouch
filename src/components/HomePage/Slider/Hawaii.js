@@ -17,7 +17,28 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Hawaii = () => {
+  const useViewport = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+      const handleWindowResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleWindowResize);
+      return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
+    return { width };
+  };
+
+  const viewPort = useViewport();
+  const isMobile = viewPort.width <= 1024;
   const classes = useStyles();
+  if (isMobile) {
+    return (
+      <div>
+        <img src={hawai} className={classes.image} alt="" />
+      </div>
+    );
+  }
   return (
     <Stack
       direction="column"

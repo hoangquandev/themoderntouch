@@ -10,25 +10,26 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     gap: "10px",
 
-    "&:nth-child(1)": {
-      fontSize: "60px",
-      fontFamily: "Times New Roman",
-      fontStyle: "normal",
-    },
+
   },
   title: {
     fontSize: "60px",
     fontFamily: "Times New Roman",
     fontStyle: "normal",
-    fontWeight: "normal",
+    textAlign: "center"
   },
   button: {
     backgroundColor: "transparent",
     borderRadius: "30px",
-    padding: "0 50px",
-    border: "1px solid",
+    padding: "4px 50px",
+    border: "1px solid #fe5600",
     cursor: "pointer",
   },
+  "@media (max-width: 1024px)": {
+    title: {
+      fontSize: "30px"
+    }
+  }
 }));
 
 const TitleProjects = () => {
@@ -36,7 +37,7 @@ const TitleProjects = () => {
   return (
     <div className={classes.container}>
       <h3 className={classes.title}>SELECTED PROJECTS</h3>
-      <button className={classes.button}>Read More</button>
+      <a href="#"><button className={classes.button}>Read More</button></a>
     </div>
   );
 };

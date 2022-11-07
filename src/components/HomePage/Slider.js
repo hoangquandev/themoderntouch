@@ -89,10 +89,12 @@ const useStyles = makeStyles((theme) => ({
   },
   "@media (max-width: 1024px)": {
     container: {
-      height: "600px",
+      height: "400px",
+      padding: "0 24px",
+      margin: "2rem auto"
     },
     callToAction: {
-      top: "35%",
+      top: "50%",
     },
   },
 }));
@@ -156,14 +158,14 @@ const SliderSection = () => {
         style={
           slider
             ? {
-                backgroundImage: `url(${backgroundImage})`,
-                marginTop: "10rem",
-                marginBottom: "6rem",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                transition: "all 2s",
-              }
+              backgroundImage: `url(${backgroundImage})`,
+              marginTop: "10rem",
+              marginBottom: "6rem",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              transition: "all 2s",
+            }
             : null
         }
       >
@@ -172,13 +174,13 @@ const SliderSection = () => {
           style={
             slider
               ? {
-                  top: "-10px",
-                  transform: "scale(40%)",
-                  boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-                  paddingLeft: "20px",
-                  paddingRight: "20px",
-                  left: "0px",
-                }
+                top: "-10px",
+                transform: "scale(40%)",
+                boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                paddingLeft: "20px",
+                paddingRight: "20px",
+                left: "0px",
+              }
               : null
           }
         >
@@ -198,8 +200,8 @@ const SliderSection = () => {
             style={
               slider
                 ? {
-                    height: 200,
-                  }
+                  height: 200,
+                }
                 : null
             }
           >
@@ -208,9 +210,9 @@ const SliderSection = () => {
               style={
                 slider
                   ? {
-                      fontSize: "40px",
-                      width: "9000px",
-                    }
+                    fontSize: "40px",
+                    width: "9000px",
+                  }
                   : null
               }
             >
@@ -221,8 +223,8 @@ const SliderSection = () => {
               style={
                 slider
                   ? {
-                      width: "900px",
-                    }
+                    width: "900px",
+                  }
                   : null
               }
             >
@@ -233,9 +235,9 @@ const SliderSection = () => {
               style={
                 slider
                   ? {
-                      fontSize: "80px",
-                      width: "9000px",
-                    }
+                    fontSize: "80px",
+                    width: "9000px",
+                  }
                   : null
               }
             >

@@ -7,6 +7,10 @@ import image2 from "../../../assets/images/avatarClients/avatar-clients-2.png";
 import image3 from "../../../assets/images/avatarClients/avatar-clients-3.png";
 
 const useStyles = makeStyles((theme) => ({
+  title: {
+    fontSize: "60px",
+    fontWeight: "normal"
+  },
   circle: {
     borderRadius: "50%",
     height: "100px",
@@ -32,6 +36,17 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "12px",
     fontStyle: "italic",
   },
+  "@media (max-width: 1024px)": {
+    title: {
+      fontSize: "30px",
+      padding: "0 30px"
+    },
+    circle: {
+      height: "70px",
+      width: "70px",
+
+    }
+  }
 }));
 
 const ClientPartner = () => {
@@ -42,13 +57,13 @@ const ClientPartner = () => {
       style={{ textAlign: "center", marginTop: "3rem", marginBottom: "3rem" }}
     >
       <Grid item xs={12} mb={4}>
-        <h2 style={{ fontSize: "60px", fontWeight: "normal" }}>
+        <h2 className={classes.title} >
           OUR CLIENTS & PARTNERS
         </h2>
       </Grid>
       <Grid item xs={8} margin="auto">
         <Grid container spacing={3}>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <img src={image1} className={classes.circle} alt="" />
             <h4 style={{ marginTop: "2rem" }}>MR. HOANG VAN QUYEN</h4>
             <div className={classes.border}></div>
@@ -66,7 +81,7 @@ const ClientPartner = () => {
               order that the value of commitments must be full to the client."
             </p>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <img src={image2} className={classes.circle} alt="" />
             <h4 style={{ marginTop: "2rem" }}>DIVA MY LINH</h4>
             <div className={classes.border}></div>
@@ -80,7 +95,7 @@ const ClientPartner = () => {
               area designed in an exquisite and unique style.”
             </p>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <img src={image3} className={classes.circle} alt="" />
             <h4 style={{ marginTop: "2rem" }}>MR. DANG VAN THOAI</h4>
             <div className={classes.border}></div>

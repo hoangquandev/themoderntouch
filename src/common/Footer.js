@@ -17,10 +17,114 @@ const useStyles = makeStyles((theme) => ({
   containerLeft: {
     textAlign: "left",
   },
+  containerMobile: {
+    padding: "1rem 24px",
+  },
+  itemMobile: {
+    display: "flex",
+    justifyContent: "space-between"
+  },
+  itemRight: {
+    textAlign: "right"
+  },
+  itemLeft: {
+    textAlign: "left"
+  },
+  newsLetter: {
+    textAlign: "center",
+    height: "100px",
+    margin: "1rem auto"
+  }
 }));
 
 const Footer = () => {
   const classes = useStyles();
+  const useViewport = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+      const handleWindowResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleWindowResize);
+      return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
+    return { width };
+  };
+
+  const viewPort = useViewport();
+  const isMobile = viewPort.width <= 600;
+  if (isMobile) {
+    return (
+      <div className={classes.containerMobile}>
+        <div className={classes.itemMobile}>
+          <div className={classes.itemLeft} style={{ width: "30%" }}>
+            <img src={logo} atl="TMT" style={{ maxWidth: "100%", height: "150px", marginTop: -20 }} />
+          </div>
+          <div className={classes.itemRight} style={{ width: "45%" }}>
+            <h4>CONTACT</h4>
+            <ul>
+              <li>200 Pasteur, Vo Thi Sau Ward, District 3, Ho Chi Minh City</li>
+              <li>info@themoderntouch.co</li>
+              <li>+84 28 39 305 018</li>
+            </ul>
+          </div>
+        </div>
+        <div className={classes.itemMobile}>
+          <div className={classes.itemLeft}>
+            <h4>ABOUT</h4>
+            <ul>
+              <li>People</li>
+              <li>Projects</li>
+              <li>News</li>
+              <li>Careers</li>
+            </ul>
+          </div>
+          <div className={classes.itemRight}>
+            <h4>SOCIAL</h4>
+            <ul>
+              <li>Facebook</li>
+              <li>Youtube</li>
+              <li>Linkedin</li>
+            </ul>
+          </div>
+        </div>
+        <div className={classes.newsLetter}>
+          <h2>SIGN UP NEWSLETTERS</h2>
+          <div style={{ position: "relative" }}>
+            <input
+              type="text"
+              placeHolder="Enter your email to subscribe Us"
+              style={{
+                borderRadius: "30px",
+                border: "none",
+                boxShadow: "rgba(0, 0, 0, 0.18) 0px 2px 4px",
+                width: "90%",
+                textAlign: "center",
+                padding: "10px 10%",
+                marginTop: "10px",
+              }}
+            />
+            <button
+              style={{
+                border: "none",
+                backgroundColor: "#fff",
+                position: "absolute",
+                top: "10px",
+                right: "5%",
+                height: "36px",
+                width: "36px",
+                boxShadow:
+                  "rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px",
+                borderRadius: "50%",
+              }}
+            >
+              <ArrowForwardIcon />
+            </button>
+          </div>
+        </div>
+      </div>
+    )
+  }
   return (
     <Grid container className={classes.container} spacing={3}>
       <Grid item xs={8}>

@@ -11,6 +11,10 @@ import ServiceCard5 from "./ServiceCard5.js";
 import ServiceCard6 from "./ServiceCard6.js";
 
 const useStyles = makeStyles((theme) => ({
+  title: {
+    fontFamily: "Times New Roman",
+    fontSize: "60px"
+  },
   content: {
     width: "100%",
     margin: "4rem auto",
@@ -47,6 +51,27 @@ const useStyles = makeStyles((theme) => ({
     height: "300px",
     margin: "0 15px",
   },
+  "@media (max-width: 1024px)": {
+    containerCard: {
+      width: "700px"
+    },
+    containerItem: {
+      width: "200px",
+      height: "200px",
+    }
+  },
+  "@media (max-width: 600px)": {
+    title: {
+      fontSize: "30px"
+    },
+    containerCard: {
+      width: "100%",
+    },
+    containerItem: {
+      width: "330px",
+      height: "100px"
+    }
+  }
 }));
 
 const Service = () => {
@@ -63,11 +88,11 @@ const Service = () => {
         margin: "0 auto",
       }}
     >
-      <Typography variant="h3" fontFamily="Times New Roman" fontSize="60px">
+      <h3 className={classes.title}>
         WHAT WE DO
         <span style={{ color: "#fe5600", fontStyle: "italic" }}> &</span> OUR
         SERVICES
-      </Typography>
+      </h3>
       <div className={classes.content}>
         <div item xs={2} className={classes.containerButton}>
           <div

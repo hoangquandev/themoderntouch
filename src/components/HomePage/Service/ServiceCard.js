@@ -55,6 +55,33 @@ const useStyles = makeStyles((theme) => ({
     transform: "translate(-50%,-20%)",
     borderRadius: "20px",
   },
+  "@media (max-width: 600px)": {
+    container: {
+      height: 100,
+    },
+    card: {
+      height: "100px"
+    },
+    number: {
+      top: "70%",
+      left: "17%",
+      transform: "translate(-50%,-50%)",
+      height: "100px",
+      textAlign: "center",
+      fontSize: "3rem",
+    },
+    titleCard: {
+      top: "38%",
+      left: "51%",
+      transform: "translate(-50%,-50%)",
+      fontSize: "18px",
+      lineHeight: "20px",
+      paddingBottom: "8px",
+      "& *": {
+        width: "250px",
+      },
+    },
+  }
 }));
 
 const ServiceCard = () => {

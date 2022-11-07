@@ -1,6 +1,9 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
+import SearchIcon from '@mui/icons-material/Search';
+import MenuIcon from '@mui/icons-material/Menu';
 import logo from "../assets/images/slider/SLIDER-09.png";
+import { display } from "@mui/system";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -36,6 +39,10 @@ const useStyles = makeStyles((theme) => ({
     transform: "translate(-50%,-50%)",
     zIndex: 10,
   },
+  imageLogo: {
+    maxWidth: "100%",
+    marginTop: "13px"
+  },
   navbar: {
     listStyle: "none",
     textAlign: "right",
@@ -64,9 +71,12 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  menuMobile: {
+    display: "none"
+  },
   "@media (max-width: 1280px)": {
     container: {
-      width: 960,
+      width: 1200,
     },
     navbar: {
       "& *": {
@@ -77,14 +87,32 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-  "@media (max-width: 960px)": {
+  "@media (max-width: 1024px)": {
+    container: {
+      maxWidth: "100%",
+      width: 960,
+      margin: "0 auto",
+      height: 90,
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding: "0 24px"
+    },
     logoArea: {
-      width: "100px",
-      height: "100px",
-      paddingLeft: "20px",
-      left: "10%",
+      width: "80px",
+      height: "80px",
+      position: "relative",
+      // paddingLeft: "20px",
       top: "50%",
-      transform: "translate(-50%,-50%)",
+      left: "0",
+      transform: "translateY(-50%)",
+    },
+    imageLogo: {
+      marginTop: "0"
+    },
+    menuMobile: {
+      display: "flex",
+      justifyContent: "center"
     },
     navbar: {
       display: "none",
@@ -101,11 +129,12 @@ const Header = () => {
           <a href="#">
             <img
               src={logo}
-              style={{ maxWidth: "100%", marginTop: "13px" }}
+              className={classes.imageLogo}
               atl="The Mordern Touch"
             />
           </a>
         </div>
+
         <div className={classes.mainMenu}>
           <ul className={classes.navbar}>
             <li>
@@ -127,6 +156,15 @@ const Header = () => {
               <a href="#">contact</a>
             </li>
           </ul>
+        </div>
+
+        <div className={classes.menuMobile}>
+          <div>
+            <SearchIcon fontSize="large" />
+          </div>
+          <div>
+            <MenuIcon fontSize="large" />
+          </div>
         </div>
       </div>
     </header>

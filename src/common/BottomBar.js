@@ -25,7 +25,7 @@ const Container = styled.div`
   font-size: 12px;
   font-style: italic;
   @media (max-width: 960px) {
-    display: none;
+    
   }
 `;
 
