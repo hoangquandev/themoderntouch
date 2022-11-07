@@ -57,7 +57,7 @@ const Footer = () => {
     return (
       <div className={classes.containerMobile}>
         <div className={classes.itemMobile}>
-          <div className={classes.itemLeft} style={{ width: "30%" }}>
+          <div className={classes.itemLeft} style={{ width: "150px" }}>
             <img src={logo} atl="TMT" style={{ maxWidth: "100%", height: "150px", marginTop: -20 }} />
           </div>
           <div className={classes.itemRight} style={{ width: "45%" }}>

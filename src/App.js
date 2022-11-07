@@ -6,7 +6,7 @@ import LoadingPage from "./pages/LoadingPage";
 import "./App.css";
 import Footer from "./common/Footer";
 import BottomBar from "./common/BottomBar";
-
+document.title = "The Modern Touch"
 function App() {
   const [loading, setLoading] = useState(false);
 
