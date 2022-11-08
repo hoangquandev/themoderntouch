@@ -13,7 +13,7 @@ import ServiceCard6 from "./ServiceCard6.js";
 const useStyles = makeStyles((theme) => ({
   title: {
     fontFamily: "Times New Roman",
-    fontSize: "60px"
+    fontSize: "60px",
   },
   content: {
     width: "100%",
@@ -53,31 +53,95 @@ const useStyles = makeStyles((theme) => ({
   },
   "@media (max-width: 1024px)": {
     containerCard: {
-      width: "700px"
+      width: "810px",
     },
     containerItem: {
-      width: "200px",
-      height: "200px",
-    }
-  },
-  "@media (max-width: 600px)": {
+      width: "240px",
+      height: "240px",
+      margin: "0 8px",
+    },
     title: {
-      fontSize: "30px"
+      fontSize: "36px",
+    },
+    button: {
+      height: "50px",
+      width: "50px",
+    },
+  },
+  "@media (max-width: 640px)": {
+    title: {
+      fontSize: "30px",
     },
     containerCard: {
       width: "100%",
     },
     containerItem: {
       width: "330px",
-      height: "100px"
-    }
-  }
+      height: "100px",
+      margin: "8px auto",
+    },
+  },
 }));
 
 const Service = () => {
   const classes = useStyles();
   const [isShownNext, setIsShownNext] = useState(false);
   const [isShown, setIsShown] = useState(false);
+  const useViewport = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+      const handleWindowResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleWindowResize);
+      return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
+    return { width };
+  };
+
+  const viewPort = useViewport();
+  const isMobile = viewPort.width <= 640;
+  if (isMobile) {
+    return (
+      <div
+        style={{
+          textAlign: "center",
+          fontFamily: "Times New Roman",
+          width: "1280px",
+          maxWidth: "100%",
+          margin: "0 auto",
+        }}
+      >
+        <h3 className={classes.title}>
+          WHAT WE DO
+          <span style={{ color: "#fe5600", fontStyle: "italic" }}> &</span> OUR
+          SERVICES
+        </h3>
+        <div className={classes.content}>
+          <div className={classes.containerCard}>
+            <div className={classes.containerItem}>
+              <ServiceCard />
+            </div>
+            <div className={classes.containerItem}>
+              <ServiceCard2 />
+            </div>
+            <div className={classes.containerItem}>
+              <ServiceCard3 />
+            </div>
+            <div className={classes.containerItem}>
+              <ServiceCard4 />
+            </div>
+            <div className={classes.containerItem}>
+              <ServiceCard5 />
+            </div>
+            <div className={classes.containerItem}>
+              <ServiceCard6 />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div
       style={{

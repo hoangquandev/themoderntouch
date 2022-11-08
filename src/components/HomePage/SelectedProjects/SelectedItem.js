@@ -6,6 +6,7 @@ import image2 from "../../../assets/images/SelectedProjects/Hinh-tung-cong-trinh
 import image3 from "../../../assets/images/SelectedProjects/Hinh-tung-cong-trinh/Sunrise-resort/WEBSITE TMT-31.png";
 
 import React, { useState } from "react";
+import SelectedMobile from "./SelectedMobile";
 const useStyles = makeStyles((theme) => ({
   image: {
     borderRadius: "10px",
@@ -151,6 +152,23 @@ const SelectedItem = (props) => {
       style: "Vintage",
     },
   ];
+  const useViewport = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+      const handleWindowResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleWindowResize);
+      return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
+    return { width };
+  };
+
+  const viewPort = useViewport();
+  const isMobile = viewPort.width <= 1024;
+  if (isMobile) {
+    return <SelectedMobile data={projectList} index={index} />;
+  }
   return (
     <Grid container spacing={2}>
       <Grid item xs={6}>

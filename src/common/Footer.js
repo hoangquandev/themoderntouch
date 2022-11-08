@@ -22,19 +22,69 @@ const useStyles = makeStyles((theme) => ({
   },
   itemMobile: {
     display: "flex",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   itemRight: {
-    textAlign: "right"
+    textAlign: "right",
+    margin: "12px 0 12px 12px",
   },
   itemLeft: {
-    textAlign: "left"
+    textAlign: "left",
+    margin: "12px 12px 12px 0",
   },
   newsLetter: {
     textAlign: "center",
     height: "100px",
-    margin: "1rem auto"
-  }
+    margin: "1rem auto",
+  },
+  input: {
+    borderRadius: "30px",
+    border: "none",
+    boxShadow: "rgba(0, 0, 0, 0.18) 0px 2px 4px",
+    width: "90%",
+    textAlign: "center",
+    padding: "10px 10%",
+    marginTop: "10px",
+  },
+  "@media (max-width: 1024px)": {
+    container: {
+      width: "90vw",
+      height: "200px",
+      borderTop: "1px solid ",
+      margin: "0 auto",
+      padding: "0 24px",
+      textAlign: "center",
+      fontSize: "12px",
+    },
+    containerLeft: {
+      textAlign: "left",
+    },
+    containerMobile: {
+      padding: "1rem 24px",
+    },
+    itemMobile: {
+      display: "flex",
+      justifyContent: "space-between",
+    },
+    itemRight: {
+      textAlign: "right",
+      margin: "12px 0 12px 12px",
+    },
+    itemLeft: {
+      textAlign: "left",
+      margin: "12px 12px 12px 0",
+    },
+    newsLetter: {
+      textAlign: "center",
+      height: "100px",
+      margin: "1rem auto",
+    },
+    input: {
+      fontSize: "12px",
+      fontStyle: "italic",
+      paddingLeft: "10px",
+    },
+  },
 }));
 
 const Footer = () => {
@@ -52,18 +102,24 @@ const Footer = () => {
   };
 
   const viewPort = useViewport();
-  const isMobile = viewPort.width <= 600;
+  const isMobile = viewPort.width <= 640;
   if (isMobile) {
     return (
       <div className={classes.containerMobile}>
         <div className={classes.itemMobile}>
           <div className={classes.itemLeft} style={{ width: "150px" }}>
-            <img src={logo} atl="TMT" style={{ maxWidth: "100%", height: "150px", marginTop: -20 }} />
+            <img
+              src={logo}
+              atl="TMT"
+              style={{ maxWidth: "100%", height: "150px", marginTop: -20 }}
+            />
           </div>
           <div className={classes.itemRight} style={{ width: "45%" }}>
             <h4>CONTACT</h4>
             <ul>
-              <li>200 Pasteur, Vo Thi Sau Ward, District 3, Ho Chi Minh City</li>
+              <li>
+                200 Pasteur, Vo Thi Sau Ward, District 3, Ho Chi Minh City
+              </li>
               <li>info@themoderntouch.co</li>
               <li>+84 28 39 305 018</li>
             </ul>
@@ -123,7 +179,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    )
+    );
   }
   return (
     <Grid container className={classes.container} spacing={3}>
@@ -171,15 +227,7 @@ const Footer = () => {
           <input
             type="text"
             placeHolder="Enter your email to subscribe Us"
-            style={{
-              borderRadius: "30px",
-              border: "none",
-              boxShadow: "rgba(0, 0, 0, 0.18) 0px 2px 4px",
-              width: "90%",
-              textAlign: "center",
-              padding: "10px 10%",
-              marginTop: "10px",
-            }}
+            className={classes.input}
           />
           <button
             style={{

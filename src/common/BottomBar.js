@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import slogan from "../assets/images/topbar/SloganWhite.png";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import SearchIcon from "@mui/icons-material/Search";
 
 const BottomBar = () => {
   return (
     <Container>
-      All Rights Reserved © 2022 The Modern Touch | Term & Conditions | Privacy
-      Policy
+      <p style={{ lineHeight: "14px" }}>
+        All Rights Reserved © 2022 The Modern Touch | Term & Conditions |
+        Privacy Policy
+      </p>
     </Container>
   );
 };
@@ -25,7 +24,8 @@ const Container = styled.div`
   font-size: 12px;
   font-style: italic;
   @media (max-width: 960px) {
-    
+    height: 2rem;
+    text-align: center;
   }
 `;
 

@@ -91,10 +91,21 @@ const useStyles = makeStyles((theme) => ({
     container: {
       height: "400px",
       padding: "0 24px",
-      margin: "2rem auto"
+      margin: "2rem auto",
+      marginBottom: "4rem",
     },
     callToAction: {
       top: "50%",
+    },
+    slogan: {
+      textAlign: "center",
+    },
+    title: {
+      fontSize: "36px",
+    },
+    subtitle: {
+      fontSize: "14px",
+      fontFamily: "TimesNewRomanItalic",
     },
   },
 }));
@@ -139,14 +150,12 @@ const SliderSection = () => {
             <VietNam />
           </Grid>
         </Grid>
-        <div className={classes.callToAction}>
-          <h6 className={classes.textH6}>
-            Become the leading Design Consulting Company in the segment
-          </h6>
-          <div className={classes.img}>
-            <img src={arrow} alt="CTA" className={classes.image} />
-          </div>
-          <h2 className={classes.textH2}>"Premium & Luxury"</h2>
+        <div className={classes.slogan}>
+          <p className={classes.subtitle}>Become the leading</p>
+          <p className={classes.subtitle}>
+            Design Consulting Company in the segment
+          </p>
+          <h3 className={classes.title}>“Premium & Luxury”</h3>
         </div>
       </div>
     );
@@ -158,14 +167,14 @@ const SliderSection = () => {
         style={
           slider
             ? {
-              backgroundImage: `url(${backgroundImage})`,
-              marginTop: "10rem",
-              marginBottom: "6rem",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              transition: "all 2s",
-            }
+                backgroundImage: `url(${backgroundImage})`,
+                marginTop: "10rem",
+                marginBottom: "6rem",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                transition: "all 2s",
+              }
             : null
         }
       >
@@ -174,13 +183,13 @@ const SliderSection = () => {
           style={
             slider
               ? {
-                top: "-10px",
-                transform: "scale(40%)",
-                boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-                paddingLeft: "20px",
-                paddingRight: "20px",
-                left: "0px",
-              }
+                  top: "-10px",
+                  transform: "scale(40%)",
+                  boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                  paddingLeft: "20px",
+                  paddingRight: "20px",
+                  left: "0px",
+                }
               : null
           }
         >
@@ -200,8 +209,8 @@ const SliderSection = () => {
             style={
               slider
                 ? {
-                  height: 200,
-                }
+                    height: 200,
+                  }
                 : null
             }
           >
@@ -210,9 +219,9 @@ const SliderSection = () => {
               style={
                 slider
                   ? {
-                    fontSize: "40px",
-                    width: "9000px",
-                  }
+                      fontSize: "40px",
+                      width: "9000px",
+                    }
                   : null
               }
             >
@@ -223,8 +232,8 @@ const SliderSection = () => {
               style={
                 slider
                   ? {
-                    width: "900px",
-                  }
+                      width: "900px",
+                    }
                   : null
               }
             >
@@ -235,9 +244,9 @@ const SliderSection = () => {
               style={
                 slider
                   ? {
-                    fontSize: "80px",
-                    width: "9000px",
-                  }
+                      fontSize: "80px",
+                      width: "9000px",
+                    }
                   : null
               }
             >
