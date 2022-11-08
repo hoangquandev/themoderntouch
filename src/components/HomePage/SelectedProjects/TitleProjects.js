@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     gap: "10px",
   },
   title: {
-    fontSize: "60px",
+    fontSize: "36px",
     fontFamily: "Times New Roman",
     fontStyle: "normal",
     textAlign: "center",

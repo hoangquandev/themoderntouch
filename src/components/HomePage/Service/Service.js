@@ -13,7 +13,7 @@ import ServiceCard6 from "./ServiceCard6.js";
 const useStyles = makeStyles((theme) => ({
   title: {
     fontFamily: "Times New Roman",
-    fontSize: "60px",
+    fontSize: "36px",
   },
   content: {
     width: "100%",

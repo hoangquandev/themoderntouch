@@ -1,12 +1,15 @@
 import { makeStyles } from "@mui/styles";
 import React from "react";
-import img1 from "../../../assets/images/logo/sliderlogo1.png";
+import img1 from "../../../assets/images/logo/logo-clients-1.png";
+import img2 from "../../../assets/images/logo/logo-clients-2.png";
+import img3 from "../../../assets/images/logo/logo-clients-3.png";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     maxWidth: "100%",
     width: "1280px",
     margin: "0 auto",
+    marginBottom: "3rem"
   },
   "@media (max-width: 1024px)": {
     container: {

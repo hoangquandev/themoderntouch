@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     top: "69%",
     left: "50%",
     transform: "translate(-50%,-50%)",
-    fontSize: "18px",
+    fontSize: "14px",
     lineHeight: "20px",
     paddingBottom: "8px",
     "& *": {

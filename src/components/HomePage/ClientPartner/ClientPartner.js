@@ -1,4 +1,4 @@
-import { ClassNames } from "@emotion/react";
+
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
@@ -8,7 +8,7 @@ import image3 from "../../../assets/images/avatarClients/avatar-clients-3.png";
 
 const useStyles = makeStyles((theme) => ({
   title: {
-    fontSize: "60px",
+    fontSize: "36px",
     fontWeight: "normal"
   },
   circle: {
@@ -62,7 +62,7 @@ const ClientPartner = () => {
         </h2>
       </Grid>
       <Grid item xs={8} margin="auto">
-        <Grid container spacing={3}>
+        <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
             <img src={image1} className={classes.circle} alt="" />
             <h4 style={{ marginTop: "2rem" }}>MR. HOANG VAN QUYEN</h4>

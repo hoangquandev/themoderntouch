@@ -152,7 +152,7 @@ const BodyProject = () => {
   return (
     <div>
       <SelectedItem index={selectIndex} />
-      <div>
+      <div style={{ padding: "0 30px" }}>
         <ul className={classes.selectList}>
           <li onClick={handleSelected1} className={classes.itemSelect}>
             {selectedImg1 ? (
