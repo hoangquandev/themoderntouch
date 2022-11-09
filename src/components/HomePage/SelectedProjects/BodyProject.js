@@ -179,56 +179,58 @@ const BodyProject = () => {
   return (
     <div className={classes.container}>
       <div className={classes.content}>
-        <Slider asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-          <div>
-            <SelectedItem index={selectIndex} />
-          </div>
-        </Slider>
+        <div data-aos="zoom-in" data-aos-duration="1500">
+          <Slider asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+            <div>
+              <SelectedItem index={selectIndex} />
+            </div>
+          </Slider>
+        </div>
 
         <div style={{ margin: "0 auto" }}>
           <Slider

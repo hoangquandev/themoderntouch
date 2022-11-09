@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./common/Header";
 import TopBar from "./common/TopBar";
 
-import LoadingPage from "./pages/LoadingPage";
+// import LoadingPage from "./pages/LoadingPage";
 import "./App.css";
 import { routes } from "./routes/index";
 document.title = "The Modern Touch";

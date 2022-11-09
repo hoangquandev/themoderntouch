@@ -1,6 +1,5 @@
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { motion } from "framer-motion";
 import thumbnailImg from "../../../assets/images/thumbnailProject/sunrise-1.png";
 import image1 from "../../../assets/images/SelectedProjects/Hinh-tung-cong-trinh/Sunrise-resort/WEBSITE TMT-29.png";
 import image2 from "../../../assets/images/SelectedProjects/Hinh-tung-cong-trinh/Sunrise-resort/WEBSITE TMT-30.png";
@@ -34,7 +33,7 @@ import image22 from "../../../assets/images/ProjectsData/thecalla-2.png";
 import image23 from "../../../assets/images/ProjectsData/thecalla-3.png";
 import image24 from "../../../assets/images/ProjectsData/thecalla-4.png";
 
-import React, { useState } from "react";
+import React from "react";
 import SelectedMobile from "./SelectedMobile";
 const useStyles = makeStyles((theme) => ({
   image: {
@@ -193,7 +192,7 @@ const SelectedItem = (props) => {
     return <SelectedMobile data={projectList} index={index} />;
   }
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, x: "100%" }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 2 }}
@@ -360,7 +359,7 @@ const SelectedItem = (props) => {
           </Grid>
         </Grid>
       </Grid>
-    </motion.div>
+    </div>
   );
 };
 
