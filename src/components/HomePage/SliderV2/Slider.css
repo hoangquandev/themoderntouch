@@ -34,10 +34,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    width: 570px;
 }
 
 .sliderItem img{
-    height: 260px;
+    height: 290px;
     
 }
