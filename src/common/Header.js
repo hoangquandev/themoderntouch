@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "@mui/styles";
-import SearchIcon from '@mui/icons-material/Search';
-import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from "@mui/icons-material/Search";
+import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/images/slider/SLIDER-09.png";
-import { display } from "@mui/system";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     width: 1280,
     margin: "0 auto",
     position: "relative",
-    height: 125,
+    height: 100,
   },
   mainMenu: {
     width: "100%",
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imageLogo: {
     maxWidth: "100%",
-    marginTop: "13px"
+    marginTop: "13px",
   },
   navbar: {
     listStyle: "none",
@@ -72,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   menuMobile: {
-    display: "none"
+    display: "none",
   },
   "@media (max-width: 1280px)": {
     container: {
@@ -96,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
-      padding: "0 24px"
+      padding: "0 24px",
     },
     logoArea: {
       width: "80px",
@@ -108,11 +109,11 @@ const useStyles = makeStyles((theme) => ({
       transform: "translateY(-50%)",
     },
     imageLogo: {
-      marginTop: "0"
+      marginTop: "0",
     },
     menuMobile: {
       display: "flex",
-      justifyContent: "center"
+      justifyContent: "center",
     },
     navbar: {
       display: "none",
@@ -122,6 +123,10 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = () => {
   const classes = useStyles();
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <header className={classes.header}>
       <div className={classes.container}>
@@ -131,28 +136,30 @@ const Header = () => {
               src={logo}
               className={classes.imageLogo}
               atl="The Mordern Touch"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
             />
           </a>
         </div>
 
         <div className={classes.mainMenu}>
           <ul className={classes.navbar}>
-            <li>
+            <li data-aos="fade-right" data-aos-duration="1000">
               <a href="#">about us</a>
             </li>
-            <li>
+            <li data-aos="fade-right" data-aos-duration="1000">
               <a href="#">services</a>
             </li>
-            <li>
+            <li data-aos="fade-right" data-aos-duration="1000">
               <a href="#">projects</a>
             </li>
-            <li>
+            <li data-aos="fade-left" data-aos-duration="1000">
               <a href="#">news</a>
             </li>
-            <li>
+            <li data-aos="fade-left" data-aos-duration="1000">
               <a href="#">careers</a>
             </li>
-            <li>
+            <li data-aos="fade-left" data-aos-duration="1000">
               <a href="#">contact</a>
             </li>
           </ul>

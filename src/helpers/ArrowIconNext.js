@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
     flexDirection: "column",
-    gap: "20px",
+    gap: "12px",
   },
   "@media (max-width: 1024px)": {
     container: { gap: "10px" },

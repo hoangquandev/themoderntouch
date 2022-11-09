@@ -8,6 +8,9 @@ const useStyles = makeStyles((theme) => ({
     padding: "4px 50px",
     border: "1px solid #fe5600",
     cursor: "pointer",
+    fontFamily: "Times New Roman",
+    fontStyle: "italic",
+    fontSize: "16px",
   },
 }));
 
@@ -15,7 +18,7 @@ const ReadMoreButton = () => {
   const classes = useStyles();
 
   return (
-    <a href="#">
+    <a href="/projects">
       <button className={classes.button}>Read More</button>
     </a>
   );

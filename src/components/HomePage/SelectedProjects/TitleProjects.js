@@ -1,15 +1,16 @@
 import { makeStyles } from "@mui/styles";
 import React from "react";
-import ReadMoreButton from "../../../helpers/ReadMoreButton";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    height: "225px",
+    // height: "225px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
     gap: "10px",
+    marginBottom: "3rem",
   },
   title: {
     fontSize: "36px",
@@ -60,9 +61,12 @@ const TitleProjects = () => {
     );
   }
   return (
-    <div className={classes.container}>
+    <div
+      className={classes.container}
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <h3 className={classes.title}>SELECTED PROJECTS</h3>
-      <ReadMoreButton className={classes.button} />
     </div>
   );
 };

@@ -1,12 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import slogan from "../assets/images/topbar/SloganWhite.png";
+import slogan from "../assets/images/slider/SLIDER-08.png";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SearchIcon from "@mui/icons-material/Search";
 
 const TopBar = () => {
   return (
-    <Container>
+    <Container
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="300"
+      data-aos-offset="0"
+    >
       <Content>
         <div>info@themoderntouch.co</div>
         <Slogan>
@@ -28,7 +33,7 @@ const TopBar = () => {
 
 const Container = styled.div`
   width: 100%;
-  height: 3rem;
+  height: 1.5rem;
   padding-left: calc(100% / 12);
   padding-right: calc(100% / 12);
   background-color: #000;
@@ -57,7 +62,8 @@ const Slogan = styled.div`
 `;
 
 const SloganImg = styled.img`
-  height: 60px;
+  height: 20px;
+  padding-left: 25px;
 `;
 
 const SubNav = styled.div`

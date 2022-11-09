@@ -1,4 +1,3 @@
-
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
@@ -9,7 +8,7 @@ import image3 from "../../../assets/images/avatarClients/avatar-clients-3.png";
 const useStyles = makeStyles((theme) => ({
   title: {
     fontSize: "36px",
-    fontWeight: "normal"
+    fontWeight: "normal",
   },
   circle: {
     borderRadius: "50%",
@@ -22,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   desciption: {
     textAlign: "justify",
-    fontSize: "14px",
+    fontSize: "15px",
     marginTop: "1rem",
     fontStyle: "italic",
   },
@@ -39,14 +38,13 @@ const useStyles = makeStyles((theme) => ({
   "@media (max-width: 1024px)": {
     title: {
       fontSize: "30px",
-      padding: "0 30px"
+      padding: "0 30px",
     },
     circle: {
       height: "70px",
       width: "70px",
-
-    }
-  }
+    },
+  },
 }));
 
 const ClientPartner = () => {
@@ -57,15 +55,13 @@ const ClientPartner = () => {
       style={{ textAlign: "center", marginTop: "3rem", marginBottom: "3rem" }}
     >
       <Grid item xs={12} mb={4}>
-        <h2 className={classes.title} >
-          OUR CLIENTS & PARTNERS
-        </h2>
+        <h2 className={classes.title}>OUR CLIENTS & PARTNERS</h2>
       </Grid>
-      <Grid item xs={8} margin="auto">
+      <Grid item xs={10} margin="auto">
         <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
             <img src={image1} className={classes.circle} alt="" />
-            <h4 style={{ marginTop: "2rem" }}>MR. HOANG VAN QUYEN</h4>
+            <h3 style={{ marginTop: "2rem" }}>MR. HOANG VAN QUYEN</h3>
             <div className={classes.border}></div>
             <p className={classes.subTitle}>
               FORMER DIRECTOR OF KOHLER IN VIETNAM
@@ -83,7 +79,7 @@ const ClientPartner = () => {
           </Grid>
           <Grid item xs={12} md={4}>
             <img src={image2} className={classes.circle} alt="" />
-            <h4 style={{ marginTop: "2rem" }}>DIVA MY LINH</h4>
+            <h3 style={{ marginTop: "2rem" }}>DIVA MY LINH</h3>
             <div className={classes.border}></div>
             <p className={classes.subTitle}>CO-OWNER OF SAIGON SMILE SPA</p>
             <p className={classes.desciption}>
@@ -97,7 +93,7 @@ const ClientPartner = () => {
           </Grid>
           <Grid item xs={12} md={4}>
             <img src={image3} className={classes.circle} alt="" />
-            <h4 style={{ marginTop: "2rem" }}>MR. DANG VAN THOAI</h4>
+            <h3 style={{ marginTop: "2rem" }}>MR. DANG VAN THOAI</h3>
             <div className={classes.border}></div>
             <p className={classes.subTitle}>PRESIDENT OF MEKONG ONE</p>
             <p className={classes.desciption}>

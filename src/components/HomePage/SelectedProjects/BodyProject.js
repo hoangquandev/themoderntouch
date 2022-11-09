@@ -1,7 +1,7 @@
-import { Grid } from "@mui/material";
+import React, { useRef, useState } from "react";
 import { makeStyles } from "@mui/styles";
 
-import React, { useState } from "react";
+import Slider from "react-slick";
 
 import img1 from "../../../assets/images/SelectedProjects/1-black-diamond.png";
 import img2 from "../../../assets/images/SelectedProjects/2-black-mailinh.png";
@@ -20,6 +20,7 @@ import imgActive6 from "../../../assets/images/SelectedProjects/6-orange-ritavo.
 import imgActive7 from "../../../assets/images/SelectedProjects/7-orange-oneheritage.png";
 import imgActive8 from "../../../assets/images/SelectedProjects/8-orange-fideco.png";
 import SelectedItem from "./SelectedItem";
+import ReadMoreButton from "../../../helpers/ReadMoreButton";
 
 const selectList = [img1, img2, img3, img4, img5, img6, img7, img8];
 const activeList = [
@@ -45,11 +46,25 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "2rem",
   },
   itemSelect: {
-    margin: "0 10px",
+    margin: "0 7px",
     cursor: "pointer",
+    height: "100px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 }));
 const BodyProject = () => {
+  const settings = {
+    className: "center variable-width",
+    centerMode: true,
+    focusOnSelect: true,
+    infinite: true,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    speed: 500,
+  };
+
   const classes = useStyles();
   const [selectIndex, setSelectedIndex] = useState(3);
   const [selectedImg1, setSelectedImg1] = useState(false);
@@ -149,10 +164,322 @@ const BodyProject = () => {
     setSelectedImg8(true);
     setSelectedIndex(7);
   };
+  const selectedIndex = useRef(-1);
+  const el = useRef < HTMLDivElement > null;
+
+  const [nav1, setNav1] = useState();
+  const [nav2, setNav2] = useState();
+
   return (
     <div>
-      <SelectedItem index={selectIndex} />
-      <div style={{ padding: "0 30px" }}>
+      <Slider asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+        <div>
+          <SelectedItem index={selectIndex} />
+        </div>
+      </Slider>
+
+      <div
+        style={{ margin: "0 auto" }}
+        data-aos="flip-left"
+        data-aos-duration="500"
+      >
+        <Slider
+          asNavFor={nav1}
+          ref={(slider2) => setNav2(slider2)}
+          {...settings}
+          style={{ width: "98%", padding: "0 80px" }}
+        >
+          <div>
+            <div
+              onClick={handleSelected1}
+              className={classes.itemSelect}
+              style={{ padding: "0 20px" }}
+            >
+              {selectedImg1 ? (
+                <img style={{ height: "100px" }} src={activeList[0]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[0]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div
+              onClick={handleSelected2}
+              className={classes.itemSelect}
+              style={{ padding: "0 20px" }}
+            >
+              {selectedImg2 ? (
+                <img style={{ height: "100px" }} src={activeList[1]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[1]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div
+              onClick={handleSelected3}
+              className={classes.itemSelect}
+              style={{ padding: "0 20px" }}
+            >
+              {selectedImg3 ? (
+                <img style={{ height: "100px" }} src={activeList[2]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[2]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div
+              onClick={handleSelected4}
+              className={classes.itemSelect}
+              style={{ padding: "0 20px" }}
+            >
+              {selectedImg4 ? (
+                <img style={{ height: "100px" }} src={activeList[3]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[3]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div onClick={handleSelected5} className={classes.itemSelect}>
+              {selectedImg5 ? (
+                <img style={{ height: "100px" }} src={activeList[4]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[4]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div onClick={handleSelected6} className={classes.itemSelect}>
+              {selectedImg6 ? (
+                <img style={{ height: "100px" }} src={activeList[5]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[5]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div onClick={handleSelected7} className={classes.itemSelect}>
+              {selectedImg7 ? (
+                <img style={{ height: "100px" }} src={activeList[6]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[6]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div onClick={handleSelected8} className={classes.itemSelect}>
+              {selectedImg8 ? (
+                <img style={{ height: "100px" }} src={activeList[7]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[7]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div
+              onClick={handleSelected1}
+              className={classes.itemSelect}
+              style={{ padding: "0 20px" }}
+            >
+              {selectedImg1 ? (
+                <img style={{ height: "100px" }} src={activeList[0]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[0]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div
+              onClick={handleSelected2}
+              className={classes.itemSelect}
+              style={{ padding: "0 20px" }}
+            >
+              {selectedImg2 ? (
+                <img style={{ height: "100px" }} src={activeList[1]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[1]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div
+              onClick={handleSelected3}
+              className={classes.itemSelect}
+              style={{ padding: "0 20px" }}
+            >
+              {selectedImg3 ? (
+                <img style={{ height: "100px" }} src={activeList[2]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[2]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div
+              onClick={handleSelected4}
+              className={classes.itemSelect}
+              style={{ padding: "0 20px" }}
+            >
+              {selectedImg4 ? (
+                <img style={{ height: "100px" }} src={activeList[3]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[3]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div onClick={handleSelected5} className={classes.itemSelect}>
+              {selectedImg5 ? (
+                <img style={{ height: "100px" }} src={activeList[4]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[4]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div onClick={handleSelected6} className={classes.itemSelect}>
+              {selectedImg6 ? (
+                <img style={{ height: "100px" }} src={activeList[5]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[5]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div onClick={handleSelected7} className={classes.itemSelect}>
+              {selectedImg7 ? (
+                <img style={{ height: "100px" }} src={activeList[6]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[6]} alt="" />
+              )}
+            </div>
+          </div>
+          <div>
+            <div onClick={handleSelected8} className={classes.itemSelect}>
+              {selectedImg8 ? (
+                <img style={{ height: "100px" }} src={activeList[7]} alt="" />
+              ) : (
+                <img style={{ height: "100px" }} src={selectList[7]} alt="" />
+              )}
+            </div>
+          </div>
+          {/* <div onClick={handleSelected1} className={classes.itemSelect}>
+          {selectedImg1 ? (
+            <img style={{ height: "150px" }} src={activeList[0]} alt="" />
+          ) : (
+            <img style={{ height: "150px" }} src={selectList[0]} alt="" />
+          )}
+        </div>
+        <div onClick={handleSelected2} className={classes.itemSelect}>
+          {selectedImg2 ? (
+            <img style={{ height: "150px" }} src={activeList[1]} alt="" />
+          ) : (
+            <img style={{ height: "150px" }} src={selectList[1]} alt="" />
+          )}
+        </div>
+        <div onClick={handleSelected3} className={classes.itemSelect}>
+          {selectedImg3 ? (
+            <img style={{ height: "150px" }} src={activeList[2]} alt="" />
+          ) : (
+            <img style={{ height: "150px" }} src={selectList[2]} alt="" />
+          )}
+        </div>
+        <div onClick={handleSelected4} className={classes.itemSelect}>
+          {selectedImg4 ? (
+            <img style={{ height: "150px" }} src={activeList[3]} alt="" />
+          ) : (
+            <img style={{ height: "150px" }} src={selectList[3]} alt="" />
+          )}
+        </div>
+        <div onClick={handleSelected5} className={classes.itemSelect}>
+          {selectedImg5 ? (
+            <img style={{ height: "150px" }} src={activeList[4]} alt="" />
+          ) : (
+            <img style={{ height: "150px" }} src={selectList[4]} alt="" />
+          )}
+        </div>
+        <div onClick={handleSelected6} className={classes.itemSelect}>
+          {selectedImg6 ? (
+            <img style={{ height: "150px" }} src={activeList[5]} alt="" />
+          ) : (
+            <img style={{ height: "150px" }} src={selectList[5]} alt="" />
+          )}
+        </div>
+        <div onClick={handleSelected7} className={classes.itemSelect}>
+          {selectedImg7 ? (
+            <img style={{ height: "150px" }} src={activeList[6]} alt="" />
+          ) : (
+            <img style={{ height: "150px" }} src={selectList[6]} alt="" />
+          )}
+        </div>
+        <div onClick={handleSelected8} className={classes.itemSelect}>
+          {selectedImg8 ? (
+            <img style={{ height: "150px" }} src={activeList[7]} alt="" />
+          ) : (
+            <img style={{ height: "150px" }} src={selectList[7]} alt="" />
+          )}
+        </div> */}
+        </Slider>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "2rem auto",
+          }}
+        >
+          <ReadMoreButton />
+        </div>
+      </div>
+
+      {/* <div style={{ padding: "0 30px" }}>
         <ul className={classes.selectList}>
           <li onClick={handleSelected1} className={classes.itemSelect}>
             {selectedImg1 ? (
@@ -211,7 +538,7 @@ const BodyProject = () => {
             )}
           </li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

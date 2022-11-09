@@ -26,17 +26,17 @@ const useStyles = makeStyles((theme) => ({
   },
   number: {
     position: "absolute",
-    top: "50%",
+    top: "60%",
     left: "50%",
     transform: "translate(-50%,-50%)",
     height: "200px",
     textAlign: "center",
-    fontSize: "4rem",
+    fontSize: "5rem",
   },
   titleCard: {
     borderBottom: "1px solid",
     position: "absolute",
-    top: "69%",
+    top: "79%",
     left: "50%",
     transform: "translate(-50%,-50%)",
     fontSize: "14px",
@@ -153,7 +153,8 @@ const ServiceCard3 = () => {
       >
         <h1 className={classes.number}>3</h1>
         <div className={classes.titleCard}>
-          <h3>MASTER PLANNING SURVEY & ANALYSIS</h3>
+          <h3>MASTER PLANNING SURVEY </h3>
+          <h3>& ANALYSIS</h3>
           <div className={classes.border}></div>
         </div>
       </Stack>

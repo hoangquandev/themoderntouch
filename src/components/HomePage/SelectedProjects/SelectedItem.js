@@ -1,38 +1,38 @@
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import thumbnailImg from "../../../assets/images/ProjectsData/sunrise-1.png";
+import { motion } from "framer-motion";
+import thumbnailImg from "../../../assets/images/thumbnailProject/sunrise-1.png";
 import image1 from "../../../assets/images/SelectedProjects/Hinh-tung-cong-trinh/Sunrise-resort/WEBSITE TMT-29.png";
 import image2 from "../../../assets/images/SelectedProjects/Hinh-tung-cong-trinh/Sunrise-resort/WEBSITE TMT-30.png";
 import image3 from "../../../assets/images/SelectedProjects/Hinh-tung-cong-trinh/Sunrise-resort/WEBSITE TMT-31.png";
-import thumbnailImg1 from "../../../assets/images/ProjectsData/diamond-1.png"
+import thumbnailImg1 from "../../../assets/images/thumbnailProject/diamond-1.png";
 import image4 from "../../../assets/images/ProjectsData/diamond-2.png";
 import image5 from "../../../assets/images/ProjectsData/diamond-3.png";
 import image6 from "../../../assets/images/ProjectsData/diamond-4.png";
-import thumbnailImage2 from "../../../assets/images/ProjectsData/fideco-1.png";
+import thumbnailImage2 from "../../../assets/images/thumbnailProject/fideco-1.png";
 import image7 from "../../../assets/images/ProjectsData/fideco-2.png";
 import image8 from "../../../assets/images/ProjectsData/fideco-3.png";
 import image9 from "../../../assets/images/ProjectsData/fideco-4.png";
-import thumbnailImage3 from "../../../assets/images/ProjectsData/mailinh-1.png";
+import thumbnailImage3 from "../../../assets/images/thumbnailProject/mailinh-1.png";
 import image10 from "../../../assets/images/ProjectsData/mailinh-2.png";
 import image11 from "../../../assets/images/ProjectsData/mailinh-3.png";
 import image12 from "../../../assets/images/ProjectsData/mailinh-4.png";
-import thumbnailImage4 from "../../../assets/images/ProjectsData/oneheritage-1.png";
+import thumbnailImage4 from "../../../assets/images/thumbnailProject/oneheritage-1.png";
 import image13 from "../../../assets/images/ProjectsData/oneheritage-2.png";
 import image14 from "../../../assets/images/ProjectsData/oneheritage-3.png";
 import image15 from "../../../assets/images/ProjectsData/oneheritage-4.png";
-import thumbnailImage5 from "../../../assets/images/ProjectsData/ritavo-1.png";
+import thumbnailImage5 from "../../../assets/images/thumbnailProject/ritavo-1.png";
 import image16 from "../../../assets/images/ProjectsData/ritavo-2.png";
 import image17 from "../../../assets/images/ProjectsData/ritavo-3.png";
 import image18 from "../../../assets/images/ProjectsData/ritavo-4.png";
-import thumbnailImage6 from "../../../assets/images/ProjectsData/tayho-1.png";
+import thumbnailImage6 from "../../../assets/images/thumbnailProject/tayho-1.png";
 import image19 from "../../../assets/images/ProjectsData/tayho-2.png";
 import image20 from "../../../assets/images/ProjectsData/tayho-3.png";
 import image21 from "../../../assets/images/ProjectsData/tayho-4.png";
-import thumbnailImage7 from "../../../assets/images/ProjectsData/thecalla-1.png";
+import thumbnailImage7 from "../../../assets/images/thumbnailProject/thecalla-1.png";
 import image22 from "../../../assets/images/ProjectsData/thecalla-2.png";
 import image23 from "../../../assets/images/ProjectsData/thecalla-3.png";
 import image24 from "../../../assets/images/ProjectsData/thecalla-4.png";
-
 
 import React, { useState } from "react";
 import SelectedMobile from "./SelectedMobile";
@@ -87,7 +87,6 @@ const SelectedItem = (props) => {
       style: "Modern",
     },
 
-
     {
       name: "TAY HO VILLA",
       thumbnailImage: thumbnailImage6,
@@ -102,9 +101,6 @@ const SelectedItem = (props) => {
       number: 2,
       style: "Modern, Asian Contemporary",
     },
-
-
-
 
     {
       name: "SUNRISE RESORT",
@@ -143,7 +139,7 @@ const SelectedItem = (props) => {
       client: `RITA VO`,
       location: `Cai Rang, Can Tho`,
       lotArea: 2.015,
-      conArea: 11.760,
+      conArea: 11.76,
       pool: 860,
       height: "49,75",
       number: 12,
@@ -157,9 +153,9 @@ const SelectedItem = (props) => {
       description: `The villa is designed in a semi-classical style, which is a harmonious combination of high-class materials in an airy space. Prominent on the light color of the ceiling and walls is the warm brown color, creating a cozy and trendy feeling like entering a magnificent heritage.`,
       client: `MEKONG ONE`,
       location: `Ba Dinh, Ha Noi`,
-      lotArea: '1,723',
+      lotArea: "1,723",
       conArea: 890,
-      pool: '1,458',
+      pool: "1,458",
       height: "18,3",
       number: 4,
       style: "Semi Classic",
@@ -172,7 +168,7 @@ const SelectedItem = (props) => {
       description: `Fideco Building is located in the central area of District 1, with a luxurious and high-class design orientation, meeting Grade A office standards.`,
       client: `FIDECO`,
       location: `District 1, Ho Chi Minh`,
-      lotArea: '356,3',
+      lotArea: "356,3",
       conArea: 163.611,
       pool: 860,
       number: 18,
@@ -197,130 +193,138 @@ const SelectedItem = (props) => {
     return <SelectedMobile data={projectList} index={index} />;
   }
   return (
-    <Grid container spacing={2} style={{ padding: "0 30px" }}>
-      <Grid item xs={6}>
-        <img
-          src={projectList[index].thumbnailImage}
-          className={classes.image}
-          alt=""
-        />
-      </Grid>
-      <Grid item xs={6}>
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <Grid container spacing={2}>
-              <Grid item xs={8}>
-                <img
-                  src={projectList[index].images[0]}
-                  className={classes.image}
-                  alt=""
-                />
-              </Grid>
-              <Grid item xs={4}>
-                <Grid container spacing={1}>
-                  <Grid item xs={12}>
-                    <img
-                      src={projectList[index].images[1]}
-                      className={classes.image}
-                      alt=""
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <img
-                      src={projectList[index].images[2]}
-                      className={classes.image}
-                      alt=""
-                    />
+    <motion.div
+      initial={{ opacity: 0, x: "100%" }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1 }}
+    >
+      <Grid container spacing={2} style={{ padding: "0 30px" }}>
+        <Grid item xs={6}>
+          <img
+            src={projectList[index].thumbnailImage}
+            className={classes.image}
+            alt=""
+          />
+        </Grid>
+        <Grid item xs={6}>
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <Grid container spacing={2}>
+                <Grid item xs={8}>
+                  <img
+                    src={projectList[index].images[0]}
+                    className={classes.image}
+                    alt=""
+                  />
+                </Grid>
+                <Grid item xs={4}>
+                  <Grid container spacing={1}>
+                    <Grid item xs={12}>
+                      <img
+                        src={projectList[index].images[1]}
+                        className={classes.image}
+                        alt=""
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <img
+                        src={projectList[index].images[2]}
+                        className={classes.image}
+                        alt=""
+                      />
+                    </Grid>
                   </Grid>
                 </Grid>
               </Grid>
             </Grid>
-          </Grid>
-          <Grid item xs={12}>
-            <Grid
-              container
-              spacing={1.8}
-              style={{ fontSize: "11px", fontStyle: "italic" }}
-            >
+            <Grid item xs={12}>
               <Grid
-                item
-                xs={4}
-                style={{ fontSize: "11px", textAlign: "justify" }}
+                container
+                spacing={1.8}
+                style={{ fontSize: "11px", fontStyle: "italic" }}
               >
-                <div>{projectList[index].description}</div>
-              </Grid>
-              <Grid item xs={4} style={{ fontSize: "11px" }}>
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
+                <Grid
+                  item
+                  xs={4}
+                  style={{ fontSize: "11px", textAlign: "justify" }}
                 >
-                  <div>Client:</div>
-                  <b>{projectList[index].client}</b>
-                </div>
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <div>Design consultant:</div>
-                  <b>{projectList[index].design}</b>
-                </div>
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <div>Local consultant:</div>
-                  <b>THE MODERN TOUCH</b>
-                </div>
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <div>Location:</div>
-                  <b>{projectList[index].location}</b>
-                </div>
-              </Grid>
-              <Grid item xs={4} style={{ fontSize: "12px" }}>
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <div>Lot area:</div>
-                  <b>
-                    {projectList[index].lotArea} m
-                    <span style={{ verticalAlign: "super" }}>2</span>
-                  </b>
-                </div>
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <div>Construction area:</div>
-                  <b>
-                    {projectList[index].conArea} m
-                    <span style={{ verticalAlign: "super" }}>2</span>
-                  </b>
-                </div>
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <div>Public area/swimming pool:</div>
-                  <b>
-                    {projectList[index].pool} m
-                    <span style={{ verticalAlign: "super" }}>2</span>
-                  </b>
-                </div>
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <div>Number of stories:</div>
-                  <b>{projectList[index].number} Stories</b>
-                </div>
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <div>Style:</div>
-                  <b>{projectList[index].style}</b>
-                </div>
+                  <div style={{ height: "150px" }}>
+                    {projectList[index].description}
+                  </div>
+                </Grid>
+                <Grid item xs={4} style={{ fontSize: "11px" }}>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div>Client:</div>
+                    <b>{projectList[index].client}</b>
+                  </div>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div>Design consultant:</div>
+                    <b>{projectList[index].design}</b>
+                  </div>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div>Local consultant:</div>
+                    <b>THE MODERN TOUCH</b>
+                  </div>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div>Location:</div>
+                    <b>{projectList[index].location}</b>
+                  </div>
+                </Grid>
+                <Grid item xs={4} style={{ fontSize: "12px" }}>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div>Lot area:</div>
+                    <b>
+                      {projectList[index].lotArea} m
+                      <span style={{ verticalAlign: "super" }}>2</span>
+                    </b>
+                  </div>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div>Construction area:</div>
+                    <b>
+                      {projectList[index].conArea} m
+                      <span style={{ verticalAlign: "super" }}>2</span>
+                    </b>
+                  </div>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div>Public area/swimming pool:</div>
+                    <b>
+                      {projectList[index].pool} m
+                      <span style={{ verticalAlign: "super" }}>2</span>
+                    </b>
+                  </div>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div>Number of stories:</div>
+                    <b>{projectList[index].number} Stories</b>
+                  </div>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div>Style:</div>
+                    <b>{projectList[index].style}</b>
+                  </div>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </motion.div>
   );
 };
 

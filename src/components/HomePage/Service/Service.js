@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { Grid, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard.js";
 import { makeStyles } from "@mui/styles";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import ArrowIconNext from "../../../helpers/ArrowIconNext.js";
 import ArrowIconPre from "../../../helpers/ArrowIconPre.js";
 import ServiceCard2 from "./ServiceCard2.js";
@@ -12,20 +13,21 @@ import ServiceCard6 from "./ServiceCard6.js";
 
 const useStyles = makeStyles((theme) => ({
   title: {
+    marginTop: "4rem",
     fontFamily: "Times New Roman",
     fontSize: "36px",
   },
   content: {
     width: "100%",
-    margin: "4rem auto",
+    margin: "2rem auto",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
   button: {
     boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
-    height: "100px",
-    width: "100px",
+    height: "50px",
+    width: "50px",
     borderRadius: "50%",
     "&:hover": {
       boxShadow: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
@@ -49,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   containerItem: {
     width: "300px",
     height: "300px",
-    margin: "0 15px",
+    margin: "15px 15px",
   },
   "@media (max-width: 1024px)": {
     containerCard: {
@@ -87,6 +89,7 @@ const Service = () => {
   const classes = useStyles();
   const [isShownNext, setIsShownNext] = useState(false);
   const [isShown, setIsShown] = useState(false);
+
   const useViewport = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
 
@@ -99,6 +102,10 @@ const Service = () => {
     return { width };
   };
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   const viewPort = useViewport();
   const isMobile = viewPort.width <= 640;
   if (isMobile) {
@@ -112,11 +119,13 @@ const Service = () => {
           margin: "0 auto",
         }}
       >
-        <h3 className={classes.title}>
-          WHAT WE DO
-          <span style={{ color: "#fe5600", fontStyle: "italic" }}> &</span> OUR
-          SERVICES
-        </h3>
+        <div>
+          <h3 className={classes.title}>
+            WHAT WE DO
+            <span style={{ color: "#fe5600", fontStyle: "italic" }}>&</span>
+            OUR SERVICES
+          </h3>
+        </div>
         <div className={classes.content}>
           <div className={classes.containerCard}>
             <div className={classes.containerItem}>
@@ -152,7 +161,7 @@ const Service = () => {
         margin: "0 auto",
       }}
     >
-      <h3 className={classes.title}>
+      <h3 className={classes.title} data-aos="fade-up" data-aos-duration="1000">
         WHAT WE DO
         <span style={{ color: "#fe5600", fontStyle: "italic" }}> &</span> OUR
         SERVICES
