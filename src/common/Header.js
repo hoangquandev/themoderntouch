@@ -136,8 +136,6 @@ const Header = () => {
               src={logo}
               className={classes.imageLogo}
               atl="The Mordern Touch"
-              data-aos="zoom-in"
-              data-aos-duration="1000"
             />
           </a>
         </div>

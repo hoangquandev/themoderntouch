@@ -6,12 +6,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 const TopBar = () => {
   return (
-    <Container
-      data-aos="fade-zoom-in"
-      data-aos-easing="ease-in-back"
-      data-aos-delay="300"
-      data-aos-offset="0"
-    >
+    <Container>
       <Content>
         <div>info@themoderntouch.co</div>
         <Slogan>

@@ -1,5 +1,6 @@
 .container {
-
+ 
+    margin-top: 20px;
     height: calc(100vh - 155px);
     width: 100%;
     overflow: hidden;
@@ -8,7 +9,7 @@
 .zoom {
     background-image: url("../../../assets//images/slider/background.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     height: calc(100vh - 155px);
     width: 100%;

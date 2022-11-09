@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Slider from "react-slick";
 // import { useState } from 'react'
 import "./Slider.css"
@@ -11,14 +11,12 @@ import slider3 from "../../../assets/images/slider/banner-3.png"
 
 
 const Banner = () => {
-    // const [zoom, setZoom] = useState(false)
-    // const zoomable = () => {
-    //     if (window.scrollY > 10) {
-    //         setZoom(true)
-    //     } else {
-    //         setZoom(false)
-    //     }
-    // }
+    const [zoom, setZoom] = useState(false)
+    const zoomable = () => {
+        if (window.scrollY > 1) {
+            setZoom(true)
+        } 
+    }
     
     const settings = {
     infinite: true,
@@ -28,12 +26,12 @@ const Banner = () => {
       arrows: false,
       };
 
-    // window.addEventListener("scroll", zoomable)
+    window.addEventListener("scroll", zoomable)
     return (
         <div className='container' 
         data-aos="zoom-out"
           data-aos-duration="1000"
-        // style={zoom ? { transform: "scale(1)", transition: "all 1s linear" } : { transform: "scale(4)", transition: "all 1s linear" }}
+        style={zoom ? { transform: "scale(1)", transition: "all 1s linear" } : { transform: "scale(2.7)", transition: "all 1s linear" }}
         >
             <div className='zoom'>
                 <Slider className='slider' {...settings}>
