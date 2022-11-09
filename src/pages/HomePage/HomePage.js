@@ -23,7 +23,6 @@ const HomePage = () => {
 
       <Service />
       <SelectedProject />
-      <Quotes />
       <ClientPartner />
       <SlideLogo />
       <Footer />
