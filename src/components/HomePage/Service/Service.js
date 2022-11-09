@@ -10,8 +10,16 @@ import ServiceCard3 from "./ServiceCard3.js";
 import ServiceCard4 from "./ServiceCard4.js";
 import ServiceCard5 from "./ServiceCard5.js";
 import ServiceCard6 from "./ServiceCard6.js";
+import Quotes from "../Quote/Quotes.js";
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    textAlign: "center",
+    fontFamily: "Times New Roman",
+    width: "1280px",
+    maxWidth: "100%",
+    margin: "0 auto",
+  },
   title: {
     marginTop: "4rem",
     fontFamily: "Times New Roman",
@@ -46,12 +54,17 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     flexWrap: "wrap",
-    width: "1020px",
+    // width: "1020px",
   },
   containerItem: {
     width: "300px",
     height: "300px",
     margin: "15px 15px",
+  },
+  "@media (max-width: 1300px)": {
+    containerCard: {
+      width: "1060px",
+    },
   },
   "@media (max-width: 1024px)": {
     containerCard: {
@@ -152,16 +165,13 @@ const Service = () => {
     );
   }
   return (
-    <div
-      style={{
-        textAlign: "center",
-        fontFamily: "Times New Roman",
-        width: "1280px",
-        maxWidth: "100%",
-        margin: "0 auto",
-      }}
-    >
-      <h3 className={classes.title} data-aos="fade-up" data-aos-duration="1000">
+    <div className={classes.container}>
+      <h3
+        className={classes.title}
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+      >
         WHAT WE DO
         <span style={{ color: "#fe5600", fontStyle: "italic" }}> &</span> OUR
         SERVICES
@@ -178,22 +188,51 @@ const Service = () => {
         </div>
         <div item xs={8}>
           <div className={classes.containerCard}>
-            <div className={classes.containerItem}>
+            <div
+              className={classes.containerItem}
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+            >
               <ServiceCard />
             </div>
-            <div className={classes.containerItem}>
+            <div
+              className={classes.containerItem}
+              data-aos="zoom-in"
+              data-aos-delay="400"
+              data-aos-duration="2000"
+            >
               <ServiceCard2 />
             </div>
-            <div className={classes.containerItem}>
+            <div
+              className={classes.containerItem}
+              data-aos="zoom-in"
+              data-aos-delay="800"
+              data-aos-duration="2000"
+            >
               <ServiceCard3 />
             </div>
-            <div className={classes.containerItem}>
+            <div
+              className={classes.containerItem}
+              data-aos="zoom-in"
+              data-aos-delay="1200"
+              data-aos-duration="2000"
+            >
               <ServiceCard4 />
             </div>
-            <div className={classes.containerItem}>
+            <div
+              className={classes.containerItem}
+              data-aos="zoom-in"
+              data-aos-delay="1600"
+              data-aos-duration="2000"
+            >
               <ServiceCard5 />
             </div>
-            <div className={classes.containerItem}>
+            <div
+              className={classes.containerItem}
+              data-aos="zoom-in"
+              data-aos-delay="2000"
+              data-aos-duration="2000"
+            >
               <ServiceCard6 />
             </div>
           </div>
@@ -208,6 +247,7 @@ const Service = () => {
           </div>
         </div>
       </div>
+      <Quotes />
     </div>
   );
 };

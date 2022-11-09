@@ -8,9 +8,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    flexDirection: "column",
-    gap: "10px",
+
     marginBottom: "3rem",
+    marginTop: "3rem",
   },
   title: {
     fontSize: "36px",
@@ -18,13 +18,7 @@ const useStyles = makeStyles((theme) => ({
     fontStyle: "normal",
     textAlign: "center",
   },
-  button: {
-    backgroundColor: "transparent",
-    borderRadius: "30px",
-    padding: "4px 50px",
-    border: "1px solid #fe5600",
-    cursor: "pointer",
-  },
+
   "@media (max-width: 1024px)": {
     title: {
       fontSize: "36px",
@@ -64,6 +58,7 @@ const TitleProjects = () => {
     <div
       className={classes.container}
       data-aos="fade-up"
+      data-aos-easing="linear"
       data-aos-duration="1000"
     >
       <h3 className={classes.title}>SELECTED PROJECTS</h3>

@@ -1,7 +1,7 @@
 import { Stack } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
-import imgService from "../../../assets/images/servicesImages/service-2.png";
+import imgService from "../../../assets/images/services/service-2.png";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -14,13 +14,12 @@ const useStyles = makeStyles((theme) => ({
   card: {
     height: "300px",
     position: "relative",
+    backgroundImage: `url(${imgService})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
     "&:hover": {
-      color: "#fff",
-      backgroundImage: `url(${imgService})`,
       transform: "scale(1.1)",
-      backgroundPosition: "center",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
       transition: "all 1s",
     },
   },
@@ -32,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
     height: "200px",
     textAlign: "center",
     fontSize: "5rem",
+    color: "#fe5600",
   },
   titleCard: {
     borderBottom: "1px solid",
@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "14px",
     lineHeight: "20px",
     paddingBottom: "8px",
+    color: "#fff",
     "& *": {
       width: "250px",
     },

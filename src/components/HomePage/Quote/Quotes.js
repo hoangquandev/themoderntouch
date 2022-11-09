@@ -7,7 +7,7 @@ const Quotes = () => {
       <h4 style={{ marginBottom: "0.1rem" }}>
         “Quality
         <Typical
-          steps={[" Design", 2000, " Life", 2000]}
+          steps={[" Design", 3000, " Life", 3000]}
           loop={Infinity}
           wrapper="span"
         />

@@ -196,7 +196,7 @@ const SelectedItem = (props) => {
     <motion.div
       initial={{ opacity: 0, x: "100%" }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 2 }}
     >
       <Grid container spacing={2} style={{ padding: "0 30px" }}>
         <Grid item xs={6}>
@@ -254,25 +254,41 @@ const SelectedItem = (props) => {
                 </Grid>
                 <Grid item xs={4} style={{ fontSize: "11px" }}>
                   <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    style={{
+                      display: "flex",
+                      lineHeight: "16px",
+                      justifyContent: "space-between",
+                    }}
                   >
                     <div>Client:</div>
                     <b>{projectList[index].client}</b>
                   </div>
                   <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    style={{
+                      display: "flex",
+                      lineHeight: "16px",
+                      justifyContent: "space-between",
+                    }}
                   >
                     <div>Design consultant:</div>
                     <b>{projectList[index].design}</b>
                   </div>
                   <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    style={{
+                      display: "flex",
+                      lineHeight: "16px",
+                      justifyContent: "space-between",
+                    }}
                   >
                     <div>Local consultant:</div>
                     <b>THE MODERN TOUCH</b>
                   </div>
                   <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    style={{
+                      display: "flex",
+                      lineHeight: "16px",
+                      justifyContent: "space-between",
+                    }}
                   >
                     <div>Location:</div>
                     <b>{projectList[index].location}</b>
@@ -280,7 +296,11 @@ const SelectedItem = (props) => {
                 </Grid>
                 <Grid item xs={4} style={{ fontSize: "12px" }}>
                   <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    style={{
+                      display: "flex",
+                      lineHeight: "16px",
+                      justifyContent: "space-between",
+                    }}
                   >
                     <div>Lot area:</div>
                     <b>
@@ -289,7 +309,11 @@ const SelectedItem = (props) => {
                     </b>
                   </div>
                   <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    style={{
+                      display: "flex",
+                      lineHeight: "16px",
+                      justifyContent: "space-between",
+                    }}
                   >
                     <div>Construction area:</div>
                     <b>
@@ -298,7 +322,11 @@ const SelectedItem = (props) => {
                     </b>
                   </div>
                   <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    style={{
+                      display: "flex",
+                      lineHeight: "16px",
+                      justifyContent: "space-between",
+                    }}
                   >
                     <div>Public area/swimming pool:</div>
                     <b>
@@ -307,13 +335,21 @@ const SelectedItem = (props) => {
                     </b>
                   </div>
                   <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    style={{
+                      display: "flex",
+                      lineHeight: "16px",
+                      justifyContent: "space-between",
+                    }}
                   >
                     <div>Number of stories:</div>
                     <b>{projectList[index].number} Stories</b>
                   </div>
                   <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    style={{
+                      display: "flex",
+                      lineHeight: "16px",
+                      justifyContent: "space-between",
+                    }}
                   >
                     <div>Style:</div>
                     <b>{projectList[index].style}</b>
