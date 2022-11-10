@@ -60,11 +60,12 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    width: "180px",
   },
 }));
 const BodyProject = () => {
   const settings = {
-    className: "center",
+    className: "center variable-width",
     centerMode: true,
     focusOnSelect: true,
     infinite: true,
@@ -72,6 +73,7 @@ const BodyProject = () => {
     slidesToScroll: 1,
     speed: 500,
     arrows: false,
+    variableWidth: true,
   };
 
   const classes = useStyles();
@@ -238,7 +240,7 @@ const BodyProject = () => {
             asNavFor={nav1}
             ref={(slider2) => setNav2(slider2)}
             {...settings}
-            style={{ width: "100%", padding: "0 80px" }}
+            style={{ width: "100%" }}
           >
             <div>
               <div
@@ -280,11 +282,7 @@ const BodyProject = () => {
               </div>
             </div>
             <div>
-              <div
-                onClick={handleSelected4}
-                className={classes.itemSelect}
-                style={{ padding: "0 10px" }}
-              >
+              <div onClick={handleSelected4} className={classes.itemSelect}>
                 {selectedImg4 ? (
                   <img style={{ height: "100px" }} src={activeList[3]} alt="" />
                 ) : (
@@ -293,7 +291,11 @@ const BodyProject = () => {
               </div>
             </div>
             <div>
-              <div onClick={handleSelected5} className={classes.itemSelect}>
+              <div
+                onClick={handleSelected5}
+                className={classes.itemSelect}
+                style={{ width: "121px" }}
+              >
                 {selectedImg5 ? (
                   <img style={{ height: "100px" }} src={activeList[4]} alt="" />
                 ) : (
@@ -302,7 +304,11 @@ const BodyProject = () => {
               </div>
             </div>
             <div>
-              <div onClick={handleSelected6} className={classes.itemSelect}>
+              <div
+                onClick={handleSelected6}
+                className={classes.itemSelect}
+                style={{ width: "121px" }}
+              >
                 {selectedImg6 ? (
                   <img style={{ height: "100px" }} src={activeList[5]} alt="" />
                 ) : (
@@ -311,7 +317,11 @@ const BodyProject = () => {
               </div>
             </div>
             <div>
-              <div onClick={handleSelected7} className={classes.itemSelect}>
+              <div
+                onClick={handleSelected7}
+                className={classes.itemSelect}
+                style={{ width: "121px" }}
+              >
                 {selectedImg7 ? (
                   <img style={{ height: "100px" }} src={activeList[6]} alt="" />
                 ) : (
