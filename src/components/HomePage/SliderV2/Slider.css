@@ -47,11 +47,29 @@
     background-image: url("../../../assets/images/banner\ mobile/backgroundbanner.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: calc(100vh);
+    height: calc(100vh - 90px);
     position: relative;
 }
 
-
+.bannerMoblie .text {
+    width: 100%;
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.bannerMoblie .text .subSlogan {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.bannerMoblie .text .slogan {
+    margin-top: 10px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: bold;
+}
 
 .bannerMoblie img {
     max-width: 60%;

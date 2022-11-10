@@ -41,15 +41,24 @@ const Banner = () => {
 
         return { width };
     };
-
+    
     const viewPort = useViewport();
     const isMobile = viewPort.width <= 640;
     if (isMobile) {
         return (
             <div className='bannerMoblie'>
-                <div className='image'>
+                <div className='image' id='parallax'>
                     <img src={beforeMobile} alt='' />
                 </div>
+                <div className='text'>
+                    <p className='subSlogan'> Become the leading <br/>
+                  
+                    
+                    Design Consulting Company in the Segment
+                    </p>
+                    <h4 className='slogan'>"Premium & Luxury"</h4>
+                </div>
+                
             </div>
         )
     }

@@ -95,7 +95,11 @@ const ClientPartner = () => {
           }}
         >
           <Grid item xs={12} mb={4}>
-            <h2 className={classes.title}>
+            <h2
+              className={classes.title}
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               OUR CLIENTS{" "}
               <span style={{ fontStyle: "italic", color: "#fe5600" }}>&</span>{" "}
               PARTNERS
@@ -103,7 +107,14 @@ const ClientPartner = () => {
           </Grid>
           <Grid item xs={10} md={12} margin="auto">
             <Grid container spacing={5}>
-              <Grid item xs={12} md={4}>
+              <Grid
+                item
+                xs={12}
+                md={4}
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="2000"
+              >
                 <img src={image1} className={classes.circle} alt="" />
                 <h3 style={{ marginTop: "2rem" }}>MR. HOANG VAN QUYEN</h3>
                 <div className={classes.border}></div>
@@ -122,7 +133,14 @@ const ClientPartner = () => {
                   must be full to the client."
                 </p>
               </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid
+                item
+                xs={12}
+                md={4}
+                data-aos="fade-up"
+                data-aos-delay="300"
+                data-aos-duration="2000"
+              >
                 <img src={image2} className={classes.circle} alt="" />
                 <h3 style={{ marginTop: "2rem" }}>DIVA MY LINH</h3>
                 <div className={classes.border}></div>
@@ -136,7 +154,14 @@ const ClientPartner = () => {
                   the spa area designed in an exquisite and unique style.”
                 </p>
               </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid
+                item
+                xs={12}
+                md={4}
+                data-aos="fade-up"
+                data-aos-delay="400"
+                data-aos-duration="2000"
+              >
                 <img src={image3} className={classes.circle} alt="" />
                 <h3 style={{ marginTop: "2rem" }}>MR. DANG VAN THOAI</h3>
                 <div className={classes.border}></div>
