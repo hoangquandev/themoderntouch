@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import image1 from "../../../assets/images/avatarClients/avatar-clients-1.png";
 import image2 from "../../../assets/images/avatarClients/avatar-clients-2.png";
@@ -94,17 +94,16 @@ const ClientPartner = () => {
             marginBottom: "3rem",
           }}
         >
-          <Grid item xs={12} mb={4} >
-            <h2 className={classes.title} >OUR CLIENTS & PARTNERS</h2>
+          <Grid item xs={12} mb={4}>
+            <h2 className={classes.title}>
+              OUR CLIENTS{" "}
+              <span style={{ fontStyle: "italic", color: "#fe5600" }}>&</span>{" "}
+              PARTNERS
+            </h2>
           </Grid>
           <Grid item xs={10} md={12} margin="auto">
             <Grid container spacing={5}>
-              <Grid
-                item
-                xs={12}
-                md={4}
-
-              >
+              <Grid item xs={12} md={4}>
                 <img src={image1} className={classes.circle} alt="" />
                 <h3 style={{ marginTop: "2rem" }}>MR. HOANG VAN QUYEN</h3>
                 <div className={classes.border}></div>
@@ -123,12 +122,7 @@ const ClientPartner = () => {
                   must be full to the client."
                 </p>
               </Grid>
-              <Grid
-                item
-                xs={12}
-                md={4}
-
-              >
+              <Grid item xs={12} md={4}>
                 <img src={image2} className={classes.circle} alt="" />
                 <h3 style={{ marginTop: "2rem" }}>DIVA MY LINH</h3>
                 <div className={classes.border}></div>
@@ -142,12 +136,7 @@ const ClientPartner = () => {
                   the spa area designed in an exquisite and unique style.”
                 </p>
               </Grid>
-              <Grid
-                item
-                xs={12}
-                md={4}
-
-              >
+              <Grid item xs={12} md={4}>
                 <img src={image3} className={classes.circle} alt="" />
                 <h3 style={{ marginTop: "2rem" }}>MR. DANG VAN THOAI</h3>
                 <div className={classes.border}></div>

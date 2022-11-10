@@ -57,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "2rem",
   },
   itemSelect: {
-
     cursor: "pointer",
     height: "100px",
     display: "flex",
@@ -71,8 +70,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100px",
     backgroundColor: "#fff",
     top: "0%",
-    left: "0%"
-
+    left: "0%",
   },
   sliderright: {
     position: "absolute",
@@ -80,9 +78,8 @@ const useStyles = makeStyles((theme) => ({
     height: "100px",
     backgroundColor: "#fff",
     top: "0%",
-    right: "0%"
-
-  }
+    right: "0%",
+  },
 }));
 const BodyProject = () => {
   const settings = {
@@ -223,8 +220,12 @@ const BodyProject = () => {
   return (
     <div className={classes.container}>
       <div className={classes.content}>
-        <div >
-          <Slider asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
+        <div>
+          <Slider
+            draggable={false}
+            asNavFor={nav2}
+            ref={(slider1) => setNav1(slider1)}
+          >
             <div>
               <SelectedItem index={selectIndex} />
             </div>
@@ -284,11 +285,7 @@ const BodyProject = () => {
             style={{ width: "100%" }}
           >
             <div style={{ padding: "0 10px" }}>
-              <div
-                onClick={handleSelected1}
-                className={classes.itemSelect}
-
-              >
+              <div onClick={handleSelected1} className={classes.itemSelect}>
                 {selectedImg1 ? (
                   <img style={{ height: "100px" }} src={activeList[0]} alt="" />
                 ) : (
@@ -301,7 +298,7 @@ const BodyProject = () => {
               <div
                 onClick={handleSelected5}
                 className={classes.itemSelect}
-              // style={{ width: "121px" }}
+                // style={{ width: "121px" }}
               >
                 {selectedImg5 ? (
                   <img style={{ height: "100px" }} src={activeList[4]} alt="" />
@@ -311,11 +308,7 @@ const BodyProject = () => {
               </div>
             </div>
             <div style={{ padding: "0 10px" }}>
-              <div
-                onClick={handleSelected2}
-                className={classes.itemSelect}
-
-              >
+              <div onClick={handleSelected2} className={classes.itemSelect}>
                 {selectedImg2 ? (
                   <img style={{ height: "100px" }} src={activeList[1]} alt="" />
                 ) : (
@@ -327,7 +320,7 @@ const BodyProject = () => {
               <div
                 onClick={handleSelected6}
                 className={classes.itemSelect}
-              // style={{ width: "121px" }}
+                // style={{ width: "121px" }}
               >
                 {selectedImg6 ? (
                   <img style={{ height: "100px" }} src={activeList[5]} alt="" />
@@ -337,11 +330,7 @@ const BodyProject = () => {
               </div>
             </div>
             <div style={{ padding: "0 10px" }}>
-              <div
-                onClick={handleSelected3}
-                className={classes.itemSelect}
-
-              >
+              <div onClick={handleSelected3} className={classes.itemSelect}>
                 {selectedImg3 ? (
                   <img style={{ height: "100px" }} src={activeList[2]} alt="" />
                 ) : (
@@ -353,7 +342,7 @@ const BodyProject = () => {
               <div
                 onClick={handleSelected7}
                 className={classes.itemSelect}
-              // style={{ width: "121px" }}
+                // style={{ width: "121px" }}
               >
                 {selectedImg7 ? (
                   <img style={{ height: "100px" }} src={activeList[6]} alt="" />
@@ -372,9 +361,6 @@ const BodyProject = () => {
               </div>
             </div>
 
-
-
-
             <div style={{ padding: "0 10px" }}>
               <div onClick={handleSelected8} className={classes.itemSelect}>
                 {selectedImg8 ? (
@@ -385,14 +371,11 @@ const BodyProject = () => {
               </div>
             </div>
 
-
-
-
             <div style={{ padding: "0 10px" }}>
               <div
                 onClick={handleSelected9}
                 className={classes.itemSelect}
-              // style={{ width: "121px" }}
+                // style={{ width: "121px" }}
               >
                 {selectedImg9 ? (
                   <img style={{ height: "100px" }} src={activeList[8]} alt="" />
@@ -401,8 +384,6 @@ const BodyProject = () => {
                 )}
               </div>
             </div>
-
-
           </Slider>
           <div className={classes.sliderleft}></div>
           <div className={classes.sliderright}></div>
