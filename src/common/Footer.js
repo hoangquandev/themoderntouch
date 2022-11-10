@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "30px",
     border: "none",
     boxShadow: "rgba(0, 0, 0, 0.18) 0px 2px 4px",
-    width: "90%",
+    width: "70%",
     textAlign: "center",
     padding: "10px 10%",
     marginTop: "10px",
@@ -203,6 +203,7 @@ const Footer = () => {
                     maxWidth: "100%",
                     height: "150px",
                     marginTop: "-1rem",
+                    marginLeft: "-125px",
                   }}
                 />
               </Grid>
@@ -210,7 +211,7 @@ const Footer = () => {
                 <h2>CONTACT</h2>
                 <ul>
                   <li>
-                    200 Pasteur, Vo Thi Sau Ward, District 3, Ho Chi Minh City
+                    200 Pasteur, Vo Thi Sau Ward, Dist.3, HCMC
                   </li>
                   <li>info@themoderntouch.co</li>
                   <li>+84 28 39 305 018</li>
@@ -249,7 +250,7 @@ const Footer = () => {
                   backgroundColor: "#fff",
                   position: "absolute",
                   top: "10px",
-                  right: "5%",
+                  right: "13%",
                   height: "36px",
                   width: "36px",
                   boxShadow:

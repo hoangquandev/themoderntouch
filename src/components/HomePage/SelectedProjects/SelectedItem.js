@@ -60,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
     whiteSpace: "pre-line",
     overflow: "hidden",
     textOverflow: "ellipsis",
+    lineHeight: "16px"
   }
 }));
 
@@ -132,7 +133,7 @@ const SelectedItem = (props) => {
     },
 
     {
-      name: "CALLA APARTMENT QUY NHON",
+      name: "THE CALLA",
       widthImage: "140%",
       thumbnailImage: thumbnailImage7,
       images: [image22, image23, image24],
@@ -240,6 +241,8 @@ const SelectedItem = (props) => {
             backgroundRepeat: "no-repeat"
 
           }}
+          data-aos="fade-up"
+          data-aos-duration="2000"
         >
           {/* <div style={{
             backgroundImage: `url(${projectList[index].thumbnailImage})`,
@@ -324,8 +327,10 @@ const SelectedItem = (props) => {
                     data-aos-delay="200"
                     data-aos-duration="2000"
                   >
+                    <h3 style={{ textAlign: "left" }}>{projectList[index].name}</h3>
                     <p className={classes.description}>"{projectList[index].description}</p>
-                    <p>..."</p>
+                    <p style={{ color: "#fe5600", fontStyle: "italic", fontSize: "13px" }}> Read more ...</p>
+
                   </div>
                 </Grid>
                 <Grid
@@ -346,7 +351,7 @@ const SelectedItem = (props) => {
                     <div>Client:</div>
                     <b>{projectList[index].client}</b>
                   </div>
-                  <div
+                  {/* <div
                     style={{
                       display: "flex",
                       lineHeight: "16px",
@@ -355,8 +360,8 @@ const SelectedItem = (props) => {
                   >
                     <div>Design consultant:</div>
                     <b>{projectList[index].design}</b>
-                  </div>
-                  <div
+                  </div> */}
+                  {/* <div
                     style={{
                       display: "flex",
                       lineHeight: "16px",
@@ -365,7 +370,7 @@ const SelectedItem = (props) => {
                   >
                     <div>Local consultant:</div>
                     <b style={{ textAlign: "right" }}>THE MODERN TOUCH</b>
-                  </div>
+                  </div> */}
                   <div
                     style={{
                       display: "flex",
@@ -418,7 +423,7 @@ const SelectedItem = (props) => {
                       justifyContent: "space-between",
                     }}
                   >
-                    <div>Public area/swimming pool:</div>
+                    <div>Public area:</div>
                     <b>
                       {projectList[index].pool} m
                       <span style={{ verticalAlign: "super" }}>2</span>

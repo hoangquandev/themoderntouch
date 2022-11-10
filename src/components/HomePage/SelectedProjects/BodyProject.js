@@ -406,7 +406,7 @@ const BodyProject = () => {
           </Slider>
           <div className={classes.sliderleft}></div>
           <div className={classes.sliderright}></div>
-          <div
+          {/* <div
             style={{
               display: "flex",
               justifyContent: "center",
@@ -415,7 +415,7 @@ const BodyProject = () => {
             }}
           >
             <ReadMoreButton />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
