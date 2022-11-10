@@ -204,7 +204,7 @@ const Footer = () => {
                   maxWidth: "100%",
                   height: "150px",
                   marginTop: "-1rem",
-                  marginLeft: "3rem",
+                  marginLeft: "-2rem",
                 }}
               />
             </Grid>
