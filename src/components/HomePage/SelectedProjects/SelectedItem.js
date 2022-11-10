@@ -40,6 +40,11 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "10px",
     maxWidth: "100%",
   },
+  thumbnail: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   selectList: {
     display: "flex",
     justifyContent: "center",
@@ -198,7 +203,13 @@ const SelectedItem = (props) => {
       transition={{ duration: 2 }}
     >
       <Grid container spacing={2} style={{ padding: "0 30px" }}>
-        <Grid item xs={6}>
+        <Grid
+          item
+          xs={6}
+          className={classes.thumbnail}
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <img
             src={projectList[index].thumbnailImage}
             className={classes.image}
@@ -209,14 +220,26 @@ const SelectedItem = (props) => {
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <Grid container spacing={2}>
-                <Grid item xs={8}>
+                <Grid
+                  item
+                  xs={8}
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                  data-aos-duration="2000"
+                >
                   <img
                     src={projectList[index].images[0]}
                     className={classes.image}
                     alt=""
                   />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid
+                  item
+                  xs={4}
+                  data-aos="fade-up"
+                  data-aos-delay="800"
+                  data-aos-duration="2000"
+                >
                   <Grid container spacing={1}>
                     <Grid item xs={12}>
                       <img
@@ -225,7 +248,13 @@ const SelectedItem = (props) => {
                         alt=""
                       />
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid
+                      item
+                      xs={12}
+                      data-aos="fade-up"
+                      data-aos-delay="1200"
+                      data-aos-duration="2000"
+                    >
                       <img
                         src={projectList[index].images[2]}
                         className={classes.image}
@@ -247,11 +276,23 @@ const SelectedItem = (props) => {
                   xs={4}
                   style={{ fontSize: "11px", textAlign: "justify" }}
                 >
-                  <div style={{ height: "150px" }}>
+                  <div
+                    style={{ height: "150px" }}
+                    data-aos="fade-up"
+                    data-aos-delay="1600"
+                    data-aos-duration="2000"
+                  >
                     {projectList[index].description}
                   </div>
                 </Grid>
-                <Grid item xs={4} style={{ fontSize: "11px" }}>
+                <Grid
+                  item
+                  xs={4}
+                  style={{ fontSize: "11px" }}
+                  data-aos="fade-up"
+                  data-aos-delay="2000"
+                  data-aos-duration="2000"
+                >
                   <div
                     style={{
                       display: "flex",
@@ -293,7 +334,14 @@ const SelectedItem = (props) => {
                     <b>{projectList[index].location}</b>
                   </div>
                 </Grid>
-                <Grid item xs={4} style={{ fontSize: "12px" }}>
+                <Grid
+                  item
+                  xs={4}
+                  style={{ fontSize: "12px" }}
+                  data-aos="fade-up"
+                  data-aos-delay="2400"
+                  data-aos-duration="2000"
+                >
                   <div
                     style={{
                       display: "flex",

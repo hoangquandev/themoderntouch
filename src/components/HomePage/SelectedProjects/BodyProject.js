@@ -64,13 +64,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 const BodyProject = () => {
   const settings = {
-    className: "center variable-width",
+    className: "center",
     centerMode: true,
     focusOnSelect: true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 7,
     slidesToScroll: 1,
     speed: 500,
+    arrows: false,
   };
 
   const classes = useStyles();
@@ -237,7 +238,7 @@ const BodyProject = () => {
             asNavFor={nav1}
             ref={(slider2) => setNav2(slider2)}
             {...settings}
-            style={{ width: "98%", padding: "0 80px" }}
+            style={{ width: "100%", padding: "0 80px" }}
           >
             <div>
               <div

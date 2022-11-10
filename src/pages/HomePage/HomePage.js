@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import BottomBar from "../../common/BottomBar";
 import Footer from "../../common/Footer";
 import ClientPartner from "../../components/HomePage/ClientPartner/ClientPartner";
-import Quotes from "../../components/HomePage/Quote/Quotes";
+
 import SelectedProject from "../../components/HomePage/SelectedProjects/SelectedProject";
 import Service from "../../components/HomePage/Service/Service";
 import SlideLogo from "../../components/HomePage/SlideLogo/SlideLogo";
@@ -11,7 +11,7 @@ import Banner from "../../components/HomePage/SliderV2/Banner";
 const useStyles = makeStyles((theme) => ({
   noZoom: {
     margin: "0 auto",
-    marginBottom: "2rem",
+
     zIndex: 10,
   },
 }));
@@ -41,14 +41,19 @@ const HomePage = () => {
     <div
       className={classes.noZoom}
       style={
-        zoom ? null : { height: "calc(100vh - 154px)", overflow: "hidden" }
+        zoom
+          ? null
+          : {
+              height: "calc(100vh - 154px)",
+              overflow: "hidden",
+              marginBottom: "2rem",
+            }
       }
     >
       <Banner />
 
       <Service />
       <SelectedProject />
-      <Quotes />
       <ClientPartner />
       <SlideLogo />
       <Footer />

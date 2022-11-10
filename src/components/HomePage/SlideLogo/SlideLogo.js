@@ -1,9 +1,9 @@
 import { makeStyles } from "@mui/styles";
 import React from "react";
 import Slider from "react-slick";
-import img1 from "../../../assets/images/logo/logo-clients-1.png";
-import img2 from "../../../assets/images/logo/logo-clients-2.png";
-import img3 from "../../../assets/images/logo/logo-clients-3.png";
+import img1 from "../../../assets/images/Logoclients/logo-clients-1.png";
+import img2 from "../../../assets/images/Logoclients/logo-clients-2.png";
+import img3 from "../../../assets/images/Logoclients/logo-clients-3.png";
 import mobile1 from "../../../assets/images/CLIENTMOBLIE/CLIENT-ON-MOBILE-2.png";
 import mobile2 from "../../../assets/images/CLIENTMOBLIE/CLIENT-ON-MOBILE-3.png";
 import mobile3 from "../../../assets/images/CLIENTMOBLIE/CLIENT-ON-MOBILE-4.png";
@@ -48,7 +48,7 @@ const SlideLogo = () => {
     infinite: true,
     speed: 1000,
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 5000,
     arrows: false,
   };
   if (isMobile) {
