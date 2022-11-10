@@ -37,6 +37,36 @@ const HomePage = () => {
   };
 
   window.addEventListener("scroll", zoomable);
+
+  const useViewport = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+      const handleWindowResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleWindowResize);
+      return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
+    return { width };
+  };
+
+  const viewPort = useViewport();
+  const isMobile = viewPort.width <= 640;
+  if (isMobile) {
+    return (
+      <div>
+        <Banner />
+
+        <Service />
+        <SelectedProject />
+        <ClientPartner />
+        <SlideLogo />
+        <Footer />
+        <BottomBar />
+      </div>
+    );
+  }
+
   return (
     <div
       className={classes.noZoom}

@@ -43,6 +43,25 @@
     
 }
 
+.bannerMoblie{
+    background-image: url("../../../assets/images/banner\ mobile/backgroundbanner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh);
+    position: relative;
+}
+
+.bannerMoblie img{
+    max-width: 100%;
+    position: absolute;
+    animation: mymove 3s ease;
+}
+
+@keyframes mymove {
+    from {top: -200px;}
+    to {top: 0px;}
+  }
+
 @media only screen and (max-width: 1600px) {
     .sliderItem img{
         height: 250px;

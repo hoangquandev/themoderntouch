@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import slider1 from "../../../assets/images/slider/slider1.png"
 import slider2 from "../../../assets/images/slider/banner2.png"
 import slider3 from "../../../assets/images/slider/banner-3.png"
+import beforeMobile from "../../../assets/images/banner mobile/beforeMobile.png"
 
 
 
@@ -27,6 +28,29 @@ const Banner = () => {
       };
 
     window.addEventListener("scroll", zoomable)
+
+    const useViewport = () => {
+        const [width, setWidth] = React.useState(window.innerWidth);
+    
+        React.useEffect(() => {
+          const handleWindowResize = () => setWidth(window.innerWidth);
+          window.addEventListener("resize", handleWindowResize);
+          return () => window.removeEventListener("resize", handleWindowResize);
+        }, []);
+    
+        return { width };
+      };
+    
+      const viewPort = useViewport();
+      const isMobile = viewPort.width <= 640;
+      if(isMobile){
+        return(
+            <div className='bannerMoblie'>
+                <img src={beforeMobile} alt=''/>
+            </div>
+        )
+      }
+
     return (
         <div className='container' 
         data-aos="zoom-out"
