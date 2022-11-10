@@ -91,10 +91,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "12px",
       fontStyle: "italic",
       paddingLeft: "10px",
-      "&:focus": {
-        width: "90vw",
 
-      }
     },
   },
 }));
