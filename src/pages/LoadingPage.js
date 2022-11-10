@@ -7,8 +7,11 @@ const LoadingPage = () => {
     <motion.div
       initial={{ opacity: 1 }}
       animate={{ opacity: 0 }}
-      transition={{ delay: 5, duration: 1 }}>
-      <img src={gif} alt="" />
+      transition={{ delay: 5, duration: 1 }}
+      style={{ position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+
+      <img src={gif} alt="" style={{ maxWidth: "70%" }} />
+
     </motion.div>
   );
 };
