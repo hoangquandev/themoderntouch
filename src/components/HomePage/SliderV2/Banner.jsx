@@ -21,9 +21,9 @@ const Banner = () => {
 
     const settings = {
         infinite: true,
-        speed: 500,
+        speed: 1000,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 5000,
         arrows: false,
     };
 

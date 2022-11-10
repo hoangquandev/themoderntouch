@@ -51,13 +51,13 @@
     position: relative;
 }
 
-.bannerMoblie .image {
-    animation: mymove 3s ease;
-}
+
 
 .bannerMoblie img {
-    max-width: 100%;
+    max-width: 60%;
     position: absolute;
+    left: 54%;
+    transform: translateX(-50%);
 }
 
 @keyframes mymove {

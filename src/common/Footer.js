@@ -119,7 +119,7 @@ const Footer = () => {
             <img
               src={logo}
               atl="TMT"
-              style={{ maxWidth: "100%", height: "150px", marginTop: -20 }}
+              style={{ maxWidth: "100%", height: "150px", marginTop: -20, marginLeft: -20 }}
             />
           </div>
           <div className={classes.itemRight} style={{ width: "45%" }}>

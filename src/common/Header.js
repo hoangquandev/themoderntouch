@@ -87,6 +87,7 @@ const useStyles = makeStyles((theme) => ({
         "& *": {
           fontSize: "20px",
           padding: "10px 20px",
+          fontWeight: "bold"
         },
       },
     },
@@ -122,6 +123,7 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
     menu: {
+      display: "block",
       position: "absolute",
       backgroundColor: "#fff",
       height: "calc(100vh - 90px)",
