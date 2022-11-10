@@ -1,15 +1,14 @@
 import React from "react";
-import Typical from "react-typical";
+import ReactTypingEffect from 'react-typing-effect';
 
 const Quotes = () => {
   return (
     <div style={{ textAlign: "center", marginTop: "2rem" }}>
       <h4 style={{ marginBottom: "0.1rem" }}>
-        “Quality
-        <Typical
-          steps={[" Design", 3000, " Life", 3000]}
-          loop={Infinity}
-          wrapper="span"
+        “Quality <span> </span>
+        <ReactTypingEffect
+          text={[" Life", " Design"]}
+
         />
         ”
       </h4>

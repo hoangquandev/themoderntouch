@@ -28,7 +28,7 @@
     justify-content: center;
     align-items: center;
     width: 734px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
 }
 
 .sliderItem {
@@ -51,10 +51,13 @@
     position: relative;
 }
 
+.bannerMoblie .image {
+    animation: mymove 3s ease;
+}
+
 .bannerMoblie img {
     max-width: 100%;
     position: absolute;
-    animation: mymove 3s ease;
 }
 
 @keyframes mymove {

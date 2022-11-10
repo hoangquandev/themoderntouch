@@ -1,6 +1,9 @@
+import React, { useEffect } from "react";
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import image1 from "../../../assets/images/avatarClients/avatar-clients-1.png";
 import image2 from "../../../assets/images/avatarClients/avatar-clients-2.png";
 import image3 from "../../../assets/images/avatarClients/avatar-clients-3.png";
@@ -43,6 +46,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "12px",
     fontStyle: "italic",
   },
+  "@media (max-width: 1280px)": {
+    content: {
+      width: "1024px",
+    },
+  },
 
   "@media (max-width: 1024px)": {
     title: {
@@ -71,6 +79,10 @@ const useStyles = makeStyles((theme) => ({
 
 const ClientPartner = () => {
   const classes = useStyles();
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div className={classes.container}>
       <div className={classes.content}>
@@ -82,8 +94,8 @@ const ClientPartner = () => {
             marginBottom: "3rem",
           }}
         >
-          <Grid item xs={12} mb={4} data-aos="fade-up" data-aos-duration="2000">
-            <h2 className={classes.title}>OUR CLIENTS & PARTNERS</h2>
+          <Grid item xs={12} mb={4} >
+            <h2 className={classes.title} >OUR CLIENTS & PARTNERS</h2>
           </Grid>
           <Grid item xs={10} md={12} margin="auto">
             <Grid container spacing={5}>
@@ -91,9 +103,7 @@ const ClientPartner = () => {
                 item
                 xs={12}
                 md={4}
-                data-aos="fade-up"
-                data-aos-delay="400"
-                data-aos-duration="2000"
+
               >
                 <img src={image1} className={classes.circle} alt="" />
                 <h3 style={{ marginTop: "2rem" }}>MR. HOANG VAN QUYEN</h3>
@@ -117,9 +127,7 @@ const ClientPartner = () => {
                 item
                 xs={12}
                 md={4}
-                data-aos="fade-up"
-                data-aos-delay="800"
-                data-aos-duration="2000"
+
               >
                 <img src={image2} className={classes.circle} alt="" />
                 <h3 style={{ marginTop: "2rem" }}>DIVA MY LINH</h3>
@@ -138,9 +146,7 @@ const ClientPartner = () => {
                 item
                 xs={12}
                 md={4}
-                data-aos="fade-up"
-                data-aos-delay="1200"
-                data-aos-duration="2000"
+
               >
                 <img src={image3} className={classes.circle} alt="" />
                 <h3 style={{ marginTop: "2rem" }}>MR. DANG VAN THOAI</h3>

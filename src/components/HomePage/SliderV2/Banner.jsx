@@ -16,46 +16,48 @@ const Banner = () => {
     const zoomable = () => {
         if (window.scrollY > 1) {
             setZoom(true)
-        } 
+        }
     }
-    
+
     const settings = {
-    infinite: true,
-      speed: 500,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      arrows: false,
-      };
+        infinite: true,
+        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+    };
 
     window.addEventListener("scroll", zoomable)
 
     const useViewport = () => {
         const [width, setWidth] = React.useState(window.innerWidth);
-    
+
         React.useEffect(() => {
-          const handleWindowResize = () => setWidth(window.innerWidth);
-          window.addEventListener("resize", handleWindowResize);
-          return () => window.removeEventListener("resize", handleWindowResize);
+            const handleWindowResize = () => setWidth(window.innerWidth);
+            window.addEventListener("resize", handleWindowResize);
+            return () => window.removeEventListener("resize", handleWindowResize);
         }, []);
-    
+
         return { width };
-      };
-    
-      const viewPort = useViewport();
-      const isMobile = viewPort.width <= 640;
-      if(isMobile){
-        return(
+    };
+
+    const viewPort = useViewport();
+    const isMobile = viewPort.width <= 640;
+    if (isMobile) {
+        return (
             <div className='bannerMoblie'>
-                <img src={beforeMobile} alt=''/>
+                <div className='image'>
+                    <img src={beforeMobile} alt='' />
+                </div>
             </div>
         )
-      }
+    }
 
     return (
-        <div className='container' 
-        data-aos="zoom-out"
-          data-aos-duration="1000"
-        style={zoom ? { transform: "scale(1)", transition: "all 1s linear" } : { transform: "scale(2.7)", transition: "all 1s linear" }}
+        <div className='container'
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+            style={zoom ? { transform: "scale(1)", transition: "all 1s linear" } : { transform: "scale(2.7)", transition: "all 1s linear" }}
         >
             <div className='zoom'>
                 <Slider className='slider' {...settings}>

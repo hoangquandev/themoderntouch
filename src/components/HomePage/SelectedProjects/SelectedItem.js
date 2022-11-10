@@ -55,6 +55,12 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 10px",
     cursor: "pointer",
   },
+  description: {
+    height: "65px",
+    whiteSpace: "pre-line",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+  }
 }));
 
 const SelectedItem = (props) => {
@@ -63,6 +69,7 @@ const SelectedItem = (props) => {
   const projectList = [
     {
       name: "DIAMOND VILLA",
+      widthImage: "100%",
       thumbnailImage: thumbnailImg1,
       images: [image4, image5, image6],
       description: `Seen from the outside, this project stands out with its impressive design and luxurious diamond shape, featuring an image of bare concrete and glass materials to bring simple but really high class to the owner. In addition, the design highlight is the "bedroom in the clouds" which brings a very new and special experience.
@@ -79,6 +86,7 @@ const SelectedItem = (props) => {
 
     {
       name: "MAI LINH RETREAT",
+      widthImage: "110%",
       thumbnailImage: thumbnailImage3,
       images: [image10, image11, image12],
       description: `Possessing an attractive and impressive beauty, a delicate combination style design between Indochinese classics mixed with luxurious modern features. With the meaning of a place to keep memories, a place to retreat after busy days, the villa has a cozy exterior with deep brown tones of wood and unique lighting ideas that impress anyone at first sight. In particular, the highlighted design is impressive creativity with a "D" shape inspired by the owner's last name.`,
@@ -93,6 +101,7 @@ const SelectedItem = (props) => {
 
     {
       name: "TAY HO VILLA",
+      widthImage: "100%",
       thumbnailImage: thumbnailImage6,
       images: [image19, image20, image21],
       description: `Modern architectural avatar with soft rounded lines. The large curved glass system increases the elegance and impression of the building. Tay Ho Villa consists of 2 blocks with an open space design that brings a sense of comfort. Especially the green space connecting the 2 building blocks is a spiral staircase specially designed by The Modern Touch Architects, very delicate and gentle.`,
@@ -108,6 +117,7 @@ const SelectedItem = (props) => {
 
     {
       name: "SUNRISE RESORT",
+      widthImage: "110%",
       thumbnailImage: thumbnailImg,
       images: [image1, image2, image3],
       description: `Having the location close to the coast, Sunrise Resort is shaped like two large sails reaching out to the ocean to catch the sunrise. The project is a delicate combination of modern features like coming from the future because it is surrounded by a system of glass walls and closeness, blending with the majestic natural landscape.`,
@@ -123,6 +133,7 @@ const SelectedItem = (props) => {
 
     {
       name: "CALLA APARTMENT QUY NHON",
+      widthImage: "140%",
       thumbnailImage: thumbnailImage7,
       images: [image22, image23, image24],
       description: `Calla Apartment Quy Nhon is a trend-catching project located in the "golden" position in the center of Quy Nhon coastal city. Immerse yourself in the trend of experiencing a new perfect life, giving apartment owners high-class and comfortable experiences.`,
@@ -137,6 +148,7 @@ const SelectedItem = (props) => {
 
     {
       name: "RITA VO TAY DO",
+      widthImage: "120%",
       thumbnailImage: thumbnailImage5,
       images: [image16, image17, image18],
       description: `Inspired by the waves of the Can Tho River and the graceful lines of Ninh Kieu wharf combined with the image of a dragon's body reaching up to the sky, Rita Vo Tay Do building has a soft appearance suitable for the charming people of Can Tho but still majestic enough to be worthy of being a landmark for the Mekong Delta region.`,
@@ -152,6 +164,7 @@ const SelectedItem = (props) => {
 
     {
       name: "ONE HERITAGE",
+      widthImage: "120%",
       thumbnailImage: thumbnailImage4,
       images: [image13, image14, image15],
       description: `The villa is designed in a semi-classical style, which is a harmonious combination of high-class materials in an airy space. Prominent on the light color of the ceiling and walls is the warm brown color, creating a cozy and trendy feeling like entering a magnificent heritage.`,
@@ -167,6 +180,21 @@ const SelectedItem = (props) => {
 
     {
       name: "FIDECO OFFICE",
+      widthImage: "120%",
+      thumbnailImage: thumbnailImage2,
+      images: [image7, image8, image9],
+      description: `Fideco Building is located in the central area of District 1, with a luxurious and high-class design orientation, meeting Grade A office standards.`,
+      client: `FIDECO`,
+      location: `District 1, Ho Chi Minh`,
+      lotArea: "356,3",
+      conArea: 163.611,
+      pool: 860,
+      number: 18,
+      style: "Modern, luxurious",
+    },
+    {
+      name: "FIDECO OFFICE",
+      widthImage: "120%",
       thumbnailImage: thumbnailImage2,
       images: [image7, image8, image9],
       description: `Fideco Building is located in the central area of District 1, with a luxurious and high-class design orientation, meeting Grade A office standards.`,
@@ -198,23 +226,35 @@ const SelectedItem = (props) => {
   }
   return (
     <div
-      initial={{ opacity: 0, x: "100%" }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 2 }}
+
     >
       <Grid container spacing={2} style={{ padding: "0 30px" }}>
         <Grid
           item
           xs={6}
           className={classes.thumbnail}
-          data-aos="fade-up"
-          data-aos-duration="2000"
+          style={{
+            backgroundImage: `url(${projectList[index].thumbnailImage})`,
+            backgroundSize: `${projectList[index].widthImage}`,
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat"
+
+          }}
         >
-          <img
-            src={projectList[index].thumbnailImage}
-            className={classes.image}
-            alt=""
-          />
+          {/* <div style={{
+            backgroundImage: `url(${projectList[index].thumbnailImage})`,
+            backgroundSize: "cover"
+
+          }}> */}
+          {/* <img
+              src={projectList[index].thumbnailImage}
+              className={classes.image}
+              style={{ width: `${projectList[index].widthImage}` }}
+              alt=""
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            /> */}
+          {/* </div> */}
         </Grid>
         <Grid item xs={6}>
           <Grid container spacing={2}>
@@ -223,22 +263,22 @@ const SelectedItem = (props) => {
                 <Grid
                   item
                   xs={8}
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                  data-aos-duration="2000"
+
                 >
-                  <img
-                    src={projectList[index].images[0]}
-                    className={classes.image}
-                    alt=""
-                  />
+                  <div data-aos="fade-up"
+                    data-aos-duration="2000">
+                    <img
+                      src={projectList[index].images[0]}
+                      className={classes.image}
+                      alt=""
+
+                    />
+                  </div>
                 </Grid>
                 <Grid
                   item
                   xs={4}
-                  data-aos="fade-up"
-                  data-aos-delay="800"
-                  data-aos-duration="2000"
+
                 >
                   <Grid container spacing={1}>
                     <Grid item xs={12}>
@@ -246,19 +286,21 @@ const SelectedItem = (props) => {
                         src={projectList[index].images[1]}
                         className={classes.image}
                         alt=""
+                        data-aos="fade-up"
+                        data-aos-duration="2000"
                       />
                     </Grid>
                     <Grid
                       item
                       xs={12}
-                      data-aos="fade-up"
-                      data-aos-delay="1200"
-                      data-aos-duration="2000"
+
                     >
                       <img
                         src={projectList[index].images[2]}
                         className={classes.image}
                         alt=""
+                        data-aos="fade-up"
+                        data-aos-duration="2000"
                       />
                     </Grid>
                   </Grid>
@@ -279,10 +321,11 @@ const SelectedItem = (props) => {
                   <div
                     style={{ height: "150px" }}
                     data-aos="fade-up"
-                    data-aos-delay="1600"
+                    data-aos-delay="200"
                     data-aos-duration="2000"
                   >
-                    {projectList[index].description}
+                    <p className={classes.description}>"{projectList[index].description}</p>
+                    <p>..."</p>
                   </div>
                 </Grid>
                 <Grid
@@ -290,7 +333,7 @@ const SelectedItem = (props) => {
                   xs={4}
                   style={{ fontSize: "11px" }}
                   data-aos="fade-up"
-                  data-aos-delay="2000"
+                  data-aos-delay="200"
                   data-aos-duration="2000"
                 >
                   <div
@@ -321,7 +364,7 @@ const SelectedItem = (props) => {
                     }}
                   >
                     <div>Local consultant:</div>
-                    <b>THE MODERN TOUCH</b>
+                    <b style={{ textAlign: "right" }}>THE MODERN TOUCH</b>
                   </div>
                   <div
                     style={{
@@ -339,7 +382,7 @@ const SelectedItem = (props) => {
                   xs={4}
                   style={{ fontSize: "12px" }}
                   data-aos="fade-up"
-                  data-aos-delay="2400"
+                  data-aos-delay="200"
                   data-aos-duration="2000"
                 >
                   <div

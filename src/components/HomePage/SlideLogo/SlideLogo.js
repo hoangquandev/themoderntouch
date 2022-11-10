@@ -10,6 +10,10 @@ import mobile3 from "../../../assets/images/CLIENTMOBLIE/CLIENT-ON-MOBILE-4.png"
 import mobile4 from "../../../assets/images/CLIENTMOBLIE/CLIENT-ON-MOBILE-5.png";
 
 const useStyles = makeStyles((theme) => ({
+  mainContainer: {
+    width: '100%',
+    margin: "0 auto"
+  },
   container: {
     maxWidth: "100%",
     width: "1280px",
@@ -70,17 +74,19 @@ const SlideLogo = () => {
     );
   }
   return (
-    <Slider className={classes.container} {...settings}>
-      <div>
-        <img src={img1} alt="" style={{ maxWidth: "100%" }} />
-      </div>
-      <div>
-        <img src={img2} alt="" style={{ maxWidth: "100%" }} />
-      </div>
-      <div>
-        <img src={img3} alt="" style={{ maxWidth: "100%" }} />
-      </div>
-    </Slider>
+    <div className={classes.mainContainer}>
+      <Slider className={classes.container} {...settings}>
+        <div>
+          <img src={img1} alt="" style={{ maxWidth: "100%" }} />
+        </div>
+        <div>
+          <img src={img2} alt="" style={{ maxWidth: "100%" }} />
+        </div>
+        <div>
+          <img src={img3} alt="" style={{ maxWidth: "100%" }} />
+        </div>
+      </Slider>
+    </div>
   );
 };
 
