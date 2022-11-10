@@ -27,7 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    width: 640px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -35,11 +35,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    width: 640px;
 }
 
 .sliderItem img{
-    height: 300px;
+    height: 320px;
     
 }
 
@@ -67,6 +67,10 @@
         height: 250px;
         
     }
+    .sliderItem{
+        
+        width: 500px;
+    }
     .slider{
         
         width: 500px;
@@ -77,6 +81,10 @@
         height: 230px;
         
     }
+    .sliderItem{
+        
+        width: 460px;
+    }
     .slider{
         
         width: 460px;
@@ -86,6 +94,10 @@
     .sliderItem img{
         height: 200px;
         
+    }
+    .sliderItem{
+        
+        width: 400px;
     }
     .slider{
         
@@ -98,6 +110,10 @@
         
     }
     .slider{
+        
+        width: 360px;
+    }
+    .sliderItem{
         
         width: 360px;
     }

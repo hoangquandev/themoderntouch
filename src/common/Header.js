@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@mui/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -118,15 +118,37 @@ const useStyles = makeStyles((theme) => ({
     navbar: {
       display: "none",
     },
+    menu: {
+      position: "absolute",
+      backgroundColor: "#fff",
+      height: "calc(100vh - 90px)",
+      width: "100vw",
+      top: "90px",
+      left: "0",
+      padding: "20px 20px",
+      transition: "all 0.5s ease",
+    },
+    navMenu: {
+      lineHeight: "20px",
+      fontSize: "16px",
+      "& *": {
+        textTransform: "uppercase",
+        margin: "10px auto",
+      },
+    },
   },
 }));
 
 const Header = () => {
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
+  const toggleMenu = () => {
+    setOpen(!open);
+  };
   return (
     <header className={classes.header}>
       <div className={classes.container}>
@@ -167,9 +189,22 @@ const Header = () => {
           <div>
             <SearchIcon fontSize="large" />
           </div>
-          <div>
+          <div onClick={toggleMenu}>
             <MenuIcon fontSize="large" />
           </div>
+        </div>
+        <div
+          className={classes.menu}
+          style={open ? { left: "0" } : { left: "-100vw" }}
+        >
+          <ul className={classes.navMenu}>
+            <li>about us</li>
+            <li>services</li>
+            <li>projects</li>
+            <li>news</li>
+            <li>careers</li>
+            <li>contact</li>
+          </ul>
         </div>
       </div>
     </header>
