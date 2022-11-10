@@ -1,5 +1,5 @@
 .container {
- 
+
     margin-top: 20px;
     height: calc(100vh - 155px);
     width: 100%;
@@ -18,32 +18,32 @@
     position: relative;
 }
 
-.slider{
+.slider {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 640px;
+    width: 734px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.sliderItem{
+.sliderItem {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 640px;
+    width: 734px;
 }
 
-.sliderItem img{
-    height: 320px;
-    
+.sliderItem img {
+    height: 357px;
+
 }
 
-.bannerMoblie{
+.bannerMoblie {
     background-image: url("../../../assets/images/banner\ mobile/backgroundbanner.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -51,70 +51,86 @@
     position: relative;
 }
 
-.bannerMoblie img{
+.bannerMoblie img {
     max-width: 100%;
     position: absolute;
     animation: mymove 3s ease;
 }
 
 @keyframes mymove {
-    from {top: -200px;}
-    to {top: 0px;}
-  }
+    from {
+        top: -200px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
 
 @media only screen and (max-width: 1600px) {
-    .sliderItem img{
+    .sliderItem img {
         height: 250px;
-        
+
     }
-    .sliderItem{
-        
+
+    .sliderItem {
+
         width: 500px;
     }
-    .slider{
-        
+
+    .slider {
+
         width: 500px;
     }
-  }
-  @media only screen and (max-width: 1420px) {
-    .sliderItem img{
+}
+
+@media only screen and (max-width: 1420px) {
+    .sliderItem img {
         height: 230px;
-        
+
     }
-    .sliderItem{
-        
+
+    .sliderItem {
+
         width: 460px;
     }
-    .slider{
-        
+
+    .slider {
+
         width: 460px;
     }
-  }
-  @media only screen and (max-width: 1280px) {
-    .sliderItem img{
+}
+
+@media only screen and (max-width: 1280px) {
+    .sliderItem img {
         height: 200px;
-        
+
     }
-    .sliderItem{
-        
+
+    .sliderItem {
+
         width: 400px;
     }
-    .slider{
-        
-        width:400px;
+
+    .slider {
+
+        width: 400px;
     }
-  }
-  @media only screen and (max-width: 1150px) {
-    .sliderItem img{
+}
+
+@media only screen and (max-width: 1150px) {
+    .sliderItem img {
         height: 180px;
-        
+
     }
-    .slider{
-        
+
+    .slider {
+
         width: 360px;
     }
-    .sliderItem{
-        
+
+    .sliderItem {
+
         width: 360px;
     }
-  }
+}

@@ -75,6 +75,9 @@ const useStyles = makeStyles((theme) => ({
   menuMobile: {
     display: "none",
   },
+  menu: {
+    display: "none",
+  },
   "@media (max-width: 1280px)": {
     container: {
       width: 1200,
