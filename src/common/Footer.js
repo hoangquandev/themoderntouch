@@ -191,79 +191,79 @@ const Footer = () => {
   }
   return (
     <div className={classes.wrapper}>
-      <div className={classes.footer}>
-        <Grid container className={classes.container} spacing={3}>
-          <Grid item xs={8}>
-            <Grid container spacing={3}>
-              <Grid item xs={4}>
-                <img
-                  src={logo}
-                  alt=""
-                  style={{
-                    maxWidth: "100%",
-                    height: "150px",
-                    marginTop: "-1rem",
-                    marginLeft: "-125px",
-                  }}
-                />
-              </Grid>
-              <Grid item xs={5} className={classes.containerLeft}>
-                <h2>CONTACT</h2>
-                <ul>
-                  <li>
-                    200 Pasteur, Vo Thi Sau Ward, Dist.3, HCMC
-                  </li>
-                  <li>info@themoderntouch.co</li>
-                  <li>+84 28 39 305 018</li>
-                </ul>
-              </Grid>
-              <Grid item xs={1.5} className={classes.containerLeft}>
-                <h2>ABOUT</h2>
-                <ul>
-                  <li>People</li>
-                  <li>Projects</li>
-                  <li>News</li>
-                  <li>Careers</li>
-                </ul>
-              </Grid>
-              <Grid item xs={1.5} className={classes.containerLeft}>
-                <h2>SOCIAL</h2>
-                <ul>
-                  <li>Facebook</li>
-                  <li>Youtube</li>
-                  <li>Linkedin</li>
-                </ul>
-              </Grid>
+
+      <Grid container className={classes.container} spacing={3}>
+        <Grid item xs={8}>
+          <Grid container spacing={3}>
+            <Grid item xs={4}>
+              <img
+                src={logo}
+                alt=""
+                style={{
+                  maxWidth: "100%",
+                  height: "150px",
+                  marginTop: "-1rem",
+                  marginLeft: "3rem",
+                }}
+              />
+            </Grid>
+            <Grid item xs={5} className={classes.containerLeft}>
+              <h2>CONTACT</h2>
+              <ul>
+                <li>
+                  200 Pasteur, Vo Thi Sau Ward, Dist.3, HCMC
+                </li>
+                <li>info@themoderntouch.co</li>
+                <li>+84 28 39 305 018</li>
+              </ul>
+            </Grid>
+            <Grid item xs={1.5} className={classes.containerLeft}>
+              <h2>ABOUT</h2>
+              <ul>
+                <li>People</li>
+                <li>Projects</li>
+                <li>News</li>
+                <li>Careers</li>
+              </ul>
+            </Grid>
+            <Grid item xs={1.5} className={classes.containerLeft}>
+              <h2>SOCIAL</h2>
+              <ul>
+                <li>Facebook</li>
+                <li>Youtube</li>
+                <li>Linkedin</li>
+              </ul>
             </Grid>
           </Grid>
-          <Grid item xs={4}>
-            <h2>SIGN UP NEWSLETTERS</h2>
-            <div style={{ position: "relative" }}>
-              <input
-                type="text"
-                placeHolder="Enter your email to subscribe Us"
-                className={classes.input}
-              />
-              <button
-                style={{
-                  border: "none",
-                  backgroundColor: "#fff",
-                  position: "absolute",
-                  top: "10px",
-                  right: "13%",
-                  height: "36px",
-                  width: "36px",
-                  boxShadow:
-                    "rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px",
-                  borderRadius: "50%",
-                }}
-              >
-                <ArrowForwardIcon />
-              </button>
-            </div>
-          </Grid>
         </Grid>
-      </div>
+        <Grid item xs={4} style={{ paddingRight: "3rem" }}>
+          <h2>SIGN UP NEWSLETTERS</h2>
+          <div style={{ position: "relative" }}>
+            <input
+              type="text"
+              placeHolder="Enter your email to subscribe Us"
+              className={classes.input}
+            />
+            <button
+              style={{
+                border: "none",
+                backgroundColor: "#fff",
+                position: "absolute",
+                top: "10px",
+                right: "13%",
+                height: "36px",
+                width: "36px",
+                boxShadow:
+                  "rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px",
+                borderRadius: "50%",
+              }}
+            >
+              <ArrowForwardIcon />
+            </button>
+          </div>
+        </Grid>
+      </Grid>
+
     </div>
   );
 };

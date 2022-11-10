@@ -1,7 +1,7 @@
 import { Stack } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
-import imgService from "../../../assets/images/services/service-1.png";
+import imgService from "../../../assets/images/services/service-6.png";
 
 const useStyles = makeStyles((theme) => ({
   container: {
