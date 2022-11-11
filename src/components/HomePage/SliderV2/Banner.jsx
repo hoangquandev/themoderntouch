@@ -4,9 +4,9 @@ import Slider from "react-slick";
 import "./Slider.css"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import slider1 from "../../../assets/images/slider/slider1.png"
-import slider2 from "../../../assets/images/slider/banner2.png"
-import slider3 from "../../../assets/images/slider/banner-3.png"
+import image1 from "../../../assets/images/slider/slider1.png"
+import image2 from "../../../assets/images/slider/banner2.png"
+import image3 from "../../../assets/images/slider/banner-3.png"
 import beforeMobile from "../../../assets/images/banner mobile/beforeMobile.png"
 
 
@@ -72,13 +72,13 @@ const Banner = () => {
             <div className='zoom'>
                 <Slider className='slider' {...settings}>
                     <div className='sliderItem'>
-                        <img src={slider1} alt="" />
+                        <img src={image1} alt="" />
                     </div>
                     <div className='sliderItem'>
-                        <img src={slider2} alt="" />
+                        <img src={image2} alt="" />
                     </div>
                     <div className='sliderItem'>
-                        <img src={slider3} alt="" />
+                        <img src={image3} alt="" />
                     </div>
                 </Slider>
             </div>
