@@ -134,9 +134,10 @@ const useStyles = makeStyles((theme) => ({
       "& *": {
         width: "250px",
       },
+      border: "none",
     },
     border: {
-      borderBottom: "1px solid",
+      display: "none",
     },
   },
 }));

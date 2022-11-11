@@ -131,12 +131,13 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "10px",
       lineHeight: "20px",
       paddingBottom: "8px",
+      border: "none",
       "& *": {
         width: "250px",
       },
     },
     border: {
-      borderBottom: "1px solid",
+      borderBottom: "none",
     },
   },
 }));

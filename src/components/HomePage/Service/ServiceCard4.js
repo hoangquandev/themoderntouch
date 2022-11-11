@@ -125,18 +125,19 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "4rem",
     },
     titleCard: {
-      top: "40%",
+      top: "46%",
       left: "50%",
       transform: "translate(-50%,-50%)",
       fontSize: "10px",
       lineHeight: "20px",
       paddingBottom: "8px",
+      border: "none",
       "& *": {
         width: "250px",
       },
     },
     border: {
-      borderBottom: "1px solid",
+      borderBottom: "none",
     },
   },
 }));
