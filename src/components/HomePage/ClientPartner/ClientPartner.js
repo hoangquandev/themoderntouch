@@ -3,6 +3,7 @@ import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Slider from "react-slick";
 
 import image1 from "../../../assets/images/avatarClients/avatar-clients-1.png";
 import image2 from "../../../assets/images/avatarClients/avatar-clients-2.png";
@@ -10,6 +11,11 @@ import image3 from "../../../assets/images/avatarClients/avatar-clients-3.png";
 
 const useStyles = makeStyles((theme) => ({
   container: {
+    margin: "0 auto",
+  },
+  containerMobile: {
+    textAlign: "center",
+    padding: "0 20px",
     margin: "0 auto",
   },
   content: {
@@ -83,6 +89,113 @@ const ClientPartner = () => {
     AOS.init();
     AOS.refresh();
   }, []);
+
+  var settings = {
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+  };
+  const useViewport = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+      const handleWindowResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleWindowResize);
+      return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
+    return { width };
+  };
+
+  const viewPort = useViewport();
+  const isMobile = viewPort.width <= 640;
+  if (isMobile) {
+    return (
+      <div style={{ textAlign: "center" }}>
+        <h2
+          className={classes.title}
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          OUR CLIENTS{" "}
+          <span style={{ fontStyle: "italic", color: "#fe5600" }}>&</span>{" "}
+          PARTNERS
+        </h2>
+        <Slider {...settings} >
+          <div
+            className={classes.containerMobile}
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="2000"
+          >
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <img src={image1} className={classes.circle} alt="" />
+            </div>
+            <h3 style={{ marginTop: "2rem" }} >MR. HOANG VAN QUYEN</h3>
+            <div className={classes.border}></div>
+            <p className={classes.subTitle}>
+              FORMER DIRECTOR OF KOHLER IN VIETNAM
+            </p>
+            <p className={classes.desciption}>
+              "Dedication, enthusiasm in creative, responsible and always
+              paying attention to the interests of clients are qualities
+              making the biggest difference in The Modern Touch. Mr. Linh
+              and The Modern Touch always work by heart in order to offer
+              clients the best value. The Modern Touch team always shows
+              dedica- tion and commitment to the work. The clear example is
+              that The Modern Touch links very closely with the supply unit,
+              partnership companion in order that the value of commitments
+              must be full to the client."
+            </p>
+          </div>
+          <div
+            className={classes.containerMobile}
+          >
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <img src={image2} className={classes.circle} alt="" />
+            </div>
+
+            <h3 style={{ marginTop: "2rem" }}>DIVA MY LINH</h3>
+            <div className={classes.border}></div>
+            <p className={classes.subTitle}>CO-OWNER OF SAIGON SMILE SPA</p>
+            <p className={classes.desciption}>
+              “Saigon Smile Spa has been continuously side by side with The
+              Modern Touch for 2 years (8 spas and 1 office). The decision
+              that all construction works are due to The Modern Touch design
+              and supervision expressed the absolute confidence of investors
+              for you. With Saigon Smile Spa, My Linh was very pleased with
+              the spa area designed in an exquisite and unique style.”
+            </p>
+          </div>
+          <div
+            className={classes.containerMobile}
+          >
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <img src={image3} className={classes.circle} alt="" />
+            </div>
+            <h3 style={{ marginTop: "2rem" }}>MR. DANG VAN THOAI</h3>
+            <div className={classes.border}></div>
+            <p className={classes.subTitle}>PRESIDENT OF MEKONG ONE</p>
+            <p className={classes.desciption}>
+              "There is a Vietnamese man, slim but full of person-ality,
+              with different emotions from serious, humorous to jovial,
+              sometimes showing irritable depending on conditions, work and
+              period... but all of them express a passionate architect who
+              lived and trained in the United States. That little fellow man
+              is also intelli-gent, and energetic. He was determined to
+              leave Hawaii, the most fascinating city in the world, to come
+              back to living in Vietnam with enthusiasm flow-ing in his
+              blood. Wish you success in the motherland in managing to build
+              and develop a brand for your-self together with the Company!"
+            </p>
+          </div>
+        </Slider>
+      </div>
+    )
+  }
   return (
     <div className={classes.container}>
       <div className={classes.content}>

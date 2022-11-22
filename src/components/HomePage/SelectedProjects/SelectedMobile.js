@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     container: {
       padding: "0 60px",
       textAlign: "center",
-      boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
+      // boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
       paddingBottom: "2rem",
     },
     description: {
@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
     container: {
       padding: "2rem 8px",
       textAlign: "center",
-      boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
+      // boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
     },
     mainImage: {
       maxWidth: "100%",
@@ -289,6 +289,8 @@ const SelectedMobile = (props) => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
   };
   const data = props.data;
   const index = props.index;

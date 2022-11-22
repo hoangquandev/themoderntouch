@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     top: "0px",
     left: "0px",
     margin: "0 auto",
-    zIndex: 100,
+    zIndex: 1000,
     width: "100%",
     backgroundColor: "#fff",
     boxShadow: "rgba(0, 0, 0, 0.1) 0px 0px 12px",
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     left: "52%",
     top: "50%",
     transform: "translate(-50%,-50%)",
-    zIndex: 10,
+    zIndex: 1000,
   },
   imageLogo: {
     maxWidth: "100%",
@@ -132,6 +132,7 @@ const useStyles = makeStyles((theme) => ({
       left: "0",
       padding: "20px 20px",
       transition: "all 0.5s ease",
+      zIndex: 10
     },
     navMenu: {
       lineHeight: "20px",
@@ -200,7 +201,7 @@ const Header = () => {
         </div>
         <div
           className={classes.menu}
-          style={open ? { left: "0" } : { left: "-100vw" }}
+          style={open ? { top: "90px" } : { top: "-100vh" }}
         >
           <ul className={classes.navMenu}>
             <li>about us</li>

@@ -61,7 +61,18 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     textOverflow: "ellipsis",
     lineHeight: "16px"
+  },
+  square: {
+    verticalAlign: "super",
+    fontSize: "9px"
+  },
+  client: {
+    textAlign: "right"
+  },
+  number: {
+    textAlign: "right"
   }
+
 }));
 
 const SelectedItem = (props) => {
@@ -73,15 +84,14 @@ const SelectedItem = (props) => {
       widthImage: "100%",
       thumbnailImage: thumbnailImg1,
       images: [image4, image5, image6],
-      description: `Seen from the outside, this project stands out with its impressive design and luxurious diamond shape, featuring an image of bare concrete and glass materials to bring simple but really high class to the owner. In addition, the design highlight is the "bedroom in the clouds" which brings a very new and special experience.
-      `,
+      description: `Seen from the outside, this project stands out with its impressive design and luxurious diamond shape, featuring an image of bare concrete and glass materials to bring simple but really high class to the owner. In addition, the design highlight is the "bedroom in the clouds" which brings a very new and special experience.`,
       client: `MR. ALAN LUCAS & MRS. HIEN LUCAS`,
       location: `District 2, Ho Chi Minh`,
-      lotArea: 752,
-      conArea: 1.199,
+      lotArea: 750,
+      conArea: '1,200',
       pool: 60,
-      height: 14.05,
-      number: 18,
+      height: 14,
+      number: '3 Stories + 1 Basement',
       style: "Modern",
     },
 
@@ -91,12 +101,13 @@ const SelectedItem = (props) => {
       thumbnailImage: thumbnailImage3,
       images: [image10, image11, image12],
       description: `Possessing an attractive and impressive beauty, a delicate combination style design between Indochinese classics mixed with luxurious modern features. With the meaning of a place to keep memories, a place to retreat after busy days, the villa has a cozy exterior with deep brown tones of wood and unique lighting ideas that impress anyone at first sight. In particular, the highlighted design is impressive creativity with a "D" shape inspired by the owner's last name.`,
-      client: `THUAN HAI GROUP`,
-      location: `Dong Nai`,
-      lotArea: 340,
-      conArea: 420,
-      pool: 15,
-      number: 2,
+      client: `THUAN HAI CORPORATION`,
+      location: `District 7, Ho Chi Minh`,
+      lotArea: '4,500',
+      conArea: '1,680',
+      pool: '-',
+      height: '15',
+      number: '2 Stories',
       style: "Modern",
     },
 
@@ -108,12 +119,12 @@ const SelectedItem = (props) => {
       description: `Modern architectural avatar with soft rounded lines. The large curved glass system increases the elegance and impression of the building. Tay Ho Villa consists of 2 blocks with an open space design that brings a sense of comfort. Especially the green space connecting the 2 building blocks is a spiral staircase specially designed by The Modern Touch Architects, very delicate and gentle.`,
       client: `NDH COMPANY`,
       location: `Tay Ho, Ha Noi`,
-      lotArea: 1.441,
-      conArea: 1.105,
-      pool: 148,
-      height: "9.3",
-      number: 2,
-      style: "Modern, Asian Contemporary",
+      lotArea: '1,500',
+      conArea: '1,100',
+      pool: '148',
+      height: "10",
+      number: '2 Stories',
+      style: "Asian Contemporary",
     },
 
     {
@@ -125,10 +136,10 @@ const SelectedItem = (props) => {
       client: `CALLA`,
       location: `Phu Cat, Binh Dinh`,
       design: "WATG",
-      lotArea: 253.891,
-      conArea: 163.611,
-      pool: 860,
-      number: 18,
+      lotArea: '253,900',
+      conArea: '163,600',
+      pool: '860',
+      number: '18 Stories',
       style: "Modern",
     },
 
@@ -137,14 +148,16 @@ const SelectedItem = (props) => {
       widthImage: "140%",
       thumbnailImage: thumbnailImage7,
       images: [image22, image23, image24],
-      description: `Calla Apartment Quy Nhon is a trend-catching project located in the "golden" position in the center of Quy Nhon coastal city. Immerse yourself in the trend of experiencing a new perfect life, giving apartment owners high-class and comfortable experiences.`,
+      description: `The CALLA is a trend-catching project located in the
+      "golden" position in the center of Quy Nhon coastal city. Immerse yourself in the trend of experiencing a new perfect life, giving apartment owners high-class and comfortable experiences.`,
       client: `ARMO`,
       location: `Quy Nhon, Binh Dinh`,
-      lotArea: 3.076,
-      conArea: 2.232,
-      pool: 100,
-      number: 29,
-      style: "VintModernage",
+      lotArea: '3,100',
+      conArea: '2,200',
+      pool: '-',
+      height: "100",
+      number: '29 Stories + 1 Basement',
+      style: "Modern",
     },
 
     {
@@ -155,11 +168,11 @@ const SelectedItem = (props) => {
       description: `Inspired by the waves of the Can Tho River and the graceful lines of Ninh Kieu wharf combined with the image of a dragon's body reaching up to the sky, Rita Vo Tay Do building has a soft appearance suitable for the charming people of Can Tho but still majestic enough to be worthy of being a landmark for the Mekong Delta region.`,
       client: `RITA VO`,
       location: `Cai Rang, Can Tho`,
-      lotArea: 2.015,
-      conArea: 11.76,
-      pool: 860,
-      height: "49,75",
-      number: 12,
+      lotArea: '2,000',
+      conArea: '740',
+      pool: '-',
+      height: "52",
+      number: '12 Stories + 1 Basement',
       style: "Modern",
     },
 
@@ -171,11 +184,11 @@ const SelectedItem = (props) => {
       description: `The villa is designed in a semi-classical style, which is a harmonious combination of high-class materials in an airy space. Prominent on the light color of the ceiling and walls is the warm brown color, creating a cozy and trendy feeling like entering a magnificent heritage.`,
       client: `MEKONG ONE`,
       location: `Ba Dinh, Ha Noi`,
-      lotArea: "1,723",
-      conArea: 890,
-      pool: "1,458",
-      height: "18,3",
-      number: 4,
+      lotArea: "1,700",
+      conArea: '890',
+      pool: "1,500",
+      height: "18",
+      number: '4 Stories',
       style: "Semi Classic",
     },
 
@@ -184,28 +197,30 @@ const SelectedItem = (props) => {
       widthImage: "120%",
       thumbnailImage: thumbnailImage2,
       images: [image7, image8, image9],
-      description: `Fideco Building is located in the central area of District 1, with a luxurious and high-class design orientation, meeting Grade A office standards.`,
+      description: `Fideco Building is located in the central area of District 1 - Ho Chi Minh City, with a luxurious and high-class design orientation, meeting Grade A office
+      standards.`,
       client: `FIDECO`,
       location: `District 1, Ho Chi Minh`,
-      lotArea: "356,3",
-      conArea: 163.611,
-      pool: 860,
-      number: 18,
-      style: "Modern, luxurious",
+      lotArea: "360",
+      conArea: "-",
+      pool: '-',
+      number: '-',
+      style: "Modern & Luxury",
     },
     {
       name: "FIDECO OFFICE",
       widthImage: "120%",
       thumbnailImage: thumbnailImage2,
       images: [image7, image8, image9],
-      description: `Fideco Building is located in the central area of District 1, with a luxurious and high-class design orientation, meeting Grade A office standards.`,
+      description: `Fideco Building is located in the central area of District 1 - Ho Chi Minh City, with a luxurious and high-class design orientation, meeting Grade A office
+      standards.`,
       client: `FIDECO`,
       location: `District 1, Ho Chi Minh`,
-      lotArea: "356,3",
-      conArea: 163.611,
-      pool: 860,
-      number: 18,
-      style: "Modern, luxurious",
+      lotArea: "360",
+      conArea: "-",
+      pool: '-',
+      number: '-',
+      style: "Modern & Luxury",
     },
   ];
   const useViewport = () => {
@@ -348,29 +363,10 @@ const SelectedItem = (props) => {
                       justifyContent: "space-between",
                     }}
                   >
-                    <div>Client:</div>
-                    <b>{projectList[index].client}</b>
+                    <p>Client:</p>
+                    <b className={classes.client}>{projectList[index].client}</b>
                   </div>
-                  {/* <div
-                    style={{
-                      display: "flex",
-                      lineHeight: "16px",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <div>Design consultant:</div>
-                    <b>{projectList[index].design}</b>
-                  </div> */}
-                  {/* <div
-                    style={{
-                      display: "flex",
-                      lineHeight: "16px",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <div>Local consultant:</div>
-                    <b style={{ textAlign: "right" }}>THE MODERN TOUCH</b>
-                  </div> */}
+
                   <div
                     style={{
                       display: "flex",
@@ -400,7 +396,7 @@ const SelectedItem = (props) => {
                     <div>Lot area:</div>
                     <b>
                       {projectList[index].lotArea} m
-                      <span style={{ verticalAlign: "super" }}>2</span>
+                      <span className={classes.square} >2</span>
                     </b>
                   </div>
                   <div
@@ -413,7 +409,7 @@ const SelectedItem = (props) => {
                     <div>Construction area:</div>
                     <b>
                       {projectList[index].conArea} m
-                      <span style={{ verticalAlign: "super" }}>2</span>
+                      <span className={classes.square} >2</span>
                     </b>
                   </div>
                   <div
@@ -426,7 +422,7 @@ const SelectedItem = (props) => {
                     <div>Public area:</div>
                     <b>
                       {projectList[index].pool} m
-                      <span style={{ verticalAlign: "super" }}>2</span>
+                      <span className={classes.square} >2</span>
                     </b>
                   </div>
                   <div
@@ -436,13 +432,13 @@ const SelectedItem = (props) => {
                       justifyContent: "space-between",
                     }}
                   >
-                    <div>Number of stories:</div>
-                    <b>{projectList[index].number} Stories</b>
+                    <div>Stories:</div>
+                    <b className={classes.number}>{projectList[index].number}</b>
                   </div>
                   <div
                     style={{
                       display: "flex",
-                      lineHeight: "16px",
+                      lineHeight: "22px",
                       justifyContent: "space-between",
                     }}
                   >
