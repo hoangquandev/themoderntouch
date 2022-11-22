@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
 
 import Slider from "react-slick";
+import Lucas from './Lucas'
 
 import img1 from "../../../assets/images/buildingiconfix/buildingicon-a1.png";
 import img2 from "../../../assets/images/buildingiconfix/buildingicon-b1.png";
@@ -94,11 +95,11 @@ const BodyProject = () => {
   };
 
   const classes = useStyles();
-  const [selectIndex, setSelectedIndex] = useState(3);
-  const [selectedImg1, setSelectedImg1] = useState(false);
+  const [selectIndex, setSelectedIndex] = useState(0);
+  const [selectedImg1, setSelectedImg1] = useState(true);
   const [selectedImg2, setSelectedImg2] = useState(false);
   const [selectedImg3, setSelectedImg3] = useState(false);
-  const [selectedImg4, setSelectedImg4] = useState(true);
+  const [selectedImg4, setSelectedImg4] = useState(false);
   const [selectedImg5, setSelectedImg5] = useState(false);
   const [selectedImg6, setSelectedImg6] = useState(false);
   const [selectedImg7, setSelectedImg7] = useState(false);
@@ -227,7 +228,7 @@ const BodyProject = () => {
             ref={(slider1) => setNav1(slider1)}
           >
             <div>
-              <SelectedItem index={selectIndex} />
+              <Lucas />
             </div>
             <div>
               <SelectedItem index={selectIndex} />
@@ -254,7 +255,7 @@ const BodyProject = () => {
               <SelectedItem index={selectIndex} />
             </div>
             <div>
-              <SelectedItem index={selectIndex} />
+              <Lucas />
             </div>
             <div>
               <SelectedItem index={selectIndex} />
@@ -298,7 +299,7 @@ const BodyProject = () => {
               <div
                 onClick={handleSelected5}
                 className={classes.itemSelect}
-                // style={{ width: "121px" }}
+              // style={{ width: "121px" }}
               >
                 {selectedImg5 ? (
                   <img style={{ height: "100px" }} src={activeList[4]} alt="" />
@@ -320,7 +321,7 @@ const BodyProject = () => {
               <div
                 onClick={handleSelected6}
                 className={classes.itemSelect}
-                // style={{ width: "121px" }}
+              // style={{ width: "121px" }}
               >
                 {selectedImg6 ? (
                   <img style={{ height: "100px" }} src={activeList[5]} alt="" />
@@ -342,7 +343,7 @@ const BodyProject = () => {
               <div
                 onClick={handleSelected7}
                 className={classes.itemSelect}
-                // style={{ width: "121px" }}
+              // style={{ width: "121px" }}
               >
                 {selectedImg7 ? (
                   <img style={{ height: "100px" }} src={activeList[6]} alt="" />
@@ -375,7 +376,7 @@ const BodyProject = () => {
               <div
                 onClick={handleSelected9}
                 className={classes.itemSelect}
-                // style={{ width: "121px" }}
+              // style={{ width: "121px" }}
               >
                 {selectedImg9 ? (
                   <img style={{ height: "100px" }} src={activeList[8]} alt="" />
