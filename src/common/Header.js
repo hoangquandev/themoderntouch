@@ -5,6 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/images/slider/SLIDER-09.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -159,34 +160,34 @@ const Header = () => {
     <header className={classes.header}>
       <div className={classes.container}>
         <div className={classes.logoArea}>
-          <a href="#">
+          <Link to="/">
             <img
               src={logo}
               className={classes.imageLogo}
               atl="The Mordern Touch"
             />
-          </a>
+          </Link>
         </div>
 
         <div className={classes.mainMenu}>
           <ul className={classes.navbar}>
             <li data-aos="fade-right" data-aos-duration="1000">
-              <a href="#">about us</a>
+              <Link to="/about-us">about us</Link>
             </li>
             <li data-aos="fade-right" data-aos-duration="1000">
-              <a href="#">services</a>
+              <Link to="/services">services</Link>
             </li>
             <li data-aos="fade-right" data-aos-duration="1000">
-              <a href="#">projects</a>
+              <Link to="/projects">projects</Link>
             </li>
             <li data-aos="fade-left" data-aos-duration="1000">
-              <a href="#">news</a>
+              <Link to="/news">news</Link>
             </li>
             <li data-aos="fade-left" data-aos-duration="1000">
-              <a href="#">careers</a>
+              <Link to="/careers">careers</Link>
             </li>
             <li data-aos="fade-left" data-aos-duration="1000">
-              <a href="#">contact</a>
+              <Link to="/contact">contact</Link>
             </li>
           </ul>
         </div>

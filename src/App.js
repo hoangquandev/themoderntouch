@@ -30,8 +30,8 @@ function App() {
       ) : (
         <div style={{ position: "relative" }}>
           <TopBar />
-          <Header />
           <Router>
+            <Header />
             <Routes>
               {routes.map((route, key) => {
                 const Page = route.page;

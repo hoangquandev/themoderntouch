@@ -13,7 +13,7 @@ export const routes = [
     page: HomePage,
   },
   {
-    path: "/about",
+    path: "/about-us",
     page: AboutUs,
   },
   {
