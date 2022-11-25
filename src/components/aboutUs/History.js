@@ -1,6 +1,5 @@
 import { makeStyles } from '@mui/styles'
 import React from 'react'
-import FooterWhite from '../../common/FooterWhite'
 import { listImageAboutUs } from '../../utils/imageAboutUs'
 import Employee from './Employee'
 
@@ -205,10 +204,43 @@ const History = () => {
                     </p>
                 </div>
             </div>
-            <div className={classes.footerDiv}>
-                <div style={{ height: "607px" }}></div>
-                <FooterWhite />
+
+            <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: "100px",
+            }}>
+                <div style={{
+                    width: "400px",
+                    padding: "20px",
+                    backgroundColor: "white"
+                }}>
+                    <img style={{
+                        borderRadius: "20px"
+                    }} className={classes.img} src={listImageAboutUs[8]} alt='' />
+                </div>
+                <div style={{
+                    width: "400px",
+                    padding: "20px",
+                    backgroundColor: "white"
+                }}>
+                    <img style={{
+                        borderRadius: "20px"
+                    }} className={classes.img} src={listImageAboutUs[8]} alt='' />
+                </div>
+                <div style={{
+                    width: "400px",
+                    padding: "20px",
+                    backgroundColor: "white"
+                }}>
+                    <img style={{
+                        borderRadius: "20px"
+                    }} className={classes.img} src={listImageAboutUs[8]} alt='' />
+                </div>
             </div>
+
+
 
         </div>
     )

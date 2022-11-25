@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import logo from "../assets/images/logo/LogoBlack.png";
+import logo from "../assets/images/logo/LogoWhite.png";
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
