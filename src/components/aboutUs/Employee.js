@@ -1,7 +1,7 @@
-import { ClassNames } from '@emotion/react';
+
 import { makeStyles } from '@mui/styles';
-import { border } from '@mui/system';
-import React from 'react'
+import { motion } from 'framer-motion';
+import React, { useRef } from 'react'
 import { listEmployee } from '../../utils/imageAboutUs';
 
 const useStyles = makeStyles((theme) => ({
@@ -50,17 +50,30 @@ const useStyles = makeStyles((theme) => ({
 }))
 const Employee = () => {
     const classes = useStyles()
+    const scrollRef = useRef(null)
     return (
         <div className={classes.container}>
             {listEmployee.map((item, key) => {
                 return (
                     <div className={classes.item} key={key}>
-                        <div className={classes.divImage}>< img className={classes.img} src={item.avata} alt="" /></div>
+                        <div className={classes.divImage}>< motion.img
+                            initial={{ opacity: 0.4, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0, transition: { duration: 1, delay: key * 0.2 } }}
+                            viewport={{ root: scrollRef, once: true }}
+                            className={classes.img} src={item.avata} alt="" /></div>
                         <div className={classes.name}>
-                            <h4>{item.name}</h4>
+                            <motion.h4
+                                initial={{ opacity: 0.4, y: 100 }}
+                                whileInView={{ opacity: 1, y: 0, transition: { duration: 1, delay: 0.2 + key * 0.2 } }}
+                                viewport={{ root: scrollRef, once: true }}
+                            >{item.name}</motion.h4>
                             <div className={classes.borderLine}></div>
                         </div>
-                        <p>{item.sub}</p>
+                        <motion.p
+                            initial={{ opacity: 0.4, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0, transition: { duration: 1, delay: 0.4 + key * 0.2 } }}
+                            viewport={{ root: scrollRef, once: true }}
+                        >{item.sub}</motion.p>
                     </div>
                 )
             })}

@@ -18,7 +18,7 @@ const AboutUs = () => {
   return <div>
     <History />
     <div className={classes.footerDiv}>
-      <div style={{ height: "607px" }}></div>
+      <div style={{ height: "591px" }}></div>
       <FooterWhite />
       <BottomBar />
     </div>

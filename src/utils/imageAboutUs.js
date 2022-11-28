@@ -17,6 +17,8 @@ import img16 from '../assets/images/aboutUs/Aboutus16.png'
 import img17 from '../assets/images/aboutUs/Aboutus17.png'
 import img18 from '../assets/images/aboutUs/Aboutus18.png'
 import img19 from '../assets/images/aboutUs/aboutus19.png'
+import img20 from '../assets/images/aboutUs/Aboutus20.jpg'
+import img21 from '../assets/images/aboutUs/Aboutus21.jpg'
 export const listImageAboutUs = [
     img1,
     img2,
@@ -27,6 +29,8 @@ export const listImageAboutUs = [
     img7,
     img18,
     img19,
+    img20,
+    img21,
 ]
 
 export const listEmployee = [
