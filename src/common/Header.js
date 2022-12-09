@@ -5,7 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/images/slider/SLIDER-09.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     position: "relative",
     height: 100,
+    transform: "translateX(-36px)"
   },
   mainMenu: {
     width: "100%",
@@ -144,6 +145,59 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  "@media (max-width: 640px)": {
+    header: {
+    },
+    container: {
+      maxWidth: "100%",
+      width: '100%',
+      margin: " 0 auto",
+      height: 90,
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding: "0",
+    },
+    logoArea: {
+      width: "80px",
+      height: "80px",
+      position: "relative",
+      // paddingLeft: "20px",
+      top: "50%",
+      left: "70px",
+      transform: "translateY(-50%)",
+    },
+    imageLogo: {
+      marginTop: "4px",
+    },
+    menuMobile: {
+      display: "flex",
+      justifyContent: "center",
+    },
+    navbar: {
+      display: "none",
+    },
+    menu: {
+      display: "block",
+      position: "absolute",
+      backgroundColor: "#fff",
+      height: "calc(100vh - 90px)",
+      width: "100vw",
+      top: "90px",
+      left: "36px",
+      padding: "20px 20px",
+      transition: "all 0.5s ease",
+      zIndex: 10
+    },
+    navMenu: {
+      lineHeight: "20px",
+      fontSize: "16px",
+      "& *": {
+        textTransform: "uppercase",
+        margin: "10px auto",
+      },
+    },
+  },
 }));
 
 const Header = () => {
@@ -160,34 +214,34 @@ const Header = () => {
     <header className={classes.header}>
       <div className={classes.container}>
         <div className={classes.logoArea}>
-          <Link to="/">
+          <NavLink to="/">
             <img
               src={logo}
               className={classes.imageLogo}
-              atl="The Mordern Touch"
+              alt="The Modern Touch"
             />
-          </Link>
+          </NavLink>
         </div>
 
         <div className={classes.mainMenu}>
           <ul className={classes.navbar}>
             <li data-aos="fade-right" data-aos-duration="1000">
-              <Link to="/about-us">about us</Link>
+              <NavLink to="/about" activestyle={{ color: "#fe5600" }}>about us</NavLink>
             </li>
             <li data-aos="fade-right" data-aos-duration="1000">
-              <Link to="/services">services</Link>
+              <NavLink to="/services" activestyle={{ color: "#fe5600" }}>services</NavLink>
             </li>
             <li data-aos="fade-right" data-aos-duration="1000">
-              <Link to="/projects">projects</Link>
+              <NavLink to="/projects" activestyle={{ color: "#fe5600" }}>projects</NavLink>
             </li>
             <li data-aos="fade-left" data-aos-duration="1000">
-              <Link to="/news">news</Link>
+              <NavLink to="/news" activestyle={{ color: "#fe5600" }}>news</NavLink>
             </li>
             <li data-aos="fade-left" data-aos-duration="1000">
-              <Link to="/careers">careers</Link>
+              <NavLink to="/careers" activestyle={{ color: "#fe5600" }}>careers</NavLink>
             </li>
             <li data-aos="fade-left" data-aos-duration="1000">
-              <Link to="/contact">contact</Link>
+              <NavLink to="/contact" activestyle={{ color: "#fe5600" }}>contact</NavLink>
             </li>
           </ul>
         </div>

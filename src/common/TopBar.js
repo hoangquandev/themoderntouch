@@ -29,7 +29,7 @@ const TopBar = () => {
 const Container = styled.div`
   width: 100%;
   height: 1.5rem;
-  padding-left: calc(100% / 12);
+  padding-left: calc(100% / 22);
   padding-right: calc(100% / 12);
   background-color: #000;
   color: #fff;

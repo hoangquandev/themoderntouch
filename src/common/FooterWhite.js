@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
         borderTop: "1px solid ",
         textAlign: "center",
         fontSize: "16px",
+        paddingTop: "1rem"
     },
     containerLeft: {
         textAlign: "left",
@@ -122,7 +123,7 @@ const FooterWhite = () => {
                     <div className={classes.itemLeft} style={{ width: "150px" }}>
                         <img
                             src={logo}
-                            atl="TMT"
+                            alt="the modern touch"
                             style={{ maxWidth: "100%", height: "150px", marginTop: -20, marginLeft: -20 }}
                         />
                     </div>
@@ -161,7 +162,7 @@ const FooterWhite = () => {
                     <div style={{ position: "relative" }}>
                         <input
                             type="text"
-                            placeHolder="Enter your email to subscribe Us"
+                            placeholder="Enter your email to subscribe Us"
                             style={{
                                 borderRadius: "30px",
                                 border: "none",
@@ -198,20 +199,20 @@ const FooterWhite = () => {
 
             <Grid container className={classes.container} spacing={3}>
                 <Grid item xs={8}>
-                    <Grid container spacing={3}>
-                        <Grid item xs={4}>
+                    <Grid container spacing={7}>
+                        <Grid item xs={2.8}>
                             <img
                                 src={logo}
                                 alt=""
                                 style={{
                                     maxWidth: "100%",
-                                    height: "150px",
-                                    marginTop: "-1rem",
-                                    marginLeft: "-2rem",
+                                    height: "110px",
+                                    marginTop: "0rem",
+                                    marginLeft: "4rem",
                                 }}
                             />
                         </Grid>
-                        <Grid item xs={5} className={classes.containerLeft}>
+                        <Grid item xs={4} className={classes.containerLeft}>
                             <h2>CONTACT</h2>
                             <ul>
                                 <li>
@@ -221,7 +222,7 @@ const FooterWhite = () => {
                                 <li>+84 28 39 305 018</li>
                             </ul>
                         </Grid>
-                        <Grid item xs={1.5} className={classes.containerLeft}>
+                        <Grid item xs={3.7} className={classes.containerLeft}>
                             <h2>ABOUT</h2>
                             <ul>
                                 <li>People</li>
@@ -245,7 +246,7 @@ const FooterWhite = () => {
                     <div style={{ position: "relative" }}>
                         <input
                             type="text"
-                            placeHolder="Enter your email to subscribe Us"
+                            placeholder="Enter your email to subscribe Us"
                             className={classes.input}
                         />
                         <button

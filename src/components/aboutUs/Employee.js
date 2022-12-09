@@ -1,8 +1,9 @@
 
 import { makeStyles } from '@mui/styles';
-import { motion } from 'framer-motion';
-import React, { useRef } from 'react'
+import React, { useEffect } from 'react'
 import { listEmployee } from '../../utils/imageAboutUs';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -10,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         flexWrap: "wrap",
         margin: "0 auto",
         textAlign: "center",
-        fontSize: "12px",
+        fontSize: "14px",
     },
     item: {
         flex: "0 0 20%",
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         margin: "0 auto"
     },
     name: {
-        fontSize: "14px",
+        fontSize: "16px",
         position: "relative"
     },
     borderLine: {
@@ -50,30 +51,33 @@ const useStyles = makeStyles((theme) => ({
 }))
 const Employee = () => {
     const classes = useStyles()
-    const scrollRef = useRef(null)
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     return (
         <div className={classes.container}>
             {listEmployee.map((item, key) => {
                 return (
                     <div className={classes.item} key={key}>
-                        <div className={classes.divImage}>< motion.img
-                            initial={{ opacity: 0.4, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0, transition: { duration: 1, delay: key * 0.2 } }}
-                            viewport={{ root: scrollRef, once: true }}
+                        <div className={classes.divImage}>< img
+                            data-aos="fade-up"
+                            data-aos-delay={100 * key}
+                            data-aos-duration="2000"
                             className={classes.img} src={item.avata} alt="" /></div>
                         <div className={classes.name}>
-                            <motion.h4
-                                initial={{ opacity: 0.4, y: 100 }}
-                                whileInView={{ opacity: 1, y: 0, transition: { duration: 1, delay: 0.2 + key * 0.2 } }}
-                                viewport={{ root: scrollRef, once: true }}
-                            >{item.name}</motion.h4>
+                            <h4
+                                data-aos="fade-up"
+                                data-aos-delay={100 + 100 * key}
+                                data-aos-duration="2000"
+                            >{item.name}</h4>
                             <div className={classes.borderLine}></div>
                         </div>
-                        <motion.p
-                            initial={{ opacity: 0.4, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0, transition: { duration: 1, delay: 0.4 + key * 0.2 } }}
-                            viewport={{ root: scrollRef, once: true }}
-                        >{item.sub}</motion.p>
+                        <p
+                            data-aos="fade-up"
+                            data-aos-delay={200 + 200 * key}
+                            data-aos-duration="2000"
+                        >{item.sub}</p>
                     </div>
                 )
             })}

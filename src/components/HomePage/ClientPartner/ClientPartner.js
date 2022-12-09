@@ -114,7 +114,7 @@ const ClientPartner = () => {
   const isMobile = viewPort.width <= 640;
   if (isMobile) {
     return (
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center", paddingBottom: "2rem" }}>
         <h2
           className={classes.title}
           data-aos="fade-up"

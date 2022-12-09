@@ -12,7 +12,7 @@
     background-size: 100%;
     background-position: center;
     height: calc(100vh - 155px);
-    width: 100%;
+    /* width: 100%; */
     /* transform: scale(4); */
     transition: all 1s linear;
     position: relative;
@@ -27,20 +27,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 734px;
-    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    width: 700px;
 }
+
+
 
 .sliderItem {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 734px;
+    width: 700px;
 }
 
 .sliderItem img {
-    height: 357px;
+    height: 100%;
 
+}
+
+.container .slick-slide {
+    width: 700px !important;
 }
 
 .bannerMoblie {
@@ -59,11 +64,13 @@
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
 .bannerMoblie .text .subSlogan {
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
 }
+
 .bannerMoblie .text .slogan {
     margin-top: 10px;
     font-size: 30px;
@@ -74,7 +81,7 @@
 .bannerMoblie img {
     max-width: 60%;
     position: absolute;
-    left: 54%;
+    left: 52%;
     transform: translateX(-50%);
 }
 
@@ -103,6 +110,10 @@
 
         width: 500px;
     }
+
+    .container .slick-slide {
+        width: 500px !important;
+    }
 }
 
 @media only screen and (max-width: 1420px) {
@@ -119,6 +130,10 @@
     .slider {
 
         width: 460px;
+    }
+
+    .container .slick-slide {
+        width: 400px !important;
     }
 }
 

@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     width: "100%",
     margin: "0 auto",
+
   },
   footer: {
     margin: "0 auto",
@@ -19,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     borderTop: "1px solid ",
     textAlign: "center",
     fontSize: "16px",
+    paddingTop: "1rem"
   },
   containerLeft: {
     textAlign: "left",
@@ -117,9 +119,7 @@ const Footer = () => {
       <div className={classes.containerMobile}>
         <div className={classes.itemMobile}>
           <div className={classes.itemLeft} style={{ width: "150px" }}>
-            <img
-              src={logo}
-              atl="TMT"
+            <img alt="the modern touch" src={logo}
               style={{ maxWidth: "100%", height: "150px", marginTop: -20, marginLeft: -20 }}
             />
           </div>
@@ -158,7 +158,7 @@ const Footer = () => {
           <div style={{ position: "relative" }}>
             <input
               type="text"
-              placeHolder="Enter your email to subscribe Us"
+              placeholder="Enter your email to subscribe Us"
               style={{
                 borderRadius: "30px",
                 border: "none",
@@ -194,21 +194,21 @@ const Footer = () => {
     <div className={classes.wrapper}>
 
       <Grid container className={classes.container} spacing={3}>
-        <Grid item xs={8}>
-          <Grid container spacing={3}>
-            <Grid item xs={4}>
+        <Grid item xs={7}>
+          <Grid container spacing={7}>
+            <Grid item xs={3.2}>
               <img
                 src={logo}
                 alt=""
                 style={{
                   maxWidth: "100%",
-                  height: "150px",
-                  marginTop: "-1rem",
-                  marginLeft: "-2rem",
+                  height: "180px",
+                  marginTop: "-2rem",
+                  marginLeft: "5rem",
                 }}
               />
             </Grid>
-            <Grid item xs={5} className={classes.containerLeft}>
+            <Grid item xs={4.6} className={classes.containerLeft}>
               <h2>CONTACT</h2>
               <ul>
                 <li>
@@ -218,7 +218,7 @@ const Footer = () => {
                 <li>+84 28 39 305 018</li>
               </ul>
             </Grid>
-            <Grid item xs={1.5} className={classes.containerLeft}>
+            <Grid item xs={3.2} className={classes.containerLeft}>
               <h2>ABOUT</h2>
               <ul>
                 <li>People</li>
@@ -227,7 +227,7 @@ const Footer = () => {
                 <li>Careers</li>
               </ul>
             </Grid>
-            <Grid item xs={1.5} className={classes.containerLeft}>
+            <Grid item xs={1} className={classes.containerLeft}>
               <h2>SOCIAL</h2>
               <ul>
                 <li>Facebook</li>
@@ -237,12 +237,12 @@ const Footer = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={4} style={{ paddingRight: "3rem" }}>
+        <Grid item xs={5} style={{ paddingRight: "3rem" }}>
           <h2>SIGN UP NEWSLETTERS</h2>
           <div style={{ position: "relative" }}>
             <input
               type="text"
-              placeHolder="Enter your email to subscribe Us"
+              placeholder="Enter your email to subscribe Us"
               className={classes.input}
             />
             <button

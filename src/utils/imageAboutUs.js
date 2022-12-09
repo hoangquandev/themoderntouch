@@ -47,7 +47,7 @@ export const listEmployee = [
     {
         avata: img10,
         name: "TA TRUONG DONG",
-        sub: "HR & Admin. Manager"
+        sub: "Finance Director"
     },
     {
         avata: img11,
@@ -57,7 +57,7 @@ export const listEmployee = [
     {
         avata: img12,
         name: "PHAM MINH SANG",
-        sub: ""
+        sub: "Project Manager"
     },
     {
         avata: img13,

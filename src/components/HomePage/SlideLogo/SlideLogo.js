@@ -50,10 +50,11 @@ const SlideLogo = () => {
 
   const settings = {
     infinite: true,
-    speed: 1000,
+    speed: 500,
     autoplay: true,
     autoplaySpeed: 5000,
     arrows: false,
+    dots: false
   };
   if (isMobile) {
     return (

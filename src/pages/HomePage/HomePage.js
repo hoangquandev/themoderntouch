@@ -20,7 +20,11 @@ const HomePage = () => {
   const [zoom, setZoom] = useState(false);
   const [lastYPos, setLastYPos] = useState(0);
   // const [isShown, setIsShown] = useState(false);
+
+
+
   const zoomable = () => {
+
     const yPos = window.scrollY;
     setLastYPos(yPos);
     const isScrollingUp = yPos < lastYPos;
@@ -54,7 +58,7 @@ const HomePage = () => {
   const isMobile = viewPort.width <= 640;
   if (isMobile) {
     return (
-      <div>
+      <div style={{ overflowX: "hidden" }}>
         <Banner />
 
         <Service />
@@ -68,26 +72,29 @@ const HomePage = () => {
   }
 
   return (
-    <div
-      className={classes.noZoom}
-      style={
-        zoom
-          ? null
-          : {
+    <div>
+
+      <div
+        className={classes.noZoom}
+        style={
+          zoom
+            ? null
+            : {
               height: "calc(100vh - 154px)",
               overflow: "hidden",
               marginBottom: "2rem",
             }
-      }
-    >
-      <Banner />
+        }
+      >
+        <Banner />
 
-      <Service />
-      <SelectedProject />
-      <ClientPartner />
-      <SlideLogo />
-      <Footer />
-      <BottomBar />
+        <Service />
+        <SelectedProject />
+        <ClientPartner />
+        <SlideLogo />
+        <Footer />
+        <BottomBar />
+      </div>
     </div>
   );
 };
