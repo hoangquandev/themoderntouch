@@ -22,6 +22,14 @@ import img17 from '../../assets/images/Diamond-image/72ppi/Artboard 19.png'
 import img18 from '../../assets/images/Diamond-image/72ppi/Artboard 20.png'
 import img19 from '../../assets/images/Diamond-image/72ppi/Artboard 21.png'
 import img20 from '../../assets/images/Diamond-image/72ppi/Artboard 22.png'
+import thumbnail1 from '../../assets/images/thumbnailProject/diamond-1.png'
+import thumbnail2 from '../../assets/images/thumbnailProject/mailinh-1.png'
+import thumbnail3 from '../../assets/images/thumbnailProject/tayho-1.png'
+import thumbnail4 from '../../assets/images/thumbnailProject/sunrise-1.png'
+import thumbnail5 from '../../assets/images/thumbnailProject/thecalla-1.png'
+import thumbnail6 from '../../assets/images/thumbnailProject/ritavo-1.png'
+import thumbnail7 from '../../assets/images/thumbnailProject/oneheritage-1.png'
+import thumbnail8 from '../../assets/images/thumbnailProject/fideco-1.png'
 import Footer from '../../common/Footer'
 import Hero from '../../components/project/Hero'
 import PopUp from '../../components/project/PopUp'
@@ -54,9 +62,10 @@ const DetailProject = ({ id }) => {
     const imageUrls = [
         img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20
     ]
+    const thumbnailList = [thumbnail1, thumbnail2, thumbnail3, thumbnail4, thumbnail5, thumbnail6, thumbnail7, thumbnail8]
     return (
         <div className={classes.container}>
-            <HeroDetail id={id} />
+            <HeroDetail id={id} thumbnail={thumbnailList[id]} />
             <Masonry imageUrls={imageUrls} columnCount="4" gap='5' handleOpenPopUp={handleOpenPopUp} handleSelectImg={handleSelectImg}></Masonry>
             {openPopUp && <PopUp img={imageUrls[indexImage]} handleClosePopUp={handleClosePopUp} />}
             <Footer />

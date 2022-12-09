@@ -1,6 +1,5 @@
 import { makeStyles } from '@mui/styles'
 import React from 'react'
-import thumbnail from '../../assets/images/thumbnailProject/diamond-1.png'
 import projectList from '../../utils/project.json'
 
 
@@ -66,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 
-const HeroDetail = ({ id }) => {
+const HeroDetail = ({ id, thumbnail }) => {
     const classes = useStyles()
     return (
         <div className={classes.containerMain} >
